@@ -1,0 +1,31 @@
+---
+id: 662
+title: EA penalises its existing customers; nobody cares
+date: 2012-06-08T00:38:08+00:00
+author: Mark Simpson
+layout: single
+guid: http://defragdev.com/blog/?p=662
+permalink: /?p=662
+categories:
+  - games
+  - rants
+---
+To follow up from my last babblings on the [scourge of expansion packs](http://defragdev.com/blog/?p=649) and unfair advantages, EA/DICE has really put the cat amongst the pigeons with the release of [BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
+
+I bought BF3 premium because I view £40 for 5 expansion packs as a reasonable price (even if I already own Back to Karkand and don’t receive a discount or extra copy, ala Steam).&#160; However, read about the other features and you’ll notice the following blurb,
+
+> **Queue Priority**
+> 
+> Get priority when queuing for your favorite game server. Queue priority lets you get quicker into the game (VIPs will still go first).
+
+Read this and think about what it actually means.&#160; You, the existing, non-premium customer, are being actively penalised through no fault of your own.
+
+A mere 7 months ago, you spent £30 to £40 of your hard-earned money, but now you’re a second class citizen because you’re not willing to spend even more.&#160; This is not a case of players with the base game being unable to utilise new content/maps/guns etc., it is a case of a whole tier of customers being treated with contempt, and for what?&#160; To add an extra bullet point on the marketing blurb.
+
+Why the hell should somebody who paid an extra £40 be given the nod ahead of you when joining a vanilla BF3 server?&#160; Somebody on the BF3 forums used an excellent analogy – **everybody knows it is rude to jump the queue** (or to use an Americanism, to “cut in line”).
+
+I often play on heavily contended servers with queues containing 3 or more players – without premium there’s every chance that several premium players could repeatedly knock me down the queue, potentially indefinitely.&#160; “Your game is important to us, please hold the connection”.
+
+I don’t often unleash a polemic about something, but this is what is technically known as, “total bullshit”.&#160; 
+
+It sets a worrying precedent.&#160; I hope EA/DICE reconsider this decision and show their customers more respect.

@@ -1,0 +1,6 @@
+- Fix jekyll install
+	- it's partially generating the site (news feed etc) but the posts directory content is non-existent, so links fail
+	- tried on Windows and it's failing to open file during build
+	- tried on WSL and it fails to build zlib
+- Sort out configuration
+- Sort out gitpages integration
