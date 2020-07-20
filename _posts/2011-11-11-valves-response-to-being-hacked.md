@@ -4,8 +4,8 @@ title: 'Valve&rsquo;s response to being hacked'
 date: 2011-11-11T22:24:33+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=636
-permalink: /?p=636
+guid: https://defragdev.com/blog/?p=636
+#permalink: /?p=636
 categories:
   - games
   - misc

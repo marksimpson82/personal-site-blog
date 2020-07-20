@@ -4,8 +4,8 @@ title: AutoMapper and Test Data Builders
 date: 2010-01-11T23:07:19+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=474
-permalink: /?p=474
+guid: https://defragdev.com/blog/?p=474
+#permalink: /?p=474
 categories:
   - 'c#'
   - patterns

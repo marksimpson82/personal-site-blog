@@ -4,8 +4,8 @@ title: Normal service to resume shortly
 date: 2010-10-17T16:58:28+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=597
-permalink: /?p=597
+guid: https://defragdev.com/blog/?p=597
+#permalink: /?p=597
 categories:
   - misc
   - MyWorld

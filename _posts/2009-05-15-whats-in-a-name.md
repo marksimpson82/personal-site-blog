@@ -4,8 +4,8 @@ title: 'What&#8217;s in a name?'
 date: 2009-05-15T01:09:49+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=313
-permalink: /?p=313
+guid: https://defragdev.com/blog/?p=313
+#permalink: /?p=313
 categories:
   - testing
   - tips

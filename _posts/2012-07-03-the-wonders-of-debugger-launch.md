@@ -4,8 +4,8 @@ title: The wonders of Debugger.Launch()
 date: 2012-07-03T22:46:16+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=668
-permalink: /?p=668
+guid: https://defragdev.com/blog/?p=668
+#permalink: /?p=668
 categories:
   - 'c#'
   - debugging

@@ -4,8 +4,8 @@ title: 'Focused commits (also: git add -p)'
 date: 2018-04-06T00:10:28+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=810
-permalink: /?p=810
+guid: https://defragdev.com/blog/?p=810
+#permalink: /?p=810
 categories:
   - git
   - tips

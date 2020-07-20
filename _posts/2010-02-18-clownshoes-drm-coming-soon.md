@@ -4,8 +4,8 @@ title: Clownshoes DRM coming soon
 date: 2010-02-18T01:17:30+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=523
-permalink: /?p=523
+guid: https://defragdev.com/blog/?p=523
+#permalink: /?p=523
 categories:
   - rants
 ---

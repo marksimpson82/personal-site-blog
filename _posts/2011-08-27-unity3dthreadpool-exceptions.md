@@ -4,8 +4,8 @@ title: 'Unity3d&ndash;Threadpool Exceptions'
 date: 2011-08-27T15:11:48+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=632
-permalink: /?p=632
+guid: https://defragdev.com/blog/?p=632
+#permalink: /?p=632
 categories:
   - 'c#'
   - debugging

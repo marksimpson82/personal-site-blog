@@ -4,8 +4,8 @@ title: Strongly typed commandline arguments
 date: 2009-09-28T01:19:24+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=393
-permalink: /?p=393
+guid: https://defragdev.com/blog/?p=393
+#permalink: /?p=393
 categories:
   - 'c#'
 ---

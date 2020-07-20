@@ -4,8 +4,8 @@ title: Steam is testing my patience
 date: 2010-03-04T23:13:55+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=529
-permalink: /?p=529
+guid: https://defragdev.com/blog/?p=529
+#permalink: /?p=529
 categories:
   - rants
 ---

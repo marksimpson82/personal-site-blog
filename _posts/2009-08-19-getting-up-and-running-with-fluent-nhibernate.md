@@ -4,8 +4,8 @@ title: Getting up and running with Fluent NHibernate
 date: 2009-08-19T23:01:54+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=369
-permalink: /?p=369
+guid: https://defragdev.com/blog/?p=369
+#permalink: /?p=369
 categories:
   - 'c#'
 ---

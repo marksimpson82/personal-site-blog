@@ -4,8 +4,8 @@ title: Jupyter Notebook to clean(ish) HTML
 date: 2019-10-17T00:12:05+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=837
-permalink: /?p=837
+guid: https://defragdev.com/blog/?p=837
+#permalink: /?p=837
 categories:
   - Uncategorized
 tags:

@@ -4,8 +4,8 @@ title: 'BF3 &ndash; Pump Shotgun tips (870MCS &amp; SPAS)'
 date: 2012-07-07T20:58:49+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=673
-permalink: /?p=673
+guid: https://defragdev.com/blog/?p=673
+#permalink: /?p=673
 categories:
   - games
   - tips

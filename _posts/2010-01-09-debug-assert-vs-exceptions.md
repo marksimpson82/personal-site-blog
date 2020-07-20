@@ -4,8 +4,8 @@ title: Debug.Assert vs. Exceptions
 date: 2010-01-09T18:53:30+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=467
-permalink: /?p=467
+guid: https://defragdev.com/blog/?p=467
+#permalink: /?p=467
 categories:
   - Uncategorized
 ---

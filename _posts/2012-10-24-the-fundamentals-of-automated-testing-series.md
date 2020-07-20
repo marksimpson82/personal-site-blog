@@ -4,8 +4,8 @@ title: The fundamentals of unit testing (series)
 date: 2012-10-24T00:00:17+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=692
-permalink: /?p=692
+guid: https://defragdev.com/blog/?p=692
+#permalink: /?p=692
 categories:
   - fundamentals of unit testing
   - testing

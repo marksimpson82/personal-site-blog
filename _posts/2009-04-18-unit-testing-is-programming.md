@@ -4,8 +4,8 @@ title: The pride of a programmer
 date: 2009-04-18T21:14:41+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=173
-permalink: /?p=173
+guid: https://defragdev.com/blog/?p=173
+#permalink: /?p=173
 categories:
   - testing
 ---

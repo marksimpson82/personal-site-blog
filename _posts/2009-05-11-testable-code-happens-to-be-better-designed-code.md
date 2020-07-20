@@ -4,8 +4,8 @@ title: Benefits of designing for testability
 date: 2009-05-11T01:40:23+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=274
-permalink: /?p=274
+guid: https://defragdev.com/blog/?p=274
+#permalink: /?p=274
 categories:
   - patterns
   - testing

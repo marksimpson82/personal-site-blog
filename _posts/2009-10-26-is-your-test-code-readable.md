@@ -4,8 +4,8 @@ title: Is your test code readable?
 date: 2009-10-26T01:31:05+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=421
-permalink: /?p=421
+guid: https://defragdev.com/blog/?p=421
+#permalink: /?p=421
 categories:
   - testing
   - tips

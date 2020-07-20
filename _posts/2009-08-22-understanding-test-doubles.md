@@ -4,8 +4,8 @@ title: Understanding test doubles
 date: 2009-08-22T16:10:36+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=377
-permalink: /?p=377
+guid: https://defragdev.com/blog/?p=377
+#permalink: /?p=377
 categories:
   - 'c#'
   - testing

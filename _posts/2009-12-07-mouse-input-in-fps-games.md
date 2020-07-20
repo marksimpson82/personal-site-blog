@@ -4,8 +4,8 @@ title: Mouse Input in FPS Games
 date: 2009-12-07T21:19:36+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=461
-permalink: /?p=461
+guid: https://defragdev.com/blog/?p=461
+#permalink: /?p=461
 categories:
   - games
   - rants

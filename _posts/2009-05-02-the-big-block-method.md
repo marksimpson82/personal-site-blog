@@ -4,8 +4,8 @@ title: The big block method (binary search)
 date: 2009-05-02T17:28:28+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=238
-permalink: /?p=238
+guid: https://defragdev.com/blog/?p=238
+#permalink: /?p=238
 categories:
   - 'c#'
   - debugging
@@ -32,7 +32,7 @@ Unfortunately, tools were really &#8230; rudimentary back then. These days prett
 Back when tools weren&#8217;t so great, to find leaks in a level, I used the big block method.  It&#8217;s a very simple technique.  Say we have a rubbish, leaky level like so (top down view):
 
 <div style="width: 363px" class="wp-caption alignnone">
-  <img title="Big block" src="http://defragdev.com/blog/images/bigBlockProblem.png" alt="A level, yesterday." width="353" height="289" />
+  <img title="Big block" src="https://defragdev.com/blog/images/bigBlockProblem.png" alt="A level, yesterday." width="353" height="289" />
   
   <p class="wp-caption-text">
     A leaky level, yesterday.
@@ -42,7 +42,7 @@ Back when tools weren&#8217;t so great, to find leaks in a level, I used the big
 If one of those connections between walls/floors/ceilings/whatever is not tight, it will leak.  We cannot see the site of the leak using our eyes.  We cannot be sure where the leak is by simply scrutinising each wall joint or entity.  What we can do instead, though, is place a big block over ~50% of the level.
 
 <div style="width: 363px" class="wp-caption alignnone">
-  <img title="50% of the map is now covered" src="http://defragdev.com/blog/images/bigBlockStep1.png" alt="50% of the map is now covered" width="353" height="289" />
+  <img title="50% of the map is now covered" src="https://defragdev.com/blog/images/bigBlockStep1.png" alt="50% of the map is now covered" width="353" height="289" />
   
   <p class="wp-caption-text">
     The red area is a newly created solid block
@@ -52,7 +52,7 @@ If one of those connections between walls/floors/ceilings/whatever is not tight,
 If we compile and find that the leak has disappeared, we know that the leak was definitely in the area that is now covered by the block.  On the other hand, if the leak is still present, it&#8217;s in the other 50% of the level that remains uncovered.  To hone in on the problem area, all we have to do is recursively add blocks to the problem area:
 
 <div style="width: 363px" class="wp-caption alignnone">
-  <img title="Recursively adding blocks half the size of the previous block..." src="http://defragdev.com/blog/images/bigBlockStep2.png" alt="Recursively adding blocks half the size of the previous block..." width="353" height="289" />
+  <img title="Recursively adding blocks half the size of the previous block..." src="https://defragdev.com/blog/images/bigBlockStep2.png" alt="Recursively adding blocks half the size of the previous block..." width="353" height="289" />
   
   <p class="wp-caption-text">
     A smaller block has been added

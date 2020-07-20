@@ -4,8 +4,8 @@ title: Castle DynamicProxy2 quirks
 date: 2010-05-15T15:35:31+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=552
-permalink: /?p=552
+guid: https://defragdev.com/blog/?p=552
+#permalink: /?p=552
 categories:
   - 'c#'
   - gotchas

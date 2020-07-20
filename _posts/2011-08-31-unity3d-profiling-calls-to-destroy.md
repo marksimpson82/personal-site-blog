@@ -4,8 +4,8 @@ title: 'Unity3d &#8211; Profiling calls to Destroy'
 date: 2011-08-31T16:39:01+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=633
-permalink: /?p=633
+guid: https://defragdev.com/blog/?p=633
+#permalink: /?p=633
 categories:
   - 'c#'
   - debugging

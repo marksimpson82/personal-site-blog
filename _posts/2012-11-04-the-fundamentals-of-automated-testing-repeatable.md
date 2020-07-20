@@ -4,8 +4,8 @@ title: 'The fundamentals of unit testing : Repeatable'
 date: 2012-11-04T06:54:25+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=718
-permalink: /?p=718
+guid: https://defragdev.com/blog/?p=718
+#permalink: /?p=718
 categories:
   - fundamentals of unit testing
   - testing

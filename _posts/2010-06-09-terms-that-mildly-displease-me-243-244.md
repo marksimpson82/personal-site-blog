@@ -4,8 +4,8 @@ title: 'Terms that mildly displease me #243 &#038; #244'
 date: 2010-06-09T23:33:12+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=566
-permalink: /?p=566
+guid: https://defragdev.com/blog/?p=566
+#permalink: /?p=566
 categories:
   - misc
   - rants

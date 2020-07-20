@@ -4,8 +4,8 @@ title: Empathetic Code
 date: 2013-04-30T23:37:13+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=751
-permalink: /?p=751
+guid: https://defragdev.com/blog/?p=751
+#permalink: /?p=751
 categories:
   - software
   - tips

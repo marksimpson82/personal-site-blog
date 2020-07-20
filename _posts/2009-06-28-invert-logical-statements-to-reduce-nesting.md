@@ -4,8 +4,8 @@ title: Invert logical statements to reduce nesting
 date: 2009-06-28T18:32:31+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=357
-permalink: /?p=357
+guid: https://defragdev.com/blog/?p=357
+#permalink: /?p=357
 categories:
   - 'c#'
   - software

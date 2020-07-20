@@ -4,8 +4,8 @@ title: 'Making sense of your codebase : NDepend'
 date: 2010-01-18T01:53:04+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=482
-permalink: /?p=482
+guid: https://defragdev.com/blog/?p=482
+#permalink: /?p=482
 categories:
   - 'c#'
   - software

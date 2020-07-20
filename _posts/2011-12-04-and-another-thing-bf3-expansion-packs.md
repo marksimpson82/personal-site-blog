@@ -4,8 +4,8 @@ title: 'And another thing&hellip; BF3 Expansion packs'
 date: 2011-12-04T16:17:37+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=649
-permalink: /?p=649
+guid: https://defragdev.com/blog/?p=649
+#permalink: /?p=649
 categories:
   - games
   - rants
@@ -28,7 +28,7 @@ Moreover, cynics among us (i.e. me) see this as the perfect vehicle for develope
 
 If you think I&#8217;m talking nonsense or over-exaggerating, DICE has previous in this area.&#160; 
 
-[<img style="margin: 10px 0px; display: inline" title="image" alt="image" src="http://defragdev.com/blog/images/2011/12/image_thumb1.png" width="515" height="136" />](http://defragdev.com/blog/images/2011/12/image1.png)
+[<img style="margin: 10px 0px; display: inline" title="image" alt="image" src="https://defragdev.com/blog/images/2011/12/image_thumb1.png" width="515" height="136" />](https://defragdev.com/blog/images/2011/12/image1.png)
 
 In BF2:Special Forces, the [G36-E](http://battlefield.wikia.com/wiki/G36E) was the ultimate "noob" gun in that it didn&#8217;t require any practice to wield effectively.&#160; It had a fast fire rate, high damage, low deviation, limited recoil, great iron sights and could be used on the move.&#160; For the average player, it was a massive upgrade.&#160; Normally this would be a problem with limited scope (i.e. the expansion pack would be unbalanced), but the G36-E was also usable in vanilla BF2 **[if you bought the BF2:SF expansion pack](http://answers.yahoo.com/question/index?qid=20091011111139AAsqICe)**.&#160; Suddenly, lots of players were running around with an uber-gun that was not unlockable to all players.
 

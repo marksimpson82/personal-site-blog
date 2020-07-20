@@ -4,8 +4,8 @@ title: Video recording with MSI Afterburner
 date: 2012-07-15T21:16:08+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=687
-permalink: /?p=687
+guid: https://defragdev.com/blog/?p=687
+#permalink: /?p=687
 categories:
   - games
   - software

@@ -4,8 +4,8 @@ title: Crayon syntax highlighter
 date: 2014-08-23T22:20:08+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=794
-permalink: /?p=794
+guid: https://defragdev.com/blog/?p=794
+#permalink: /?p=794
 categories:
   - Uncategorized
 ---

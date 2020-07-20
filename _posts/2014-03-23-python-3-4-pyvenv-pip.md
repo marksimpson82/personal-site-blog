@@ -4,8 +4,8 @@ title: 'Python 3.4 and the three P&rsquo;s: pyvenv, pip &amp; pycharm'
 date: 2014-03-23T21:33:29+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=761
-permalink: /?p=761
+guid: https://defragdev.com/blog/?p=761
+#permalink: /?p=761
 categories:
   - python
 tags:
@@ -46,7 +46,7 @@ At this point, you can start installing stuff with pip!
 
 > **> pip install beautifulsoup4**
 
-[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb.png" width="681" height="346" border="0" />](http://defragdev.com/blog/images/2014/03/image.png)
+[<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb.png" width="681" height="346" border="0" />](https://defragdev.com/blog/images/2014/03/image.png)
 
 Not bad. Much simpler than in olden times.
 

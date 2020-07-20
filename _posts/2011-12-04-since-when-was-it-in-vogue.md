@@ -4,8 +4,8 @@ title: 'Since when was it in vogue&hellip;'
 date: 2011-12-04T02:20:07+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=646
-permalink: /?p=646
+guid: https://defragdev.com/blog/?p=646
+#permalink: /?p=646
 categories:
   - games
   - rants

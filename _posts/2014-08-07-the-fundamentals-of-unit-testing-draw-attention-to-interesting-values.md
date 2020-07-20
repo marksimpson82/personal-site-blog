@@ -4,8 +4,8 @@ title: 'The fundamentals of unit testing : draw attention to &lsquo;interesting&
 date: 2014-08-07T21:51:25+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=789
-permalink: /?p=789
+guid: https://defragdev.com/blog/?p=789
+#permalink: /?p=789
 categories:
   - fundamentals of unit testing
   - testing

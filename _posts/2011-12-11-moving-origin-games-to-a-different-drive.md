@@ -4,8 +4,8 @@ title: Moving Origin Games to a different drive
 date: 2011-12-11T14:13:41+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=653
-permalink: /?p=653
+guid: https://defragdev.com/blog/?p=653
+#permalink: /?p=653
 categories:
   - games
   - software

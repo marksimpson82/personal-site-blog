@@ -4,8 +4,8 @@ title: 'The fundamentals of unit testing: Spring The Trap'
 date: 2012-10-27T23:21:57+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=709
-permalink: /?p=709
+guid: https://defragdev.com/blog/?p=709
+#permalink: /?p=709
 categories:
   - fundamentals of unit testing
   - testing

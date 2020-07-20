@@ -4,8 +4,8 @@ title: Avoiding the file system
 date: 2009-11-26T20:21:31+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=438
-permalink: /?p=438
+guid: https://defragdev.com/blog/?p=438
+#permalink: /?p=438
 categories:
   - 'c#'
   - patterns

@@ -4,8 +4,8 @@ title: 'The fundamentals of unit testing : Use factory methods!'
 date: 2012-11-11T06:03:47+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=726
-permalink: /?p=726
+guid: https://defragdev.com/blog/?p=726
+#permalink: /?p=726
 categories:
   - fundamentals of unit testing
   - testing

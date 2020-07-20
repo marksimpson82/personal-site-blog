@@ -4,8 +4,8 @@ title: 'Code coverage: What it is and what it isn&#8217;t.'
 date: 2009-03-30T22:34:25+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=110
-permalink: /?p=110
+guid: https://defragdev.com/blog/?p=110
+#permalink: /?p=110
 categories:
   - testing
 ---

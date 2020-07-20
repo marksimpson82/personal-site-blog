@@ -4,8 +4,8 @@ title: 'Integer to binary string in c#'
 date: 2014-04-17T23:43:22+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=767
-permalink: /?p=767
+guid: https://defragdev.com/blog/?p=767
+#permalink: /?p=767
 categories:
   - 'c#'
   - python

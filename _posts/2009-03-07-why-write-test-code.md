@@ -4,8 +4,8 @@ title: Why write test code?
 date: 2009-03-07T14:10:41+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=22
-permalink: /?p=22
+guid: https://defragdev.com/blog/?p=22
+#permalink: /?p=22
 categories:
   - testing
 ---

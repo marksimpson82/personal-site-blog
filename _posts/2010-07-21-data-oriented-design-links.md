@@ -4,8 +4,8 @@ title: Data oriented design links
 date: 2010-07-21T18:22:11+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=570
-permalink: /?p=570
+guid: https://defragdev.com/blog/?p=570
+#permalink: /?p=570
 categories:
   - games
   - patterns

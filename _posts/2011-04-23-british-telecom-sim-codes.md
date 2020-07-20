@@ -4,8 +4,8 @@ title: 'British Telecom: SIM codes'
 date: 2011-04-23T17:07:20+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=619
-permalink: /?p=619
+guid: https://defragdev.com/blog/?p=619
+#permalink: /?p=619
 categories:
   - misc
   - rants

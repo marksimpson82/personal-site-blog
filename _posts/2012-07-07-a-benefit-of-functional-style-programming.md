@@ -4,8 +4,8 @@ title: 'Functional-style programming &ndash; Easy debugging!'
 date: 2012-07-07T21:34:15+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=675
-permalink: /?p=675
+guid: https://defragdev.com/blog/?p=675
+#permalink: /?p=675
 categories:
   - 'c#'
   - debugging

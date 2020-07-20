@@ -4,8 +4,8 @@ title: 'Stackoverflow is good&hellip; but'
 date: 2011-01-30T18:29:39+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=607
-permalink: /?p=607
+guid: https://defragdev.com/blog/?p=607
+#permalink: /?p=607
 categories:
   - rants
   - software

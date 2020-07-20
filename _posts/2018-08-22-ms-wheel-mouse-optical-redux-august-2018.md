@@ -4,8 +4,8 @@ title: MS Wheel Mouse Optical Redux (August 2018)
 date: 2018-08-22T16:46:54+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=815
-permalink: /?p=815
+guid: https://defragdev.com/blog/?p=815
+#permalink: /?p=815
 categories:
   - games
   - hardware

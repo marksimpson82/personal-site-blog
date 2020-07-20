@@ -4,8 +4,8 @@ title: Multiple Mocks?
 date: 2011-02-09T20:42:22+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=617
-permalink: /?p=617
+guid: https://defragdev.com/blog/?p=617
+#permalink: /?p=617
 categories:
   - 'c#'
   - patterns
@@ -20,7 +20,7 @@ He then goes on to provide an example where one action has two identifiable/obse
 
 **Figure 53b: Two Mocks (I’m so, so, sorry)**
 
-[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="http://defragdev.com/blog/images/2011/02/image_thumb.png" border="0" alt="image" width="244" height="244" />](http://defragdev.com/blog/images/2011/02/image.png)
+[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/02/image_thumb.png" border="0" alt="image" width="244" height="244" />](https://defragdev.com/blog/images/2011/02/image.png)
 
 <!--more-->Firstly, it was a rule of thumb (or at least I read it that way).  I don’t see guidelines or so called “best practices” as edicts.  You’re allowed to exercise discretionary thought and bend the rule when it doesn’t quite fit your situation.
 

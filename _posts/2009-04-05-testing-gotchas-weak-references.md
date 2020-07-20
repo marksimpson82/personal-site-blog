@@ -4,8 +4,8 @@ title: 'Testing gotchas &#8211; c# Weak References'
 date: 2009-04-05T02:55:49+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=129
-permalink: /?p=129
+guid: https://defragdev.com/blog/?p=129
+#permalink: /?p=129
 categories:
   - 'c#'
   - gotchas

@@ -4,8 +4,8 @@ title: Data-driven testing tricks
 date: 2010-05-08T21:12:08+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=534
-permalink: /?p=534
+guid: https://defragdev.com/blog/?p=534
+#permalink: /?p=534
 categories:
   - 'c#'
   - patterns

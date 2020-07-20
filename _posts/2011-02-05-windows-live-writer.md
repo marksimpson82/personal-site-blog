@@ -4,8 +4,8 @@ title: Windows Live Writer
 date: 2011-02-05T19:50:50+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=614
-permalink: /?p=614
+guid: https://defragdev.com/blog/?p=614
+#permalink: /?p=614
 categories:
   - misc
   - tips

@@ -4,8 +4,8 @@ title: 'The fundamentals of unit testing : Tests shouldn&rsquo;t ape the product
 date: 2012-11-12T02:09:50+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=731
-permalink: /?p=731
+guid: https://defragdev.com/blog/?p=731
+#permalink: /?p=731
 categories:
   - fundamentals of unit testing
   - testing

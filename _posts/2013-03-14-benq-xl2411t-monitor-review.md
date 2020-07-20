@@ -4,8 +4,8 @@ title: Benq XL2411T Monitor Review
 date: 2013-03-14T01:37:29+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=744
-permalink: /?p=744
+guid: https://defragdev.com/blog/?p=744
+#permalink: /?p=744
 categories:
   - games
   - hardware

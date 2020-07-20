@@ -4,8 +4,8 @@ title: 'Gigabyte GeForce GTX 560 Ti OC&ndash;Avoid'
 date: 2011-12-01T02:34:45+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=642
-permalink: /?p=642
+guid: https://defragdev.com/blog/?p=642
+#permalink: /?p=642
 categories:
   - misc
   - rants
@@ -26,7 +26,7 @@ I bought the Gigabyte card purely for the quiet fans, but I’ve found that it c
   * (Silently) Crash to the desktop
   * Crash with a BF3 stopped working error
   * Crash with a Windows 7 driver failure (like this) 
-    [<img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="bf3_crash" border="0" alt="bf3_crash" src="http://defragdev.com/blog/images/2011/12/bf3_crash_thumb.png" width="244" height="108" />](http://defragdev.com/blog/images/2011/12/bf3_crash.png)</li> </ul> 
+    [<img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="bf3_crash" border="0" alt="bf3_crash" src="https://defragdev.com/blog/images/2011/12/bf3_crash_thumb.png" width="244" height="108" />](https://defragdev.com/blog/images/2011/12/bf3_crash.png)</li> </ul> 
     
     I initially raged against BF3 and called DICE all of the names under the sun as BF games have a history of being horrendously buggy on release (I still crash on loading up for the first time quite a lot so…), but this time around the amount of ranting on forums with BF3 _and_ other DX11 games points to faulty hardware.
     
@@ -52,7 +52,7 @@ I bought the Gigabyte card purely for the quiet fans, but I’ve found that it c
     
     I also underclocked my memory Clock to 1975 just to be sure.&#160; Mine looks like this now:
     
-    [<img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://defragdev.com/blog/images/2011/12/image_thumb.png" width="205" height="244" />](http://defragdev.com/blog/images/2011/12/image.png)
+    [<img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="https://defragdev.com/blog/images/2011/12/image_thumb.png" width="205" height="244" />](https://defragdev.com/blog/images/2011/12/image.png)
     
     The difference between these reference(ish) clocks and the factory OC clocks amounts to something like a 2-3% performance difference.&#160; BF3 is heavily GPU bound, so instead of getting 40 fps, you’ll probably get ~38 to 39 fps.&#160; Not a big deal.&#160; It runs beautiful on high settings @ 1920 x 1200 for me using these settings, and I’m a FPS nutter.
     

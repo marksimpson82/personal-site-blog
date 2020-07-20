@@ -4,8 +4,8 @@ title: 'Modding: Avoid making the same mistakes that I did #2'
 date: 2009-03-21T21:01:48+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=61
-permalink: /?p=61
+guid: https://defragdev.com/blog/?p=61
+#permalink: /?p=61
 categories:
   - modding
 ---

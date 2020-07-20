@@ -4,8 +4,8 @@ title: 'Project: MyWorld announced'
 date: 2010-08-06T01:34:33+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=587
-permalink: /?p=587
+guid: https://defragdev.com/blog/?p=587
+#permalink: /?p=587
 categories:
   - games
   - MyWorld

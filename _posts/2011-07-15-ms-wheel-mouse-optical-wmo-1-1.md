@@ -4,8 +4,8 @@ title: MS Wheel Mouse Optical (WMO 1.1)
 date: 2011-07-15T04:54:59+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=631
-permalink: /?p=631
+guid: https://defragdev.com/blog/?p=631
+#permalink: /?p=631
 categories:
   - games
   - misc
@@ -37,13 +37,13 @@ I’ve been gleefully using MX5xx series mice for the best part of a decade.  T
 
 **An MX518, yesterday.**
 
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="http://defragdev.com/blog/images/2011/07/image_thumb.png" alt="image" width="224" height="224" border="0" />](http://defragdev.com/blog/images/2011/07/image.png)
+[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb.png" alt="image" width="224" height="224" border="0" />](https://defragdev.com/blog/images/2011/07/image.png)
 
 However, I recently stumbled across the ‘feature’ the MX518 has that’s commonly referred to as “angle snapping”, “prediction” or “correction”.  What is angle snapping?  Well, at the hardware or driver level, if your movements stay under some arbitrary threshold, the mouse input is subtly altered to keep your ‘lines’ straight.
 
 Here’s the effect in action.  A common test is to draw some horizontal and vertical lines in MS Paint.  Notice that my MX518-created lines are eerily straight for large sections.  If you’re pixel aiming at someone’s head with a rifle, this is not helpful.
 
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="mouse_lines" src="http://defragdev.com/blog/images/2011/07/mouse_lines_thumb.png" alt="mouse_lines" width="244" height="244" border="0" />](http://defragdev.com/blog/images/2011/07/mouse_lines.png)
+[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="mouse_lines" src="https://defragdev.com/blog/images/2011/07/mouse_lines_thumb.png" alt="mouse_lines" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/mouse_lines.png)
 
 **Note:** This is a feature that is found in several mice, including gaming mice.  In some cases (such as the Logitech G series and the Razer Death Adder), you can disable the “feature” using the driver.  As that bloke off Art Attack used to say, “Try it yourself.”
 
@@ -53,7 +53,7 @@ The MX518 I use at work (I have two) recently had a wheely bad fault and, having
 
 Because that will make me a Quake Live Pro, of course… (oh and sometimes it’s fun to change things)
 
-<img class="wlEmoticon wlEmoticon-smile" style="border-style: none;" src="http://defragdev.com/blog/images/2011/07/wlEmoticon-smile.png" alt="Smile" /> 
+<img class="wlEmoticon wlEmoticon-smile" style="border-style: none;" src="https://defragdev.com/blog/images/2011/07/wlEmoticon-smile.png" alt="Smile" /> 
 
 ## Things to be aware of
 
@@ -135,7 +135,7 @@ As far as I can tell, there’s no problem with stock or versions. If you get on
 
 **The WMO 1.1**
 
-[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="http://defragdev.com/blog/images/2011/07/image_thumb1.png" alt="image" width="244" height="244" border="0" />](http://defragdev.com/blog/images/2011/07/image1.png)
+[<img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb1.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image1.png)
 
 My first port of call was to uninstall my old logitech setpoint mouse drivers.  I then plugged in the new mouse and cancelled the intellipoint driver installation process.  There’s no need to install drivers for this mouse, so it’s one less thing to worry about.
 
@@ -155,7 +155,7 @@ I’m using a [Influx Curva 1200 Right-Handed Wave Desk](http://www.ukofficedire
 
 I’ve got a 24” + 20” monitor dual screen setup, and there’s still room for a 45cm mouse mat and a few other bits and pieces.  At £150 it’s not a budget buy, but given how much I use my PC, I think it’s well worth it.
 
-[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="http://defragdev.com/blog/images/2011/07/image_thumb2.png" alt="image" width="244" height="244" border="0" />](http://defragdev.com/blog/images/2011/07/image2.png) + [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="http://defragdev.com/blog/images/2011/07/image_thumb3.png" alt="image" width="244" height="244" border="0" />](http://defragdev.com/blog/images/2011/07/image3.png)
+[<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb2.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image2.png) + [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/07/image_thumb3.png" alt="image" width="244" height="244" border="0" />](https://defragdev.com/blog/images/2011/07/image3.png)
 
 Regarding the size of the mousepad: I used to think anything over 30 cm was overkill, but having a 45 cm pad makes a large difference.  It covers such a large part of my desk that I no longer have to worry about positioning the pad – it’s _everywhere_, so I can get comfy.  A decade ago, my TFC clanmates used to constantly mock me for [my OCD style mouse mat positioning](http://defrag.urbanup.com/87179).  The words still ring in my ears.  I cried sometimes, but no longer.
 

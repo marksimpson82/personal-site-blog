@@ -4,8 +4,8 @@ title: 'A R#/Visual Studio style keymap for PyCharm'
 date: 2012-11-22T23:31:07+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=734
-permalink: /?p=734
+guid: https://defragdev.com/blog/?p=734
+#permalink: /?p=734
 categories:
   - python
   - software
@@ -19,4 +19,4 @@ PyCharm is a lovely little IDE for Python by the splendid JetBrains, but the bui
 
 There’s a few things missing and I’ve unbound some of the PyCharm functionality as it clashed with the R# style keymap, so your mileage may vary. Give it a try, though!
 
-You can download it here: [http://defragdev.com/files/RStyle.xml](https://defragdev.com/files/RStyle.xml)
+You can download it here: [https://defragdev.com/files/RStyle.xml](https://defragdev.com/files/RStyle.xml)

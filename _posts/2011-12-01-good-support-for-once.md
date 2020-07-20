@@ -4,8 +4,8 @@ title: Good support (for once)
 date: 2011-12-01T02:01:00+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=638
-permalink: /?p=638
+guid: https://defragdev.com/blog/?p=638
+#permalink: /?p=638
 categories:
   - misc
   - rants

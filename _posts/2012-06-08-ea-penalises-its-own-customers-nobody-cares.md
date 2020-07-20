@@ -4,13 +4,13 @@ title: EA penalises its existing customers; nobody cares
 date: 2012-06-08T00:38:08+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=662
-permalink: /?p=662
+guid: https://defragdev.com/blog/?p=662
+#permalink: /?p=662
 categories:
   - games
   - rants
 ---
-To follow up from my last babblings on the [scourge of expansion packs](http://defragdev.com/blog/?p=649) and unfair advantages, EA/DICE has really put the cat amongst the pigeons with the release of [BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
+To follow up from my last babblings on the [scourge of expansion packs](https://defragdev.com/blog/?p=649) and unfair advantages, EA/DICE has really put the cat amongst the pigeons with the release of [BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
 
 I bought BF3 premium because I view £40 for 5 expansion packs as a reasonable price (even if I already own Back to Karkand and don’t receive a discount or extra copy, ala Steam).&#160; However, read about the other features and you’ll notice the following blurb,
 

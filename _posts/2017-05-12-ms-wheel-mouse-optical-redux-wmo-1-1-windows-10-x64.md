@@ -4,8 +4,8 @@ title: 'MS Wheel Mouse Optical Redux (WMO 1.1 &amp; Windows 10 x64)'
 date: 2017-05-12T01:14:20+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=799
-permalink: /?p=799
+guid: https://defragdev.com/blog/?p=799
+#permalink: /?p=799
 categories:
   - games
   - hardware

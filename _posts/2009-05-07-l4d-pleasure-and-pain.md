@@ -4,8 +4,8 @@ title: 'L4D &#8211; Pleasure and Pain'
 date: 2009-05-07T01:03:16+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=251
-permalink: /?p=251
+guid: https://defragdev.com/blog/?p=251
+#permalink: /?p=251
 categories:
   - games
 ---

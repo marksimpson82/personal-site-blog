@@ -4,8 +4,8 @@ title: No longer a software engineer in test
 date: 2009-10-31T20:54:25+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=433
-permalink: /?p=433
+guid: https://defragdev.com/blog/?p=433
+#permalink: /?p=433
 categories:
   - Uncategorized
 ---

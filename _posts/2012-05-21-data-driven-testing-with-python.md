@@ -4,8 +4,8 @@ title: Data-Driven Testing with Python
 date: 2012-05-21T22:29:05+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=660
-permalink: /?p=660
+guid: https://defragdev.com/blog/?p=660
+#permalink: /?p=660
 categories:
   - python
   - software

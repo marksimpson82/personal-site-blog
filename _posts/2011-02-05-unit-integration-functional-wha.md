@@ -4,8 +4,8 @@ title: Unit? Integration? Functional? Wha?
 date: 2011-02-05T19:39:14+00:00
 author: Mark Simpson
 layout: single
-guid: http://defragdev.com/blog/?p=611
-permalink: /?p=611
+guid: https://defragdev.com/blog/?p=611
+#permalink: /?p=611
 categories:
   - software
   - testing
