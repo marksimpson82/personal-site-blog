@@ -1,6 +1,6 @@
 ---
 id: 642
-title: 'Gigabyte GeForce GTX 560 Ti OC&ndash;Avoid'
+title: Gigabyte GeForce GTX 560 Ti OC - Avoid
 date: 2011-12-01T02:34:45+00:00
 author: Mark Simpson
 layout: single

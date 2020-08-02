@@ -1,6 +1,6 @@
 ---
 id: 767
-title: 'Integer to binary string in c#'
+title: Integer to binary string in c#
 date: 2014-04-17T23:43:22+00:00
 author: Mark Simpson
 layout: single

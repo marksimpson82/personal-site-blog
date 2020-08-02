@@ -1,6 +1,6 @@
 ---
 id: 129
-title: 'Testing gotchas &#8211; c# Weak References'
+title: Testing gotchas - c# Weak References
 date: 2009-04-05T02:55:49+00:00
 author: Mark Simpson
 layout: single

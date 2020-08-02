@@ -1,6 +1,6 @@
 ---
 id: 654
-title: 'The Power of Boy Scouting &amp; Git Stash'
+title: The Power of Boy Scouting & Git Stash
 date: 2012-04-16T02:04:00+00:00
 author: Mark Simpson
 layout: single

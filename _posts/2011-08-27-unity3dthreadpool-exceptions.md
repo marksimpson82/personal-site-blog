@@ -1,6 +1,6 @@
 ---
 id: 632
-title: 'Unity3d&ndash;Threadpool Exceptions'
+title: Unity3d - Threadpool Exceptions
 date: 2011-08-27T15:11:48+00:00
 author: Mark Simpson
 layout: single

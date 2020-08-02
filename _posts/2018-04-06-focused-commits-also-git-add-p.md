@@ -1,6 +1,6 @@
 ---
 id: 810
-title: 'Focused commits (also: git add -p)'
+title: "Focused commits (also: git add -p)"
 date: 2018-04-06T00:10:28+00:00
 author: Mark Simpson
 layout: single
@@ -36,7 +36,7 @@ git rebase master</pre>
 
 (Small tip: if you are pushing your own personal branch after rebasing, you can be sure not to nuke anything important by employing [git push &#8211;force-with-lease](https://developer.atlassian.com/blog/2015/04/force-with-lease/) rather than git push &#8211;force).
 
-Then when you&#8217;re ready to merge back to master:``
+Then when you're ready to merge back to master:``
 
 <pre class="">git checkout master
 git merge mybranch --squash

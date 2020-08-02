@@ -1,6 +1,6 @@
 ---
 id: 704
-title: 'The fundamentals of unit testing : Correct'
+title: "The fundamentals of unit testing: Correct"
 date: 2012-10-27T19:50:56+00:00
 author: Mark Simpson
 layout: single

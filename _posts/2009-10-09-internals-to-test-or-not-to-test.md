@@ -1,6 +1,6 @@
 ---
 id: 407
-title: 'Internals: To test, or not to test?'
+title: "Internals: To test, or not to test?"
 date: 2009-10-09T01:01:06+00:00
 author: Mark Simpson
 layout: single

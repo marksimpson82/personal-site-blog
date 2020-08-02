@@ -1,6 +1,6 @@
 ---
 id: 45
-title: 'Modding: Avoid making the same mistakes that I did #1'
+title: "Modding: Avoid making the same mistakes that I did #1"
 date: 2009-03-21T20:28:51+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 709
-title: 'The fundamentals of unit testing: Spring The Trap'
+title: "The fundamentals of unit testing: Spring The Trap"
 date: 2012-10-27T23:21:57+00:00
 author: Mark Simpson
 layout: single

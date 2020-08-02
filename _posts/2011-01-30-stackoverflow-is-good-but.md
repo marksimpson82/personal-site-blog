@@ -1,6 +1,6 @@
 ---
 id: 607
-title: 'Stackoverflow is good&hellip; but'
+title: Stackoverflow is good... but
 date: 2011-01-30T18:29:39+00:00
 author: Mark Simpson
 layout: single

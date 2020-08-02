@@ -1,6 +1,6 @@
 ---
 id: 726
-title: 'The fundamentals of unit testing : Use factory methods!'
+title: "The fundamentals of unit testing: Use factory methods!"
 date: 2012-11-11T06:03:47+00:00
 author: Mark Simpson
 layout: single

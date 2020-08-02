@@ -1,6 +1,6 @@
 ---
 id: 587
-title: 'Project: MyWorld announced'
+title: "Project: MyWorld announced"
 date: 2010-08-06T01:34:33+00:00
 author: Mark Simpson
 layout: single

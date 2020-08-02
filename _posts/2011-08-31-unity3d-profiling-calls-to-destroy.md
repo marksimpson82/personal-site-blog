@@ -1,6 +1,6 @@
 ---
 id: 633
-title: 'Unity3d &#8211; Profiling calls to Destroy'
+title: Unity3d - Profiling calls to Destroy
 date: 2011-08-31T16:39:01+00:00
 author: Mark Simpson
 layout: single

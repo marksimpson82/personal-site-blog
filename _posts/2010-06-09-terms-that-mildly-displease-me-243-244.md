@@ -1,6 +1,6 @@
 ---
 id: 566
-title: 'Terms that mildly displease me #243 &#038; #244'
+title: Terms that mildly displease me #243 & #244
 date: 2010-06-09T23:33:12+00:00
 author: Mark Simpson
 layout: single

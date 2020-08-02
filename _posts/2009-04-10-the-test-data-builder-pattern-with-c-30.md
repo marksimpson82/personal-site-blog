@@ -1,6 +1,6 @@
 ---
 id: 147
-title: 'The Test Data Builder pattern with C# 3.0'
+title: The Test Data Builder pattern with C# 3.0
 date: 2009-04-10T00:53:14+00:00
 author: Mark Simpson
 layout: single

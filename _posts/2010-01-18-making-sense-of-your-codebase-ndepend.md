@@ -1,6 +1,6 @@
 ---
 id: 482
-title: 'Making sense of your codebase : NDepend'
+title: "Making sense of your codebase: NDepend"
 date: 2010-01-18T01:53:04+00:00
 author: Mark Simpson
 layout: single

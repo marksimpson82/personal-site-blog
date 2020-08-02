@@ -1,6 +1,6 @@
 ---
 id: 313
-title: 'What&#8217;s in a name?'
+title: What's in a name?
 date: 2009-05-15T01:09:49+00:00
 author: Mark Simpson
 layout: single

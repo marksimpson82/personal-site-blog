@@ -1,6 +1,6 @@
 ---
 id: 799
-title: 'MS Wheel Mouse Optical Redux (WMO 1.1 &amp; Windows 10 x64)'
+title: MS Wheel Mouse Optical Redux (WMO 1.1 & Windows 10 x64)
 date: 2017-05-12T01:14:20+00:00
 author: Mark Simpson
 layout: single

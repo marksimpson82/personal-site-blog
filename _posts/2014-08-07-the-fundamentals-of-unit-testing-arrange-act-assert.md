@@ -1,6 +1,6 @@
 ---
 id: 783
-title: 'The fundamentals of unit testing : Arrange, Act, Assert'
+title: "The fundamentals of unit testing: Arrange, Act, Assert"
 date: 2014-08-07T02:32:11+00:00
 author: Mark Simpson
 layout: single

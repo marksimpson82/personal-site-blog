@@ -1,6 +1,6 @@
 ---
 id: 636
-title: 'Valve&rsquo;s response to being hacked'
+title: Valve's response to being hacked
 date: 2011-11-11T22:24:33+00:00
 author: Mark Simpson
 layout: single

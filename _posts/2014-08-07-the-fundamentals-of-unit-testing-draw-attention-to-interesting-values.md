@@ -1,6 +1,6 @@
 ---
 id: 789
-title: 'The fundamentals of unit testing : draw attention to &lsquo;interesting&rsquo; values'
+title: "The fundamentals of unit testing: draw attention to 'interesting' values"
 date: 2014-08-07T21:51:25+00:00
 author: Mark Simpson
 layout: single

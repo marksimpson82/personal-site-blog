@@ -1,6 +1,6 @@
 ---
 id: 694
-title: 'The fundamentals of unit testing : It&rsquo;s a skill'
+title: "The fundamentals of unit testing: It's a skill"
 date: 2012-10-24T02:00:04+00:00
 author: Mark Simpson
 layout: single

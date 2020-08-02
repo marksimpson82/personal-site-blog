@@ -1,6 +1,6 @@
 ---
 id: 675
-title: 'Functional-style programming &ndash; Easy debugging!'
+title: Functional-style programming - Easy debugging!
 date: 2012-07-07T21:34:15+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 718
-title: 'The fundamentals of unit testing : Repeatable'
+title: "The fundamentals of unit testing: Repeatable"
 date: 2012-11-04T06:54:25+00:00
 author: Mark Simpson
 layout: single

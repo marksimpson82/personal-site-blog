@@ -1,6 +1,6 @@
 ---
 id: 673
-title: 'BF3 &ndash; Pump Shotgun tips (870MCS &amp; SPAS)'
+title: BF3 - Pump Shotgun tips (870MCS & SPAS)
 date: 2012-07-07T20:58:49+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 646
-title: 'Since when was it in vogue&hellip;'
+title: Since when was it in vogue...
 date: 2011-12-04T02:20:07+00:00
 author: Mark Simpson
 layout: single

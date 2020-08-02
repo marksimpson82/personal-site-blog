@@ -1,6 +1,6 @@
 ---
 id: 731
-title: 'The fundamentals of unit testing : Tests shouldn&rsquo;t ape the production code'
+title: "The fundamentals of unit testing: Tests shouldn't ape the production code"
 date: 2012-11-12T02:09:50+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 698
-title: 'The fundamentals of unit testing : Narrow &amp; Focused'
+title: "The fundamentals of unit testing: Narrow & Focused"
 date: 2012-10-25T23:13:58+00:00
 author: Mark Simpson
 layout: single

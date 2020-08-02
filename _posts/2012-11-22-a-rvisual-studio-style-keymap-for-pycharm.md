@@ -1,6 +1,6 @@
 ---
 id: 734
-title: 'A R#/Visual Studio style keymap for PyCharm'
+title: A R#/Visual Studio style keymap for PyCharm
 date: 2012-11-22T23:31:07+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 761
-title: 'Python 3.4 and the three P&rsquo;s: pyvenv, pip &amp; pycharm'
+title: "Python 3.4 and the three P's: pyvenv, pip & pycharm"
 date: 2014-03-23T21:33:29+00:00
 author: Mark Simpson
 layout: single

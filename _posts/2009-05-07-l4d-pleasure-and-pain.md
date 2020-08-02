@@ -1,6 +1,6 @@
 ---
 id: 251
-title: 'L4D &#8211; Pleasure and Pain'
+title: L4D - Pleasure and Pain
 date: 2009-05-07T01:03:16+00:00
 author: Mark Simpson
 layout: single

@@ -1,6 +1,6 @@
 ---
 id: 848
-title: 'Goodbye Wordpress, Hello Jekyll and Github Pages'
+title: Goodbye Wordpress, Hello Jekyll and Github Pages
 date: 2020-08-02T00:00:00+00:00
 author: Mark Simpson
 layout: single
@@ -73,7 +73,7 @@ E.g. an old URL might look something like: `https://defragdev.com/blog/?p=50`
 ```
 ---
 id: 847
-title: 'Nvidia + G-SYNC &#8211; Black screen when alt-tabbing'
+title: "Nvidia + G-SYNC &#8211; Black screen when alt-tabbing"
 date: 2020-03-29T21:14:28+00:00
 author: Mark Simpson
 layout: single

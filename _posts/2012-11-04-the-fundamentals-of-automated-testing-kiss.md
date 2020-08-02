@@ -1,6 +1,6 @@
 ---
 id: 723
-title: 'The fundamentals of unit testing : KISS'
+title: "The fundamentals of unit testing: KISS"
 date: 2012-11-04T18:32:49+00:00
 author: Mark Simpson
 layout: single

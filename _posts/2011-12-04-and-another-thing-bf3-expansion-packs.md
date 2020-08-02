@@ -1,6 +1,6 @@
 ---
 id: 649
-title: 'And another thing&hellip; BF3 Expansion packs'
+title: And another thing... BF3 Expansion packs
 date: 2011-12-04T16:17:37+00:00
 author: Mark Simpson
 layout: single
