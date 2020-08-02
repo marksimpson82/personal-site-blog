@@ -13,7 +13,10 @@ tags:
 ---
 "[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
 
-For this post, I’ll use the following example test scenario: When a stack is empty, pushing an item increments the count to one (this example was previously discussed in [Narrow & Focused](?p=698), if you want more context)
+For this post, I’ll use the following example test scenario: When a stack is empty, pushing an item increments the 
+count to one (this example was previously discussed in 
+[Narrow & focussed]({% link _posts/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md %}), if you want 
+more context)
 
 ```c#
 [Test]  
@@ -60,7 +63,10 @@ Put short, it’s a rigid template that serves as an excellent code smell detect
 
 E.g., once you’ve entered the Assert phase, you should only be verifying results, not performing actions on the class under test. If this occurs, something is likely iffy.
 
-If we return to the [Narrow & Focused](?p=698) post, you’ll see that the examples of bad tests cannot follow the AAA scaffolding, as they quickly repeat phases, mixing arranges, acts and asserts all over the place.
+If we return to the 
+[Narrow & focussed]({% link _posts/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md %}) post, you’ll 
+see that the examples of bad tests cannot follow the AAA scaffolding, as they quickly repeat phases, mixing arranges, 
+acts and asserts all over the place.
 
 Take this example of a bad test that I’ve lifted from that post (I’ve shortened a bit), for example:
 
@@ -93,7 +99,7 @@ public void BadPushPopTest()
  // Act  
  stack.Push(1); 
 
- // Assert  
+ // Assert
  Assert.That(stack.Count, Is.EqualTo(1));
 
  int popped = stack.Pop(); // Warning: action in the Assert phase**!  

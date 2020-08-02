@@ -18,7 +18,9 @@ tags:
   - tips
   - WMO
 ---
-Back in 2011, I wrote a [fairly gushing post](?p=631) about the Microsoft WMO 1.1/1.1a. It’s a great mouse. It really is.
+Back in 2011, I wrote a 
+[fairly gushing post]({% link _posts/2011-07-15-ms-wheel-mouse-optical-wmo-1-1.md %}) about the Microsoft WMO 1.1/1.1a. 
+It’s a great mouse. It really is.
 
 <img style="margin: 10px 0px;" src="https://defragdev.com/blog/images/2011/07/image1.png" width="240" height="240" /> 
 

@@ -33,7 +33,11 @@ When folk mindlessly click the “rebuild” button, we’ve lost. At this junct
 
 ## Causes
 
-Some of the causes of an unreliable test can be found on the previously-blogged [Atomic](?p=714) post (basically: global/static state and environment dependencies). However, there are some other issues that can cause tests to fail.
+Some of the causes of an unreliable test can be found on the previously-blogged 
+[Atomic]({% link _posts/2012-11-02-the-fundamentals-of-automated-testing-atomic.md %}) post (basically: global/static 
+state and environment dependencies). 
+
+However, there are some other issues that can cause tests to fail.
 
 ### Threading
 

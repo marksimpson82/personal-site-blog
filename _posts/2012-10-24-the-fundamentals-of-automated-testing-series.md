@@ -19,25 +19,25 @@ Here’s the list of things I’m going to cover (I’ll update the links as I a
 
 Overview:
 
-  * [It’s a skill](?p=694) 
+  * [It’s a skill]({% link _posts/2012-10-24-the-fundamentals-of-automated-testing-its-a-skill.md %}) 
 
 General principles to strive for:
 
-  * [Narrow & focussed](?p=698) 
-  * [Correct](?p=704) 
-  * [Atomic](?p=714) 
-  * [Repeatable](?p=718) 
+  * [Narrow & focussed]({% link _posts/2012-10-25-the-fundamentals-of-automated-testing-narrow-focused.md %}) 
+  * [Correct]({% link _posts/2012-10-27-the-fundamentals-of-automated-testing-correct.md %}) 
+  * [Atomic]({% link _posts/2012-11-02-the-fundamentals-of-automated-testing-atomic.md %}) 
+  * [Repeatable]({% link _posts/2012-11-04-the-fundamentals-of-automated-testing-repeatable.md %}) 
   * Isolated 
   * Thorough 
 
 General testing tips:
 
-  * [Arrange, Act, Assert](?p=783) 
-  * [Spring the trap](?p=709) 
+  * [Arrange, Act, Assert]({% link _posts/2014-08-07-the-fundamentals-of-unit-testing-arrange-act-assert.md %}) 
+  * [Spring the trap]({% link _posts/2012-10-27-the-fundamentals-of-automated-testing-spring-the-trap.md %}) 
   * Descriptive naming schemes 
-  * [Draw attention to ‘interesting’ values](?p=789)
-  * [Factory methods](?p=726) 
+  * [Draw attention to ‘interesting’ values]({% link _posts/2014-08-07-the-fundamentals-of-unit-testing-draw-attention-to-interesting-values.md %})
+  * [Factory methods]({% link _posts/2012-11-11-the-fundamentals-of-automated-testing-use-factories.md %}) 
   * Setup structure 
-  * [Tests shouldn’t ape the production code](?p=731) 
-  * [KISS](?p=723) 
+  * [Tests shouldn’t ape the production code]({% link _posts/2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code.md %}) 
+  * [KISS]({% link _posts/2012-11-04-the-fundamentals-of-automated-testing-kiss.md %}) 
   * Data-Driven testing (same logic, different inputs)

@@ -118,7 +118,11 @@ Add it to a testing helpers namespace and write a few tests for it. You can also
 
 ## Be as Declarative as Possible
 
-Leading on from this, I also advocate being as declarative as possible. Basically, in test code, we should endeavour to say _what_ the result should be, not _how_ to calculate it. Do your best to stick to this rule of thumb and it’ll save your life a thousand times over. I’ll talk about this more when I cover “[Don’t ape production code in tests](?p=731)” in a future post.
+Leading on from this, I also advocate being as declarative as possible. Basically, in test code, we should endeavour to 
+say _what_ the result should be, not _how_ to calculate it. Do your best to stick to this rule of thumb and it’ll save 
+your life a thousand times over. I’ll talk about this more when I cover 
+"[Don’t ape production code in tests]({% link _posts/2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code.md %})" 
+in a future post.
 
 ## Test Code is Simple Code
 

@@ -12,7 +12,8 @@ tags:
   - testing
   - tips
 ---
-Several eons ago, [I wrote a blog post](https://defragdev.com/blog/?p=660) about using the python ddt package. My only criticism was that you had to manually pack/unpack the test case arguments. 
+Several eons ago, [I wrote a blog post]({% link _posts/2012-05-21-data-driven-testing-with-python.md %}) about using 
+the python ddt package. My only criticism was that you had to manually pack/unpack the test case arguments.
 
 Happily, the developers of ddt were nice enough to add an @unpack decorator! You can now provide lists/tuples/dictionaries and, via the magic of @unpack, the list will be split into method arguments.
 
