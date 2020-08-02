@@ -48,7 +48,7 @@ Each Google Form has an associated Google Sheets results sheet. It's simple to e
 
 ### Step 3: Create a more queryable data format
 
-The original results .csv is a flat spreadsheet with 90+ uniquely-named columns like, "<span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;I enjoy playing against Ashe&quot;}">I enjoy playing against Ashe</span>", and a rating between 1.0 & 5.0. This is pretty horrible for querying results, so I transformed the data into a more database-esque format: a single general responses table with a primary key, plus a hero responses table with a foreign key, hero name, response type ["playing\_as", "playing\_against", "balance" and "value"].
+The original results .csv is a flat spreadsheet with 90+ uniquely-named columns like, "<span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;I enjoy playing against Ashe&quot;}">I enjoy playing against Ashe</span>", and a rating between 1.0 & 5.0. This is pretty horrible for querying results, so I transformed the data into a more database-esque format: a single general responses table with a primary key, plus a hero responses table with a foreign key, hero name, response type ["playing_as", "playing_against", "balance" and "value"].
 
 This is the sort of quick hackery that is a [joy to do](https://github.com/marksimpson82/overwatch_survey/blob/master/overwatch_survey/split_into_tables.py) in Python.
 

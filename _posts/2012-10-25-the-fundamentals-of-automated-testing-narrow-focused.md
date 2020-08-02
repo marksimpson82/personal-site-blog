@@ -136,7 +136,7 @@ Now let’s translate the sentence into code by writing a test for this single u
 
 ```c#
 [Test]  
-public void pushing\_an\_item\_onto\_an\_empty\_stack\_increments\_count()  
+public void pushing_an_item_onto_an_empty_stack_increments_count()  
 {  
  // Arrange  
  var stack = new Stack<bool>();  

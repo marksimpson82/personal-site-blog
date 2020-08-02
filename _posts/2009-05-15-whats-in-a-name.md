@@ -81,17 +81,17 @@ You need at least three pieces of information to name a test.
 2. The arguments/data/circumstance involved
 3. The expected outcome. What is meant to happen? Be as explicit as you can.
 
-That's it. That's all you need. I prefer to write mine in the format 1\_2\_3, but I'm sure everyone has their own personal style. As long as it's readable and consistent, I don't care.
+That's it. That's all you need. I prefer to write mine in the format 1_2_3, but I'm sure everyone has their own personal style. As long as it's readable and consistent, I don't care.
 
 ### Compare and contrast
 
 Here's a few examples of some good test names for a bounding box class.
 
-* AddPoint\_ValidPointOutsideExistingBounds\_IncreasesBoundsToContainPoint()
-* AddPoint\_ValidPointInsideExistingBounds\_DoesNothing()
-* AddPoint\_ValidPointOnEdgeOfBounds\_DoesNothing()
-* AddPoint\_InvalidPointContainingNaN\_DoesNothing()
-* AddPoint\_InvalidPointNull\_ThrowsException()
+* AddPoint_ValidPointOutsideExistingBounds_IncreasesBoundsToContainPoint()
+* AddPoint_ValidPointInsideExistingBounds_DoesNothing()
+* AddPoint_ValidPointOnEdgeOfBounds_DoesNothing()
+* AddPoint_InvalidPointContainingNaN_DoesNothing()
+* AddPoint_InvalidPointNull_ThrowsException()
 
 Now compare those to equivalent, but badly named tests:
 
@@ -113,7 +113,7 @@ Just think about the poor sod who has to maintain your code in a couple of years
 
 ### Other Advantages
 
-If I have some good ideas about how to test something, or if I'm writing my tests before the production code, I will often use the 1\_2\_3 naming system to write out scores of empty test bodies. You may be surprised to see how effective this is.
+If I have some good ideas about how to test something, or if I'm writing my tests before the production code, I will often use the 1_2_3 naming system to write out scores of empty test bodies. You may be surprised to see how effective this is.
 
 You can plough through a group of methods in no time at all, thinking of all of the horrible things that could go wrong and writing them down. In no time at all, you can have a comprehensive test suite in waiting. The names are there, the intent is clear and you can proceed.
 
