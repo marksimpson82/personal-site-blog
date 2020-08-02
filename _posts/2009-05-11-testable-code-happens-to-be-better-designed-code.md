@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=274
 #permalink: /?p=274
-categories:
+tags:
   - patterns
   - testing
 ---

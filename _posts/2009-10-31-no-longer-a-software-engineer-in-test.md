@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=433
 #permalink: /?p=433
-categories:
+tags:
   - Uncategorized
 ---
 .. I&#8217;ve swapped jobs at Realtime Worlds; I&#8217;m now a plain ol&#8217; software engineer.  As a result, there&#8217;ll be no more test engineering for me.

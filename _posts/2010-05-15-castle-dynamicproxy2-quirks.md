@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=552
 #permalink: /?p=552
-categories:
+tags:
   - 'c#'
   - gotchas
   - patterns

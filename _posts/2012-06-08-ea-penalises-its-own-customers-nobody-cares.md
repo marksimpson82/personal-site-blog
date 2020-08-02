@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=662
 #permalink: /?p=662
-categories:
+tags:
   - games
   - rants
 ---

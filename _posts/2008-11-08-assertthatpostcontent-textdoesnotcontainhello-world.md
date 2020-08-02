@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=3
 #permalink: /?p=3
-categories:
+tags:
   - misc
 ---
 Hello World.  Oh shi

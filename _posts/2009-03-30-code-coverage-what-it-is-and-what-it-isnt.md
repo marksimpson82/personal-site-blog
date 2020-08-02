@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=110
 #permalink: /?p=110
-categories:
+tags:
   - testing
 ---
 ### Coverage

@@ -6,17 +6,16 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=631
 #permalink: /?p=631
-categories:
-  - games
-  - misc
-  - tips
 tags:
   - angle snapping
   - desk
+  - games
   - gaming
+  - misc
   - mouse
   - mouse pad
   - sensitivity
+  - tips
   - WMO
 ---
 ## I’m an addict

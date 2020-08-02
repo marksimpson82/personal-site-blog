@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=393
 #permalink: /?p=393
-categories:
+tags:
   - 'c#'
 ---
 I&#8217;ve read quite a bit about [Static Reflection](http://blog.jagregory.com/2009/01/26/introduction-to-static-reflection/ "Static Reflection") and found it to be very appealing, but I hadn&#8217;t used it&#8230; until now!  Please have a quick look at the article, as I&#8217;m not going to parrot its key points, I&#8217;m going to write something that is horrendously over-engineered to solve a trivial problem, instead!  P.s. I apologise for interchanging arguments/parameters throughout this post.  My attention span is akin to that of a hey did anyone play Batman yet?

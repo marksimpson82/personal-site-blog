@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=482
 #permalink: /?p=482
-categories:
+tags:
   - 'c#'
   - software
 ---

@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=173
 #permalink: /?p=173
-categories:
+tags:
   - testing
 ---
 I was thinking about this the other day, and something struck me (and no, it wasn&#8217;t a disgruntled developer).  Automated testing is a valuable and widely accepted part of the software engineering process.  Many companies and organisations require that functionality be well tested prior to it being checked in and integrated into the main version control branch.  As a result, developers can spend hour upon hour every week writing unit tests.  In many cases, the quantity of test code can be more than double the code being tested!

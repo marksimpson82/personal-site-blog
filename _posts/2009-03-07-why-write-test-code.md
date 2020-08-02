@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=22
 #permalink: /?p=22
-categories:
+tags:
   - testing
 ---
 It&#8217;s not uncommon to encounter developers that are wholly resistant to unit/functional/integration testing.  Some of them will simply dismiss the idea due to thinking it&#8217;s new-fangled rubbish (&#8220;I never unit test, and my code is fine&#8221;).  Other developers may recognise the positive impact tests can have, but simply deplore spending any time writing them.  Some folk will go to great lengths to either bypass the test writing stage, or write tests in a fashion that gives zero or even negative returns!

@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=474
 #permalink: /?p=474
-categories:
+tags:
   - 'c#'
   - patterns
   - testing

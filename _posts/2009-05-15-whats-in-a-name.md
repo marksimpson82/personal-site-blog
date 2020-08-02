@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=313
 #permalink: /?p=313
-categories:
+tags:
   - testing
   - tips
 ---

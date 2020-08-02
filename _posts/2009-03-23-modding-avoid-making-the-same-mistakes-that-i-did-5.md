@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=89
 #permalink: /?p=89
-categories:
+tags:
   - modding
 ---
 ### The mod leader must do something tangible

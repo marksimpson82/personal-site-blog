@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=238
 #permalink: /?p=238
-categories:
+tags:
   - 'c#'
   - debugging
   - testing

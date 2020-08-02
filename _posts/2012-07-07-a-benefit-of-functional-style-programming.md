@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=675
 #permalink: /?p=675
-categories:
+tags:
   - 'c#'
   - debugging
   - MyWorld

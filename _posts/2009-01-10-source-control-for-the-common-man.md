@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=14
 #permalink: /?p=14
-categories:
+tags:
   - Uncategorized
 ---
 Due to barely taking a day off during my first six months (my own choice), I accrued so many unused holidays that I found myself with a stretch of 17 or 18 days of holiday over Christmas.  Now, I&#8217;ve never been one to shy away from laying around for prolonged periods, but this time around I found myself restless after a week or so.  In the end, I cracked; I started programming quite a bit &#8212; just pottering around doing my own personal experiments.

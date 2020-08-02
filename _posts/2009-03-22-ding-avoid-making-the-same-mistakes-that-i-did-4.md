@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=82
 #permalink: /?p=82
-categories:
+tags:
   - modding
 ---
 ### Kick problem people in double quick time

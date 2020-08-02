@@ -6,15 +6,14 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=767
 #permalink: /?p=767
-categories:
-  - 'c#'
-  - python
-  - tips
-tags:
+tags:  
   - binary
   - bitwise
   - 'c#'
   - decimal
+  - python
+  - tips
+
 ---
 Python has the terribly useful functionality of [bin()](https://docs.python.org/2/library/functions.html#bin) to do this, but what about C#?
 

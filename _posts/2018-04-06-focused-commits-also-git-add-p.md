@@ -6,9 +6,6 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=810
 #permalink: /?p=810
-categories:
-  - git
-  - tips
 tags:
   - git
   - tips

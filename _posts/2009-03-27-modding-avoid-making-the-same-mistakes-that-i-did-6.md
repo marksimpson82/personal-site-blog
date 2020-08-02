@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=98
 #permalink: /?p=98
-categories:
+tags:
   - modding
 ---
 ### Playtest & Iterate.  Lots.

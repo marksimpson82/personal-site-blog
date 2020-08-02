@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=251
 #permalink: /?p=251
-categories:
+tags:
   - games
 ---
 Left4Dead is ridiculously good.  I can&#8217;t quite get over how tremendously visceral, tense, hilarious and fun it is.  I&#8217;m one of those people who tries games, but only latches onto one in a big way every couple of years; I haven&#8217;t loved a game like this since TFC or BF2.  I&#8217;ve already played over 200 hours of it; I can&#8217;t stop playing it.  It&#8217;s multi-faceted; it has different ways of playing to suit my moods.

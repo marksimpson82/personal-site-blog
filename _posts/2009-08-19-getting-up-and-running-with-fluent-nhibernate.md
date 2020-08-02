@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=369
 #permalink: /?p=369
-categories:
+tags:
   - 'c#'
 ---
 I&#8217;ve been meaning to try out NHibernate for a good ol&#8217; while.  It&#8217;s a long-established and respected O/R M library and one of the authors (Ayende) writes a blog that I&#8217;ve read for a long time.

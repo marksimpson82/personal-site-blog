@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=129
 #permalink: /?p=129
-categories:
+tags:
   - 'c#'
   - gotchas
   - testing

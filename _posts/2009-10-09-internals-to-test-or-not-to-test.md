@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=407
 #permalink: /?p=407
-categories:
+tags:
   - Uncategorized
 ---
 Prepare for some flimsy and strange analogies.

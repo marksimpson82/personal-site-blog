@@ -6,14 +6,14 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=751
 #permalink: /?p=751
-categories:
-  - software
-  - tips
 tags:
   - api
   - design
   - empathy
   - helpful
+  - software
+  - tips
+
 ---
 I always liked the phrase, “if you’re incapable of empathy, then you shouldn’t be designing APIs”.
 

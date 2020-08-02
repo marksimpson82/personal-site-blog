@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=614
 #permalink: /?p=614
-categories:
+tags:
   - misc
   - tips
 ---

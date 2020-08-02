@@ -6,15 +6,11 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=799
 #permalink: /?p=799
-categories:
-  - games
-  - hardware
-  - misc
-  - tips
 tags:
   - 1000hz
   - games
   - gaming
+  - hardware
   - misc
   - mouse
   - overclocking

@@ -6,14 +6,13 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=815
 #permalink: /?p=815
-categories:
-  - games
-  - hardware
-  - tips
 tags:
   - driver
+  - games
+  - hardware
   - mouse
   - sweetlow
+  - tips
   - windows
   - WMO
 ---

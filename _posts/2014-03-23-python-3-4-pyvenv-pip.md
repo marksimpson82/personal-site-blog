@@ -6,8 +6,6 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=761
 #permalink: /?p=761
-categories:
-  - python
 tags:
   - pip
   - pycharm

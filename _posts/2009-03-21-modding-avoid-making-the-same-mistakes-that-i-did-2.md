@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=61
 #permalink: /?p=61
-categories:
+tags:
   - modding
 ---
 ### Keep your team as small as possible

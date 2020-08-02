@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=587
 #permalink: /?p=587
-categories:
+tags:
   - games
   - MyWorld
 ---

@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=726
 #permalink: /?p=726
-categories:
+tags:
   - fundamentals of unit testing
   - testing
   - tips

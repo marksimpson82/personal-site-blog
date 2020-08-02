@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=523
 #permalink: /?p=523
-categories:
+tags:
   - rants
 ---
 Can you believe this [horse shit](http://www.rockpapershotgun.com/2010/02/17/you-maniacs/)?  Yes, you read correctly.  DRM that requires you to be online.  At all times.  Not at all irritating.  Check the calendar, folks &#8212; it&#8217;s not the first of April.

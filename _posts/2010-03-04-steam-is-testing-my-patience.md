@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=529
 #permalink: /?p=529
-categories:
+tags:
   - rants
 ---
 Steam is great; Steam is good.  What&#8217;s not to love about the venerable, all-singing, all-dancing Steam?  Well, how about the fact that they shut down their servers for &#8216;routine&#8217; maintenance at peak UK gaming hours without forewarning anyone?  How about the fact that, without these facilities, you cannot play online or chat to friends?  Moreover, how about the fact that Valve doesn&#8217;t even have the ability to warn its customers to expect the downtime despite having a client installed on every steam user&#8217;s machine?

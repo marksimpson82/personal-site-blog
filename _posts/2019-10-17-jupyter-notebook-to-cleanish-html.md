@@ -6,8 +6,6 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=837
 #permalink: /?p=837
-categories:
-  - Uncategorized
 tags:
   - dataviz
   - jekyll

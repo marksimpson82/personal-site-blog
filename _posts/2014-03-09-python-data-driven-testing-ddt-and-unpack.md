@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=753
 #permalink: /?p=753
-categories:
+tags:
   - python
   - software
   - testing

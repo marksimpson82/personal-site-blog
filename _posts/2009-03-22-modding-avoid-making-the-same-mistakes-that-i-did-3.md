@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=66
 #permalink: /?p=66
-categories:
+tags:
   - modding
 ---
 ### Don&#8217;t expect too much, but DO remove slackers

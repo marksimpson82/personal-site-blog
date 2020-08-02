@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=570
 #permalink: /?p=570
-categories:
+tags:
   - games
   - patterns
 ---

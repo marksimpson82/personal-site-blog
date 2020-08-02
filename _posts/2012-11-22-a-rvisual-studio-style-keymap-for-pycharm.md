@@ -6,14 +6,13 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=734
 #permalink: /?p=734
-categories:
-  - python
-  - software
-  - tips
 tags:
   - keymap
   - pycharm
-  - python
+  - python  
+  - software
+  - tips  
+
 ---
 PyCharm is a lovely little IDE for Python by the splendid JetBrains, but the built-in Visual Studio keymap is not much like the default VS/R# settings I’m accustomed to. I’ve rustled up a quick version that restores all of the easy to remember refactoring key combinations (Ctrl-Shift-R, Ctrl-R, Action Key etc.) along with some of the common navigation ones (Ctrl, comma for recent files and so forth).
 

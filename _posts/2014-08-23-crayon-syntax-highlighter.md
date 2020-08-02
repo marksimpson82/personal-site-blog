@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=794
 #permalink: /?p=794
-categories:
+tags:
   - Uncategorized
 ---
 I&#8217;ve tried to install a couple of different syntax highlighters in the past and was thoroughly unimpressed. They either failed to install cleanly, didn&#8217;t work or had numerous issues that rendered them useless.

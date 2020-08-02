@@ -6,7 +6,7 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=122
 #permalink: /?p=122
-categories:
+tags:
   - modding
 ---
 ### Forget fancy websites, PR and advertising
