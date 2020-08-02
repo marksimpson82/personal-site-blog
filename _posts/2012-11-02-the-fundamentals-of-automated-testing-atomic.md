@@ -27,8 +27,6 @@ A good automated test has a descriptive name, is implemented using straightforwa
 
 However, if non-atomic tests create knock-on effects it introduces a significant maintenance risk, as to diagnose failures, we must understand the whole picture. Instead of just inspecting the local state that exists prior to executing the failing test, we have to start delving into environmental differences (machine configuration, file systems) and [AppDomain](http://blogs.msdn.com/b/cbrumme/archive/2003/04/15/51317.aspx) issues (typically global / static state).
 
-<!--more-->
-
 While most test failures caused by a lack of atomicity are localised (e.g. tests confined to one fixture start to fail), I've personally witnessed a system under test causing hundreds of test failures spanning multiple (seemingly unrelated) fixtures.
 
 Furthermore, if failures cannot be reliably reproduced, it undermines the trust in those tests. People won't pay attention to them, even if the failures are legitimate. The moment developers see a red build and, without even thinking about it, click the “rebuild” button, you’re entering the world of [NOMFUP](http://www.urbandictionary.com/define.php?term=NOMFup). 

@@ -28,15 +28,9 @@ I’ll put it more pointedly: if the tests are written after the production code
 A common cause is copy-pasting an existing test and forgetting to change it to do something else by varying an argument or value. It happens. You now have two identical tests – one is misleadingly named and both pass.
 
 ## Reducing Errors
-
 There’s two things you can do to increase the chance of a test being correct.
 
-### 
-
-<!--more-->
-
 ### Spring the Trap
-
 Temporarily break the _production_ code to make sure the test detects the failure. Change the production code. Run the test. Does it pass? If it passed, the test is incorrect, as it failed to detect the bug. If it fails in the expected fashion, then your test is more likely to be correct. It doesn’t mean the test is 100% correct, but it certainly gives it more credibility.
 
 Here’s a quick, contrived example:

@@ -22,7 +22,7 @@ He then goes on to provide an example where one action has two identifiable/obse
 
 [<img style="background-image: none; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" src="https://defragdev.com/blog/images/2011/02/image_thumb.png" border="0" alt="image" width="244" height="244" />](https://defragdev.com/blog/images/2011/02/image.png)
 
-<!--more-->Firstly, it was a rule of thumb (or at least I read it that way). I don’t see guidelines or so called “best practices” as edicts. You’re allowed to exercise discretionary thought and bend the rule when it doesn’t quite fit your situation.
+Firstly, it was a rule of thumb (or at least I read it that way). I don’t see guidelines or so called “best practices” as edicts. You’re allowed to exercise discretionary thought and bend the rule when it doesn’t quite fit your situation.
 
 It's a fair point, but I think you can have the best of both worlds. It’s perfectly possible to test two different bits of behaviour using two mocks, but while still keeping things readable with minimal code duplication.
 

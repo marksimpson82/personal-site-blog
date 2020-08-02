@@ -22,8 +22,6 @@ If the content pack contains weapons that are very strong or particularly useful
 
 Moreover, cynics among us (i.e. me) see this as the perfect vehicle for developers to drive revenue by deliberately adding must-have content to expansion packs.
 
-<!--more-->
-
 # A concrete example from BF2: The G36-E
 
 If you think I'm talking nonsense or over-exaggerating, DICE has previous in this area. 

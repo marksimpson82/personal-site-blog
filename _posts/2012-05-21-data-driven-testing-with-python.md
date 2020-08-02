@@ -18,47 +18,21 @@ Python is a dynamic programming language. It’s pretty dynamic in its ability t
 
 Anyzoom, the fundamentals of unit testing in python are very simple. I can’t be bothered detailing how to use unittest or a test runner, as there’s nine zillion resources out there on it already. 
 
-# 
-
 # A Simple Setup
-
 We’re using [unittest](http://docs.python.org/library/unittest.html) as the framework, [Nose](http://readthedocs.org/docs/nose/en/latest/) as the runner and [TeamCity Nose](http://pypi.python.org/pypi/teamcity-nose) integration. It worked very nicely out of the box, so I can’t complain. Writing tests is simple, but then I wanted to make a data-driven test and...
 
-<!--more-->
-
-# 
-
 # Data Driven?
-
 To recap what a data-driven test is: You run the same test logic and assertions, but vary the data. E.g. if you have a test method that is part of a test suite, you’d expected to see something like this (pseudo python code):
 
-<pre><p>
-  test data = Vector3D(0,1,0), Vector3D(0,1,0), 1.0
-</p>
+```python
+test data = Vector3D(0,1,0), Vector3D(0,1,0), 1.0
+test data = Vector3D(0,1,0), Vector3D(0,-1,0), -1.0
+test data = Vector3D(0,1,0), Vector3D(1,0,0), 0.0
 
-<p>
-  test data = Vector3D(0,1,0), Vector3D(0,-1,0), -1.0
-</p>
-
-<p>
-   test data = Vector3D(0,1,0), Vector3D(1,0,0), 0.0
-</p>
-
-<p>
-   def test_dot(vec1, vec2, expected_result):
-</p>
-
-<p>
-   dot = Vector3D.dot(vec1, vec2)
-</p>
-
-<p>
-  
-</p>
-
-<p>
-   assertEquals(dot, expected_result)
-</p></pre>
+def test_dot(vec1, vec2, expected_result):
+  dot = Vector3D.dot(vec1, vec2)
+  assertEquals(dot, expected_result)
+```
 
 Each of the test data cases defined above the function / method would generate a new test case. The test logic would be run 3 times – one for each test input.
 
@@ -90,57 +64,26 @@ Possibly due to being ill at ease with Python, I made a wrapper object to avoid 
 
 Note: This bit of code may make a pythonista strangle you with your own tie (I don’t wear one).
 
-<pre>class TestData:<br /> def __init__(self, **entries):<br /> self.__dict__.update(entries)
-
-<p>
-  
-</p></pre>
+```python
+class TestData:
+  def __init__(self, **entries):
+    self.__dict__.update(entries)
+```
 
 It’s then just a case of instantiating a new TestData object every time you want to pass several arguments into a test method, like so:
 
-<pre><p>
-  @data(
-</p>
-
-<p>
-  TestData(vec1=Vector3D(0,1,0), vec2=Vector3D(0,1,0), expected_result = 1.0)
-</p>
-
-<p>
-  TestData(vec1=Vector3D(0,1,0), vec2=Vector3D(0,-1,0), expected_result = -1.0)
-</p>
-
-<p>
+```python
+@data(
+  TestData(vec1=Vector3D(0,1,0), vec2=Vector3D(0,1,0), expected_result = 1.0),
+  TestData(vec1=Vector3D(0,1,0), vec2=Vector3D(0,-1,0), expected_result = -1.0),
   TestData(vec1=Vector3D(0,1,0), vec2=Vector3D(1,0,0), expected_result = 0.0)
-</p>
-
-<p>
-  )
-</p>
-
-<p>
+)
   def test_dot(self, test_data):
-</p>
-
-<p>
-  vec1 = test_data.vec1
-</p>
-
-<p>
-  vec2 = test_data.vec2
-</p>
-
-<p>
-  dot = Vector3D.dot(vec1, vec2)
-</p>
-
-<p>
-  
-</p>
-
-<p>
-  self.failUnlessAlmostEqual(dot, test_data.expected_result, places=1)
-</p></pre>
+    vec1 = test_data.vec1
+    vec2 = test_data.vec2
+    dot = Vector3D.dot(vec1, vec2)
+    self.failUnlessAlmostEqual(dot, test_data.expected_result, places=1)
+```
 
 **Updated March 2014:** The developers of ddt were nice enough to add an @unpack decorator! You can now provide lists/tuples/dictionaries and, via the magic of @unpack, the list will be split into method arguments.
 
@@ -152,15 +95,16 @@ The final option I was made aware of (thanks to my old colleague Gary) is one ca
 
 Well, the truth is... This one is almost perfect. Usage (from the documentation):
 
-<pre>@parameterized([
-    (2, 2, 4),
-    (2, 3, 8),
-    (1, 9, 1),
-    (0, 9, 0),
+```python
+@parameterized([
+  (2, 2, 4),
+  (2, 3, 8),
+  (1, 9, 1),
+  (0, 9, 0),
 ])
 def test_pow(base, exponent, expected):
-    assert_equal(math.pow(base, exponent), expected)</pre>
-
+  assert_equal(math.pow(base, exponent), expected)
+```
 Each tuple’s contents is expanded into the test method’s parameter list, just like momma used to make. Beautiful!
 
 ... so why am I using ddt instead? Unfortunately, nose-parameterized does not play nicely with PyCharm. PyCharm lets you run the tests from the IDE and also debug them, but nose-parameterised seems to confuse it.

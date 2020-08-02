@@ -18,7 +18,7 @@ The trouble with this approach is that it gets complicated to track two simple t
   1. When was a change introduced?
   2. What is the purpose of the change?
 
-How do we use git in a way that makes it easy to track both _when_ a change was introduced, and the _intent_ of the change?<!--more-->
+How do we use git in a way that makes it easy to track both _when_ a change was introduced, and the _intent_ of the change?
 
 ## The when
 

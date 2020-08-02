@@ -26,8 +26,6 @@ The survey was created with [Google Forms](https://www.google.com/forms/about/),
 
 Most of the pertinent commands are in one place: [run_all.sh](https://github.com/marksimpson82/overwatch_survey/blob/master/run_all.sh)
 
-<!--more-->
-
 ### Step 1: Create the Google Forms survey
 
 This was the most tedious part. While Google Forms is flexible, it also feels fairly clunky. On top of the general questions, I had to create 3 sets of questions per each Overwatch hero alongside the hero's image:

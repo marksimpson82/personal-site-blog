@@ -26,8 +26,6 @@ However, according to the stats, if you’re using slug rounds (read on, and I w
 
 The slug is an ammunition type that means the shotgun fires a single bullet rather than 11 or 12 pellets. I.e. it is pretty much all or nothing. Since the 870MCS and the SPAS have identical stats other than the pump speed when using slugs, it makes sense to take the shotgun with the fastest pump time.
 
-<!--more-->
-
 ## Ammunition Types
 
 A very brief summary.

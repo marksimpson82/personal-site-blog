@@ -27,8 +27,6 @@ It doesn’t matter whether it’s a carefully designed API you’re crafting fo
 
 If you encounter a gotcha, why not write a bit of code to clearly document the case, particularly if it is time-consuming to debug in the first place?
 
-<!--more-->
-
 ## Debugging may diagnose problems, but...
 
 When I was writing some road graph parsing code, due to the way that shapefiles are delivered by certain vendors, it was possible that the same road edge could be added twice. The road edges had the same ids / properties, but appeared in multiple files (files A and B contain contiguous geographical areas; roads crossing from A to B or vice-versa are sometimes contained in both files). This then caused some of the angle calculation code to detonate as, unsurprisingly, intersections between parallel lines don’t tend to give sensible results. Hi, NaN.

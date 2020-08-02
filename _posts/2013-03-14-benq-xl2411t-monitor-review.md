@@ -21,8 +21,6 @@ My first ‘serious’ bit of monitor kit was a [Dell P1110 21” Trintron ‘Fl
 
 Best purchase **ever**.
 
-<!--more-->
-
 Back in the day when playing Team Fortress Classic (bless its wee heart – many weekends were spent racking up a huge phone bill while learning to double conc, bunnyhop and all the rest), I could easily discern between 100fps/100hz and, say, 75fps/100hz. I used to notice the effect of dropping frames or using a poor refresh rate, perceiving it is a slight judder of sorts. My colleagues still troll me for this claim. I’d be incredulous when told that some folk played with vsync enabled and didn’t notice their framerate halving when the PC missed the refresh interval. Unthinkable. I still know a few folk who held on to their CRTs and used dual monitors – one for gaming and one for everything else.
 
 Anyway, following the natural order of things, my CRT gave up on me about 6 years ago. Its black depth was middling grey and brightening by the day, so I had to get a new monitor.

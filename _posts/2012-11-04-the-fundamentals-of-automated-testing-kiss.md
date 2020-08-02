@@ -40,8 +40,6 @@ Here's a real example of a bad test that contains error-prone logic (please igno
 >  }  
 > }
 
-<!--more-->
-
 Off the top of my head, here’s a list of gripes I have: The test loops _and_ branches in a totally unnecessary fashion. It’s easy to get an r or a c mixed up, just as it’s simple to make an if/else mistake. The assert branching is particularly concerning. There’s a few extra variables in the mix too, so there’s more balls in the air, so to speak. 
 
 In addition to the potential for logical errors, I can’t just look at the code and say, “row 3, column 2 of the matrix should have <x> value”. As a result, the test has been obfuscated, because I have to understand & walk through the execution of an algorithm to determine what the result should be. In this case, the test code is actually _much more_ complicated than the production code it is testing – a red flag if I’ve ever seen one.

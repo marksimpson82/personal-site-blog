@@ -25,8 +25,6 @@ An unreliable, flaky test is analogous to a car alarm that has been going off fo
 
 Most people who’ve worked with large test suites will have experienced a particular situation from time to time – the case where a handful of the tests intermittently fail. Developers quickly recognise the problematic test name(s) and exclaim, “these tests sometimes fail for no reason”. The next step is to click the “rebuild” button on the continuous integration server. Without changing a thing, the tests pass. Hooray! If you joined in with the cheering, then please punch yourself in the face (it was a ruse).
 
-<!--more-->
-
 When folk mindlessly click the “rebuild” button, we’ve lost. At this juncture, the developers don’t trust the tests. Remember when I said that the purpose of tests is to act as a canary in the mine? Well, the canary died and, rather than saying “everyone out of the shaft!” their first reaction was to send in more, as perhaps the first one had asthma or died of natural causes. If people merely gloss over the root cause of the failure and try to make the failure “go away”, this signals a collective shift into [NOMFuP](http://www.urbandictionary.com/define.php?term=NOMFup)-land. If you’re unfamiliar with NOMFuP, I recommend watching [The Thick of It](http://uk.imdb.com/title/tt0459159/).
 
 > **[Malcolm Tucker](http://uk.imdb.com/name/nm0134922/)**: NOMFuP.  

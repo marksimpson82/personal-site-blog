@@ -62,8 +62,6 @@ To give you an idea of what an unfocused test looks like, consider the following
 
 Can you spot the problems? 
 
-<!--more-->
-
 Firstly, the name is vague and doesn’t tell us anything about what the test is doing. No mention is made of the state of the unit of code under test, the actions performed or the expectations. 
 
 As it happens, we can’t give this test a good name, because it’s a total scattergun effort. Since it does about 7 different things, any attempt to name it will result in a spiel resembling a 9 year old boy’s attempts to describe his summer holidays. 

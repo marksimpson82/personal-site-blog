@@ -32,12 +32,7 @@ Each ‘phase’ of the test happens in order and occurs precisely once. Arrange
 
 A brief description of each “A” follows.
 
-<!--more-->
-
-
-
 ## Arrange
-
 To be able to put yourself in a position where you can invoke a method and check that the result was correct, you first need to able to put things into a ‘primed’ configuration. If you want to test that your pistol can shoot a tin can, then you’d probably need to set up the tin can at an appropriate range, load the weapon and take the safety off before you even think about firing.
 
 This step is often referred to as the “Arrange” phase, as you’re arranging things prior to calling the method/function of interest.
@@ -45,7 +40,6 @@ This step is often referred to as the “Arrange” phase, as you’re arranging
 In the stack example, the arrange phase would simply mean creating an empty stack. In more complicated scenarios, you will need to do more work to knock things into shape.
 
 ## Act
-
 The action is the main bit of the show. It’s the bit the test is interested in, whether because calling a method or function returns a result that can be directly scrutinised, or because calling it causes a side-effect that can be observed (mutation of state, call to another class, an event being raised etc). 
 
 This is often called the “Act” phase.
@@ -53,7 +47,6 @@ This is often called the “Act” phase.
 In the empty stack example, the “Act” phase occurs when Push() is called, as this is the ‘interesting’ call in the test – the one that exercises the unit of code under test.
 
 ## Assert
-
 The assertion is the part that ensures that your expectations are met. You can cobble objects together and call any number of methods, but unless you actually check a _meaningful_ result, there’s little point in it. Without a good assertion, the best you can do is prove that the unit of code under test hasn’t crashed – there’s very little value in this.
 
 This step is often called the “Assert” phase.
@@ -61,7 +54,6 @@ This step is often called the “Assert” phase.
 In the stack example, the “Assert” phase occurs when the Count property is checked against our expectation.
 
 ## Why use this structure?
-
 Put short, it’s a rigid template that serves as an excellent code smell detector. When your test code starts to deviate from being simple (e.g. it has multiple interleaved actions and asserts), it tends to break this template in a way that is very obvious. 
 
 E.g., once you’ve entered the Assert phase, you should only be verifying results, not performing actions on the class under test. If this occurs, something is likely iffy.

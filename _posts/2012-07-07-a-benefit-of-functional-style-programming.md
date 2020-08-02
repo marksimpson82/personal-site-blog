@@ -20,8 +20,6 @@ I always chuckle when I read the words “functional style”, because I picture
 
 One particular facet of programming in a functional style is where, rather than mutating an existing piece of data, input data is transformed / projected into something new via a [pure function](http://en.wikipedia.org/wiki/Pure_function). Since this style of programming limits the number of side-effects, it makes debugging a comparatively wonderful experience. 
 
-<!--more-->
-
 ## The status quo
 
 First, let’s consider business-as-usual. Imagine you’re debugging a part of your program that is doing something complicated. The program is written in the usual imperative, OO style; that is to say, when method calls occur, state is mutated.

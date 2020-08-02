@@ -36,8 +36,6 @@ It’s tough to track down accurate information regarding the unpackaged weight 
 
 Furthermore, I don’t want a mouse with stupid cloud software (S3 is down? Well, not sure how to load your mouse settings man!), and I’m not really a fan of spending £60 on a mouse in what is essentially a blind purchase. I might love it, but I might hate it.
 
-<!--more-->
-
 If you can walk into a decently-sized PC store and try out a load of mice, I’d recommend just forgetting about the WMO and finding something new.
 
 ## However, if you’re stubborn...

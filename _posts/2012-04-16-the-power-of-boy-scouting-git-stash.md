@@ -23,8 +23,6 @@ The gist of it:
 
 As a programmer, sometimes it’s doing the little things that makes everybody’s collective life a little bit easier. There’s a lot written about the practical benefits of doing this (namely: the ability to continually deliver without having to scrabble around in a dung-heap, weeping with shame) but, for my money, the most important thing is that it makes writing code more enjoyable on a day to day basis. 
 
-<!--more-->
-
 I always get irritated and furrow my brow when I find code that has been allowed to drift. When you think of the amount of times you run into a bewildering part of a codebase and spend 10 minutes scratching your head because something has a misleading name or there’s some dead code confusing the issue, why not just fix it up? Fine, you’ll probably have to spend a 5 to 10 minutes making the change (less with lovely refactoring tools like [ReSharper](http://www.jetbrains.com/resharper/)), but code is write once, read many. Code hardens like cement, so there’s no time like the present.
 
 The mechanical process of Typing Shit and Testing your Changes usually takes little to no time at all. If you save a few people the same 10 minutes of teeth-gnashing frustration, then you have made a positive change. 
