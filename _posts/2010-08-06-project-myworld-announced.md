@@ -9,6 +9,8 @@ guid: https://defragdev.com/blog/?p=587
 tags:
   - games
   - MyWorld
+  - life
+  - career
 ---
 We finally announced our [minature-version-of-real-world-as-a-platform-for-games project](http://playmyworld.com) last week. Image shamelessly nicked from [Luke's blog](http://lukehalliwell.wordpress.com/2010/08/05/project-myworld/):
 

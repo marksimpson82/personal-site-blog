@@ -7,10 +7,11 @@ layout: single
 guid: https://defragdev.com/blog/?p=660
 #permalink: /?p=660
 tags:
+  - data-driven
   - python
   - software
   - testing
-  - tips
+  - tips  
 ---
 Hello tests. It’s been a while since I blogged about automated testing, so it’s nice to welcome an old friend back to the fold. I’ve missed you. I’ve recently started programming in python. I say programming, but what I mean by that is ‘hopelessly jabbing at the keyboard and gawping as my lovingly written code explodes on being invoked’. While I blub.
 

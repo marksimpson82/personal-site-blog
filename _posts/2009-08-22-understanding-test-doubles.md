@@ -38,12 +38,9 @@ Other things I've witnessed include developers writing obscure lambda expression
 Warning bells should also start ringing when you return a mock and assert that its method was called by another mock which returns a mock which... errrr! It's much easier to make a dog's dinner of interaction-based testing; a good grounding in state-based testing is essential.
 
 ### One step at a time
-
-  1. Learn to sit up before you crawl. Write simple xUnit tests that involve state-based testing. It doesn't have to be great, isolated code. Even writing tests that involve scores of classes is a good way to start. Finer granularity is something that comes with experience.
-  2. Crawl before you walk. Start to experiment and find better ways of testing pieces of functionality. Ask yourself whether the test is useful, maintainable etc. Will other parts of the system break it if they change? Can you make the components and tests themselves finer grained? This stage should be about developing your sense of what constitutes a good test.
-  3. Walk before you run. Begin to experiment with different types of test doubles, but **hand roll them**. Yes, it's painful at times, but it will give you a better understanding of roles in tests and the different types of test doubles, even if you don't have names for them yet. Furthermore, constantly having to update your hand rolled stubs when disparate parts of your class changes will also give you an appreciation for the [interface segregation principle](http://www.globalnerdy.com/wordpress/wp-content/uploads/2009/07/interface_segregation_principle.jpg).
-  4. Finally, install a mocking framework and start sprinting.
-
-
+1. Learn to sit up before you crawl. Write simple xUnit tests that involve state-based testing. It doesn't have to be great, isolated code. Even writing tests that involve scores of classes is a good way to start. Finer granularity is something that comes with experience.
+2. Crawl before you walk. Start to experiment and find better ways of testing pieces of functionality. Ask yourself whether the test is useful, maintainable etc. Will other parts of the system break it if they change? Can you make the components and tests themselves finer grained? This stage should be about developing your sense of what constitutes a good test.
+3. Walk before you run. Begin to experiment with different types of test doubles, but **hand roll them**. Yes, it's painful at times, but it will give you a better understanding of roles in tests and the different types of test doubles, even if you don't have names for them yet. Furthermore, constantly having to update your hand rolled stubs when disparate parts of your class changes will also give you an appreciation for the [interface segregation principle](http://www.globalnerdy.com/wordpress/wp-content/uploads/2009/07/interface_segregation_principle.jpg).
+4. Finally, install a mocking framework and start sprinting.
 
 If you do sprint head-first into a wall, you will be better equipped to understand where you went wrong, as you understand the fundamentals. You will also have a better grasp of the terminology, as it will be grounded in real, tangible code you've written.

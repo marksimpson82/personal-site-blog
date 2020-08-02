@@ -25,40 +25,42 @@ If you have a narrow & focused test, it will...
 
 To give you an idea of what an unfocused test looks like, consider the following (and yes, I’ve seen plenty of these, both in professional [RTW] & open source code):
 
-> [Test]  
-> public void StackTestA()  
-> {  
->  var stack = new Stack<int>();  
->  Assert.That(stack.Count, Is.EqualTo(0)); 
-> 
->  stack.Push(1);  
->  Assert.That(stack.Count, Is.EqualTo(1)); 
-> 
->  stack.Push(2);  
->  Assert.That(stack.Count, Is.EqualTo(2)); 
-> 
->  var p = stack.Peek();  
->  Assert.That(p, Is.EqualTo(2);  
->   
->  stack.Push(3);  
->  Assert.That(stack.Count, Is.EqualTo(3));  
->   
->  stack.Pop();  
->  Assert.That(stack.Count, Is.EqualTo(2));  
->   
->  bool c0 = stack.Contains(1);  
->  Assert.That(c0, Is.True);  
->   
->  bool c1 = stack.Contains(10000);  
->  Assert.That(c1, Is.False);  
->   
->  stack.Push(3);  
->  Assert.That(stack.Count, Is.EqualTo(3)); 
-> 
->  int popped = stack.Pop();  
->  Assert.That(popped, Is.EqualTo(3));  
->  Assert.That(stack.Count, Is.EqualTo(2));  
-> }
+```c#
+[Test]  
+public void StackTestA()  
+{  
+ var stack = new Stack<int>();  
+ Assert.That(stack.Count, Is.EqualTo(0)); 
+
+ stack.Push(1);  
+ Assert.That(stack.Count, Is.EqualTo(1)); 
+
+ stack.Push(2);  
+ Assert.That(stack.Count, Is.EqualTo(2)); 
+
+ var p = stack.Peek();  
+ Assert.That(p, Is.EqualTo(2);  
+  
+ stack.Push(3);  
+ Assert.That(stack.Count, Is.EqualTo(3));  
+  
+ stack.Pop();  
+ Assert.That(stack.Count, Is.EqualTo(2));  
+  
+ bool c0 = stack.Contains(1);  
+ Assert.That(c0, Is.True);  
+  
+ bool c1 = stack.Contains(10000);  
+ Assert.That(c1, Is.False);  
+  
+ stack.Push(3);  
+ Assert.That(stack.Count, Is.EqualTo(3)); 
+
+ int popped = stack.Pop();  
+ Assert.That(popped, Is.EqualTo(3));  
+ Assert.That(stack.Count, Is.EqualTo(2));  
+}
+```
 
 Can you spot the problems? 
 
@@ -84,25 +86,27 @@ OK, so .. there’s a lot of things happening and we want to simplify matters. T
 
 A developer then creates the following:
 
-> [Test]  
-> public void PushPopTest()  
-> {  
->  var stack = new Stack<int>();  
->  Assert.That(stack.Count, Is.EqualTo(0)); 
-> 
->  stack.Push(1);  
->  Assert.That(stack.Count, Is.EqualTo(1)); 
-> 
->  stack.Push(2);  
->  Assert.That(stack.Count, Is.EqualTo(2)); 
-> 
->  stack.Push(3);  
->  Assert.That(stack.Count, Is.EqualTo(3)); 
-> 
->  int popped = stack.Pop();  
->  Assert.That(popped, Is.EqualTo(3));  
->  Assert.That(stack.Count, Is.EqualTo(2));  
-> }
+```c#
+[Test]  
+public void PushPopTest()  
+{  
+ var stack = new Stack<int>();  
+ Assert.That(stack.Count, Is.EqualTo(0)); 
+
+ stack.Push(1);  
+ Assert.That(stack.Count, Is.EqualTo(1)); 
+
+ stack.Push(2);  
+ Assert.That(stack.Count, Is.EqualTo(2)); 
+
+ stack.Push(3);  
+ Assert.That(stack.Count, Is.EqualTo(3)); 
+
+ int popped = stack.Pop();  
+ Assert.That(popped, Is.EqualTo(3));  
+ Assert.That(stack.Count, Is.EqualTo(2));  
+}
+```
 
 This is better, but it’s still quite vague; you can’t really describe what the test is doing, the behaviour it is testing or the expectation. 
 
@@ -120,8 +124,6 @@ Notice that this name talks about **one** specific situation, **one** action and
 
 Once you have a good understanding of what your test is proving and you’ve chosen a name, we can move on to the nuts and bolts of writing the test.
 
-## 
-
 ## Writing the test code
 
 Again, our example is:
@@ -130,22 +132,22 @@ in a situation where **<The stack is empty>** and **<An item is pushed>**, then 
 
 Now let’s translate the sentence into code by writing a test for this single unit and nothing else.
 
-### 
-
 ### A focused test
 
-> [Test]  
-> public void pushing\_an\_item\_onto\_an\_empty\_stack\_increments\_count()  
-> {  
->  // Arrange  
->  var stack = new Stack<bool>();  
->   
->  // Act  
->  stack.Push(false);  
->   
->  // Assert  
->  Assert.That(stack.Count, Is.EqualTo(1));  
-> }
+```c#
+[Test]  
+public void pushing\_an\_item\_onto\_an\_empty\_stack\_increments\_count()  
+{  
+ // Arrange  
+ var stack = new Stack<bool>();  
+  
+ // Act  
+ stack.Push(false);  
+  
+ // Assert  
+ Assert.That(stack.Count, Is.EqualTo(1));  
+}
+```
 
 Ta-da! It’s laser beam focused. You can clearly see the arrange, act and assert phases match the name of the test. There is no noise, incidental setup code, spurious actions or orthogonal assertions. It does exactly what is needed and no more. 
 
@@ -161,12 +163,12 @@ Once your tests reach this level of simplicity and your fully embrace the <**sit
 
 Off the top of my head:
 
-  * When a stack is created, the count is zero 
-  * When a stack is empty, popping causes an exception to be thrown 
-  * When a stack has items, peeking returns the top item 
-  * When a stack has items, peeking does not remove the item from the stack 
-  * When a stack has items, popping decrements the count 
-  * When a stack has items, popping returns the item that was previously at the top of the stack 
-  * When a stack has a specific item, calling contains with that item should return true 
-  * When a stack does not have a specific item, calling contains with that item should return false 
-  * etc etc.
+* When a stack is created, the count is zero 
+* When a stack is empty, popping causes an exception to be thrown 
+* When a stack has items, peeking returns the top item 
+* When a stack has items, peeking does not remove the item from the stack 
+* When a stack has items, popping decrements the count 
+* When a stack has items, popping returns the item that was previously at the top of the stack 
+* When a stack has a specific item, calling contains with that item should return true 
+* When a stack does not have a specific item, calling contains with that item should return false 
+* etc.

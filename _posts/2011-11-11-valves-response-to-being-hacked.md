@@ -9,7 +9,7 @@ guid: https://defragdev.com/blog/?p=636
 tags:
   - games
   - misc
-  - rants
+  - whinges
 ---
 ... was very, very disappointing. I’m somewhat befuddled by the extremely low key response to the incident. 
 

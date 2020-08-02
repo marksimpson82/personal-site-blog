@@ -12,7 +12,9 @@ change.
 ## Reasons for switching
 I've got a few reasons for making the switch:
 1. Wordpress is a permanent security and maintenance risk.
+
 2. Authoring posts using markdown is a lot more pleasant & predictable.
+
 3. [34sp.com](https://34sp.com) sadly withdrew their personal hosting product and forcibly migrated me to a professional one. 
 
 In short, it's a clunk dev experience and fairly expensive.
@@ -30,6 +32,7 @@ Organisation sites are limited to one per user or organisation, but you can have
 I created two repos (caveat: I'm in 'just-make-it-work-mode', so exercise your own judgement):
 1. [`<myusername>.github.io`](https://github.com/marksimpson82/marksimpson82.github.io) for my (2007!) root website 
 content
+
 2. [`blog`](https://github.com/marksimpson82/blog) for my blog 
 
 The former will serve content for [https://defragdev.com](https://defragdev.com) & the latter for 
@@ -197,3 +200,14 @@ This may or may not be what you want. It's perfect for me, but you may want to s
 I don't want to serve via HTTP, so I forced HTTPS. Check the box under:
 
 `Settings` > `GitHub Pages` > `Enforce HTTPS`
+
+### Fix up various content problems
+There's a lot of nasty holdovers from running scores of worpdress versions; off the top of my head:
+
+- formatting is all over the place (mixture of markdown, html etc.)
+
+- code snippets are generally broken
+
+- there's a never-ending variety of unicode decimal codes that hinder readability in a text editor
+
+- irrelevant tags like `<--more-->`

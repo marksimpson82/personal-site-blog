@@ -11,7 +11,7 @@ tags:
   - patterns
   - testing
   - tips
-  - Uncategorized
+  - data-driven
 ---
 It's a fairly common occurrence - somebody wants to use NUnit's data driven testing, but they want to vary either the action under test, or the expectation. I.e. they're not parametrising simple _data_, they're parametrising the _actions_.
 
@@ -21,7 +21,12 @@ Test readability is paramount, so if you have some tests written in an unfamilia
 
 **NUnit's data-driven testing**
 
-NUnit uses a few mechanisms to parametrise tests. Firstly, for simple test cases, it offers the [[TestCase](http://nunit.org/?p=testCase&r=2.5)] attribute which takes a params object[] array in its constructor. Each argument passed to the TestCaseAttribute's constructor is stored, ready for retrieval by the framework. NUnit does the heavy lifting for us and casts/converts each argument to the test method's parameter types. Here's an example where three ints are passed, then correctly mapped to a test method:
+NUnit uses a few mechanisms to parametrise tests. Firstly, for simple test cases, it offers the 
+[TestCase](http://nunit.org/?p=testCase&r=2.5) attribute which takes a `params object[]` array in its constructor. Each 
+argument passed to the TestCaseAttribute's constructor is stored, ready for retrieval by the framework. 
+
+NUnit does the heavy lifting for us and casts/converts each argument to the test method's parameter types. Here's an 
+example where three ints are passed, then correctly mapped to a test method:
 
 <img class="alignnone" src="images/simple_data_driven.png" alt="" width="689" height="361" /> 
 
@@ -29,7 +34,14 @@ The main limitation here is that we can only store intrinsic types. Strings, int
 
 ### Passing more complicated types
 
-It would appear we're screwed, but fortunately, we can use the [[TestCaseSource](http://www.nunit.org/index.php?p=testCaseSource&r=2.5)] attribute. There are numerous options for yielding the data, and one of them is to define an IEnumerable<TestCaseData> as a public method of your test class (it works if it's private, but since it's accessed via reflection it's a good idea to keep it public so that ReSharper or other tools do not flag it as unused). You can then fill up and yield individual TestCaseData instances in the same fashion as before. Once again, NUnit does the mapping and the heavy lifting for us.
+It would appear we're screwed, but fortunately, we can use the 
+[TestCaseSource](http://www.nunit.org/index.php?p=testCaseSource&r=2.5) attribute. There are numerous options for 
+yielding the data, and one of them is to define an IEnumerable<TestCaseData> as a public method of your test class (it 
+works if it's private, but since it's accessed via reflection it's a good idea to keep it public so that ReSharper or 
+other tools do not flag it as unused). 
+
+You can then fill up and yield individual TestCaseData instances in the same 
+fashion as before. Once again, NUnit does the mapping and the heavy lifting for us.
 
 <img class="alignnone" src="images/passing_more_complicated_types.png" alt="" width="604" height="379" /> 
 

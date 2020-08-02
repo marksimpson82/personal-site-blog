@@ -30,25 +30,15 @@ It would've been great. Well, in many ways yes. In other ways, no. Hindsight bei
 
 Firstly, bear in mind the fact that I said I _thought_ I knew about design, encapsulation, this that and the other. I did know a little bit, but I knew precisely **nothing** in the grand scheme of things. Here's the lowdown:
 
-<p style="padding-left: 30px;">
-  My knowledge of patterns was the singleton and some others. I did know some others, but it may as well have just been "singleton". Lalala, I can't hear you. I remember the shock when my friend linked my to the <a href="http://steve.yegge.googlepages.com/singleton-considered-stupid">"Singleton considered stupid"</a> article prior to getting a job. "But they're my best mates!", I gasped. "Yeah, but they're stupid", he replied, before jabbing me in the eye with a stick and berating me for my incompetence.
-</p>
+- My knowledge of patterns was the singleton and some others. I did know some others, but it may as well have just been "singleton". Lalala, I can't hear you. I remember the shock when my friend linked my to the <a href="http://steve.yegge.googlepages.com/singleton-considered-stupid">"Singleton considered stupid"</a> article prior to getting a job. "But they're my best mates!", I gasped. "Yeah, but they're stupid", he replied, before jabbing me in the eye with a stick and berating me for my incompetence.
 
-<p style="padding-left: 30px;">
-  My idea of simplifying problems by breaking them into smaller systems usually involved multiple managers all interacting via singletons.
-</p>
+- My idea of simplifying problems by breaking them into smaller systems usually involved multiple managers all interacting via singletons.
 
-<p style="padding-left: 30px;">
-  My idea of extensible software was using horribly complicated, deep inheritance hierarchies everywhere. Yeah let's make this base class and then...
-</p>
+- My idea of extensible software was using horribly complicated, deep inheritance hierarchies everywhere. Yeah let's make this base class and then...
 
-<p style="padding-left: 30px;">
-  Pretty much everything I wrote was tightly coupled. I thought that I had abstracted things away, but in general I just moved problems around. Nearly every class relied on multiple custom, concrete types. I never used factories.
-</p>
+- Pretty much everything I wrote was tightly coupled. I thought that I had abstracted things away, but in general I just moved problems around. Nearly every class relied on multiple custom, concrete types. I never used factories.
 
-<p style="padding-left: 30px;">
-  I relied on implementation details. I often reached into classes several levels deep. House->GetKitchen()->GetSink()->GetTap(); I didn't just break the <a href="http://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a>, I dropped it on the ground and used its smashed remains as a (crap) bouncy castle.
-</p>
+- I relied on implementation details. I often reached into classes several levels deep. House->GetKitchen()->GetSink()->GetTap(); I didn't just break the <a href="http://en.wikipedia.org/wiki/Law_of_Demeter">Law of Demeter</a>, I dropped it on the ground and used its smashed remains as a (crap) bouncy castle.
 
 I could go on. In short, as a dumb graduate, I was interested in my craft and enjoyed programming, but I had some bad habits and didn't understand why a lot of the things I was doing were flat-out wrong, unmaintanable and are diametrically opposed to the principle of least surprise. However, sometimes you don't find out about these things until you're forced to broach a particular topic.
 
@@ -62,29 +52,17 @@ We're a games company and unit testing is not something that has gained widespre
 
 Anyway, rewind back to when I sucked more than I suck now. Even though I had no idea about what testability concerns should be, I quickly learned through doing. I read articles and kept attempting to write better tests.
 
-<p style="padding-left: 30px;">
-  After a couple of weeks, I started rocking back and forth if I saw a static class. "Oh God", I'd cry, "What do I need to initialise then tear down <em>this time</em>?"
-</p>
+- After a couple of weeks, I started rocking back and forth if I saw a static class. "Oh God", I'd cry, "What do I need to initialise then tear down <em>this time</em>?"
 
-<p style="padding-left: 30px;">
-  After a month, I hated the sight of any class containing scores of methods, lengthy method bodies, multiple indentations of control flow logic etc. "Jeez, what do I need to do to hit <em>this</em> side of the double nested if statement that's part of a switch which is called in a chain of 8 private methods? If only the logic were split up into nicer chunks..."
-</p>
+- After a month, I hated the sight of any class containing scores of methods, lengthy method bodies, multiple indentations of control flow logic etc. "Jeez, what do I need to do to hit <em>this</em> side of the double nested if statement that's part of a switch which is called in a chain of 8 private methods? If only the logic were split up into nicer chunks..."
 
-<p style="padding-left: 30px;">
-  After another month, I started to wonder why many of the tests I was writing were so slow, given that I was only interested in testing one class at a time. "Oh man!", I'd exclaim. "Why do I have to create all these slow thing? Bah, I can't even get at the logic I want to test! If only I could instantiate only what I need and totally control the test environment..."
-</p>
+- After another month, I started to wonder why many of the tests I was writing were so slow, given that I was only interested in testing one class at a time. "Oh man!", I'd exclaim. "Why do I have to create all these slow thing? Bah, I can't even get at the logic I want to test! If only I could instantiate only what I need and totally control the test environment..."
 
-<p style="padding-left: 30px;">
-  After another month, I reasoned that if an interface were to be provided and the dependencies could be abstracted away into 'seams', it made the code infinitely more testable. "Hmm, I see why loose coupling is good..."
-</p>
+- After another month, I reasoned that if an interface were to be provided and the dependencies could be abstracted away into 'seams', it made the code infinitely more testable. "Hmm, I see why loose coupling is good..."
 
-<p style="padding-left: 30px;">
-  After another month, I wondered why some of the tests were so fragile. When some system or other changed, the tests for an unrelated class would fail! "Oh... that's why singletons are frowned upon. The dependencies are hidden!"
-</p>
+- After another month, I wondered why some of the tests were so fragile. When some system or other changed, the tests for an unrelated class would fail! "Oh... that's why singletons are frowned upon. The dependencies are hidden!"
 
-<p style="padding-left: 30px;">
-  After another month, a workmate found Misko Hevery's <a href="http://misko.hevery.com/code-reviewers-guide/">guide to testability</a> and the penny dropped. Like Google's testing blog logo - it was like switching on a light bulb!
-</p>
+- After another month, a workmate found Misko Hevery's [guide to testability](http://misko.hevery.com/code-reviewers-guide/) and the penny dropped. Like Google's testing blog logo - it was like switching on a light bulb!
 
 Beyond that day, I've kept learning more and more techniques to use as part of my development and testing arsenal. Making my code more testable was the goal, but it has given me so much more. Testability is a great thing, but as with all software engineering techniques, it is not a silver bullet.
 

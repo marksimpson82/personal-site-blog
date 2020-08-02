@@ -6,6 +6,12 @@ author: Mark Simpson
 layout: single
 guid: https://defragdev.com/blog/?p=847
 #permalink: /?p=847
+tags:
+  - nvidia
+  - g-sync
+  - black-screen
+  - bugs
+  - tips
 ---
 **tl;dr:** It seems G-SYNC related. I fixed it by installing the monitor driver, then toggling G-SYNC on/off. 
 

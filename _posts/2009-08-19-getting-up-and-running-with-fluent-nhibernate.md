@@ -29,7 +29,9 @@ If you use SQLite to run your application and/or test your mappings, the version
 
 The following line will also cause an exception (or at least it did on my PC - running 64 bit Windows 7):
 
+```c#
 Id(c => c.Id).GeneratedBy().HiLo("customer");
+```
 
 Again, it's a very vague exception. The article has someone seeking help for the same problem, but no solution. I asked on StackOverflow and the solution is to either remove the trailing .GeneratedBy.... fluent method calls, or to [replace it with something like HiLo("1000").](http://stackoverflow.com/questions/1283210/fluent-nhibernate-mappingexception-could-not-instantiate-id-generator)
 

@@ -64,12 +64,12 @@ There’s also a huge thread full of “HLAP! It won’t work!” posts, and I d
 
 So here’s the current state of affairs (May 2017):
 
-  * A signed driver exists which means you shouldn’t need to install an unsigned driver (this is good!)
-  * Its certificate (which must be renewed yearly, I believe) expired or is about to expire (this is bad!)
-  * A recent Windows 10 Content Creators update broke the signed driver on Windows 10 x64 (this is also bad!)
-  * It will _probably_ work for you _unless_ you’re on Windows 10 x64 with the latest updates.
-  * Various USB issues exist (haven’t personally run into this, but there’s lots of chat about disabling secure boot, xHCI and various other bits of hand-waving going on).
-  * There’s also an alternative overclock which involves USB 3.0, but I’ve not touched that one.
+* A signed driver exists which means you shouldn’t need to install an unsigned driver (this is good!)
+* Its certificate (which must be renewed yearly, I believe) expired or is about to expire (this is bad!)
+* A recent Windows 10 Content Creators update broke the signed driver on Windows 10 x64 (this is also bad!)
+* It will _probably_ work for you _unless_ you’re on Windows 10 x64 with the latest updates.
+* Various USB issues exist (haven’t personally run into this, but there’s lots of chat about disabling secure boot, xHCI and various other bits of hand-waving going on).
+* There’s also an alternative overclock which involves USB 3.0, but I’ve not touched that one.
 
 Sweetlow is doing a great job considering it’s just a side hobby for him, and he’s helping a lot of people. I thought I could help by detailing my problem & solution here.
 
@@ -81,24 +81,25 @@ Note that this involves running windows with some system settings changed. Unles
 
 I’ve also heard rumblings about some games viewing this as dodgy (from an anti-cheat perspective), but haven’t confirmed it. I ran all games for years with exactly the same method without issue.
 
-  * Backup the following files:%systemroot%\system32\drivers\usbport.sys  
-    %systemroot%\system32\drivers\usbxhci.sys
-  * Create an account on overclock.net
-  * Download the [signed driver](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver) and unzip it somewhere
-  * Download the updated (non-signed) hidusbf.sys file from [this post](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver/480#post_25977633)
-  * Replace the hidusbf.sys in the signed driver directory (DRIVER/AMD64/hidusbf.sys) with the one you just grabbed
-  * Open a cmd prompt with admin privileges and type the following commands 
-      * bcdedit -set loadoptions DISABLE\_INTEGRITY\_CHECKS
-      * bcdedit -set TESTSIGNING ON
-  * Reboot
-  * Browse to the signed driver directory
-  * Right click HIDUSBF.INF and choose “install”
-  * Run Setup.exe
-  * Check the “filter” box
-  * Set the polling rate to 1000hz or whatever you want
-  * Click “install service”
-  * Click “restart” (the button in the setup.exe, not restart your PC!)
-  * [Check your mouserate](http://zowie.benq.com/en/support/mouse-rate-checker.html) – it should be north of 125hz
+* Backup the following files:
+  * %systemroot%\system32\drivers\usbport.sys  
+  * %systemroot%\system32\drivers\usbxhci.sys
+* Create an account on overclock.net
+* Download the [signed driver](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver) and unzip it somewhere
+* Download the updated (non-signed) hidusbf.sys file from [this post](http://www.overclock.net/t/1597441/digitally-signed-sweetlow-1000hz-mouse-driver/480#post_25977633)
+* Replace the hidusbf.sys in the signed driver directory (DRIVER/AMD64/hidusbf.sys) with the one you just grabbed
+* Open a cmd prompt with admin privileges and type the following commands 
+  * `bcdedit -set loadoptions DISABLE_INTEGRITY_CHECKS`
+  * `bcdedit -set TESTSIGNING ON`
+* Reboot
+* Browse to the signed driver directory
+* Right click HIDUSBF.INF and choose “install”
+* Run Setup.exe
+* Check the “filter” box
+* Set the polling rate to 1000hz or whatever you want
+* Click “install service”
+* Click “restart” (the button in the setup.exe, not restart your PC!)
+* [Check your mouserate](http://zowie.benq.com/en/support/mouse-rate-checker.html) – it should be north of 125hz
 
 Thanks to sweetlow and co for this bit of magic.
 

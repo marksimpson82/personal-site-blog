@@ -19,28 +19,32 @@ Aping the logic of the class under test is an bad idea when writing tests, but i
 
 Production code:
 
-> public class Calculator  
-> {  
->  public int Add(int a, int b)  
->  {  
->  return **a + b**; // actual logic of the class under test  
->  }  
-> }
+```c#
+public class Calculator  
+{  
+ public int Add(int a, int b)  
+ {  
+ return a + b; // actual logic of the class under test  
+ }  
+}
+```
 
 A test for the above class:
 
-> [Test]  
-> public void adding\_two\_numbers\_returns\_the_sum()  
-> {  
->  // Arrange  
->  var calculator = CreateCalculator();
-> 
->  // Act  
->  int result = calculator.Add(1, 2);
-> 
->  // Assert  
->  Assert.That(result, Is.EqualTo(**1 + 2**)); // ape alert, ooh ooh ooh! >:O  
-> }
+```c#
+[Test]  
+public void adding_two_numbers_returns_the_sum()  
+{  
+ // Arrange  
+ var calculator = CreateCalculator();
+
+ // Act  
+ int result = calculator.Add(1, 2);
+
+ // Assert  
+ Assert.That(result, Is.EqualTo(1 + 2)); // ape alert, ooh ooh ooh! >:O  
+}
+```
 
 Although this doesn't look like the end of the world, we can see that the test method line "Assert.That(result, Is.EqualTo(**1 + 2**))" is directly replicating the logic in the Add method. This is “aping”.
 
@@ -52,18 +56,20 @@ Secondly, when writing tests, if state can be tested, it should be done using as
 
 I don't want to see the test code literally add 1 and 2 to get 3. Instead, I want to see 3 in the test. Here’s a fixed-up version of the test that does not ape the production code:
 
-> [Test]  
-> public void adding\_two\_numbers\_returns\_the_sum()  
-> {  
->  // Arrange  
->  var calculator = CreateCalculator();
-> 
->  // Act  
->  int result = calculator.Add(1, 2);
-> 
->  // Assert  
->  Assert.That(result, Is.EqualTo(3));  
-> }
+```c#
+[Test]  
+public void adding_two_numbers_returns_the_sum()  
+{  
+ // Arrange  
+ var calculator = CreateCalculator();
+
+ // Act  
+ int result = calculator.Add(1, 2);
+
+ // Assert  
+ Assert.That(result, Is.EqualTo(3));  
+}
+```
 
 You should always scan your test code looking for this anti-pattern. The example I’ve cited is very simple, but I’ve seen a lot of real world code that has succumbed to aping the production code resulting in bugs going undiscovered. 
 
@@ -73,9 +79,9 @@ You may be thinking, “OK genius, so you skipped adding 1 and 2 in the test cod
 
 It’s a good question and the truth is, it’s often the case that it’s not clear-cut. However, there are steps you can take to validate your answers (or at least be a little more sure of them).
 
-  * Don’t just assume you’ve got it right first time. Double check it for a few minutes more. 
-  * Write out some notes on paper (I sometimes do the testing version of truth tables). 
-  * Maybe you have a specification for this particular part. Use it to check the answer (stop laughing at the back, there! – it occasionally does happen; e.g. conventions for a maths library). 
-  * Use an alternative method to come up with the same answer (it’s often the case that the same value can be calculated via multiple algorithms / schemes). 
-  * Use an existing implementation to corroborate your findings. E.g. if you’re writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](http://jsonlint.com/) agrees with your test results. 
-  * If you’re not sure how to corroborate an exact answer, then check any invariants you’re aware of as a smoke test. If any of the invariants don’t hold, your answer is probably wrong.
+* Don’t just assume you’ve got it right first time. Double check it for a few minutes more. 
+* Write out some notes on paper (I sometimes do the testing version of truth tables). 
+* Maybe you have a specification for this particular part. Use it to check the answer (stop laughing at the back, there! – it occasionally does happen; e.g. conventions for a maths library). 
+* Use an alternative method to come up with the same answer (it’s often the case that the same value can be calculated via multiple algorithms / schemes). 
+* Use an existing implementation to corroborate your findings. E.g. if you’re writing a test to make sure that JSON is validated correctly, then check that [JSONLint.com](http://jsonlint.com/) agrees with your test results. 
+* If you’re not sure how to corroborate an exact answer, then check any invariants you’re aware of as a smoke test. If any of the invariants don’t hold, your answer is probably wrong.

@@ -11,26 +11,28 @@ tags:
   - testing
   - tips
 ---
-“[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)” (aka “AAA”) is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
+"[Arrange, Act, Assert](http://c2.com/cgi/wiki?ArrangeActAssert)" (aka "AAA") is a very simple way to structure your tests – I thoroughly recommend it. It is especially helpful when learning the ropes.
 
 For this post, I’ll use the following example test scenario: When a stack is empty, pushing an item increments the count to one (this example was previously discussed in [Narrow & Focused](?p=698), if you want more context)
 
-> [Test]  
-> public void pushing\_an\_item\_onto\_an\_empty\_stack\_increments\_count()  
-> {  
->  // Arrange  
->  var stack = new Stack<bool>(); 
-> 
->  // Act  
->  stack.Push(false); 
-> 
->  // Assert  
->  Assert.That(stack.Count, Is.EqualTo(1));  
-> }
+```c#
+[Test]  
+public void pushing_an_item_onto_an_empty_stack_increments_count()  
+{  
+ // Arrange  
+ var stack = new Stack<bool>(); 
+
+ // Act  
+ stack.Push(false); 
+
+ // Assert  
+ Assert.That(stack.Count, Is.EqualTo(1));  
+}
+```
 
 Each ‘phase’ of the test happens in order and occurs precisely once. Arrange precedes Act, Act precedes Assert. I’ll go into a little more detail later as to why this is a useful property.
 
-A brief description of each “A” follows.
+A brief description of each "A" follows.
 
 ## Arrange
 To be able to put yourself in a position where you can invoke a method and check that the result was correct, you first need to able to put things into a ‘primed’ configuration. If you want to test that your pistol can shoot a tin can, then you’d probably need to set up the tin can at an appropriate range, load the weapon and take the safety off before you even think about firing.
@@ -62,39 +64,43 @@ If we return to the [Narrow & Focused](?p=698) post, you’ll see that the examp
 
 Take this example of a bad test that I’ve lifted from that post (I’ve shortened a bit), for example:
 
-> [Test]  
-> public void BadPushPopTest()  
-> {  
->  var stack = new Stack<int>();  
->  Assert.That(stack.Count, Is.EqualTo(0)); 
-> 
->  stack.Push(1);  
->  Assert.That(stack.Count, Is.EqualTo(1)); 
-> 
->  int popped = stack.Pop();  
->  Assert.That(popped, Is.EqualTo(1));  
->  Assert.That(stack.Count, Is.EqualTo(0));  
-> }
+```c#
+[Test]  
+public void BadPushPopTest()  
+{  
+ var stack = new Stack<int>();  
+ Assert.That(stack.Count, Is.EqualTo(0)); 
+
+ stack.Push(1);  
+ Assert.That(stack.Count, Is.EqualTo(1)); 
+
+ int popped = stack.Pop();  
+ Assert.That(popped, Is.EqualTo(1));  
+ Assert.That(stack.Count, Is.EqualTo(0));  
+}
+```
 
 Let’s try and structure it using the Arrange, Act, Assert comments and see how it holds up:
 
-> [Test]  
-> public void BadPushPopTest()  
-> {  
->  **// Arrange**  
->  var stack = new Stack<int>();  
->  Assert.That(stack.Count, Is.EqualTo(0)); **// Warning: asserting in the Arrange phase**!
-> 
->  **// Act  
->**  stack.Push(1); 
-> 
-> ** // Assert**  
->  Assert.That(stack.Count, Is.EqualTo(1));  
->        **  
->**  int popped = stack.Pop(); **// Warning: action in the Assert phase**!  
->  Assert.That(popped, Is.EqualTo(1)); **// Warning: why are we asserting again?  
->**  Assert.That(stack.Count, Is.EqualTo(0)); **// Warning: and again...  
->** }
+```c#
+[Test]  
+public void BadPushPopTest()  
+{  
+ // Arrange  
+ var stack = new Stack<int>();  
+ Assert.That(stack.Count, Is.EqualTo(0)); // Warning: asserting in the Arrange phase**!
+
+ // Act  
+ stack.Push(1); 
+
+ // Assert  
+ Assert.That(stack.Count, Is.EqualTo(1));
+
+ int popped = stack.Pop(); // Warning: action in the Assert phase**!  
+ Assert.That(popped, Is.EqualTo(1)); // Warning: why are we asserting again?  
+ Assert.That(stack.Count, Is.EqualTo(0)); // Warning: and again...  
+}
+```
 
 It doesn’t work, because the test is not focused enough. It would be very difficult (probably impossible) to whip this into a reasonable AAA structure. If a test does not fit into the AAA structure, it’s almost always a warning sign that the test needs split into multiple tests. 
 

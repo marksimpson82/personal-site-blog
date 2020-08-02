@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=619
 #permalink: /?p=619
 tags:
   - misc
-  - rants
+  - whinges
   - tips
 ---
 **tl;dr summary**

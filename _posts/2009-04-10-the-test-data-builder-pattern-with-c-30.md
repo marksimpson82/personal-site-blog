@@ -10,6 +10,7 @@ tags:
   - 'c#'
   - patterns
   - testing
+  - builder
 ---
 **Update**
 
@@ -50,74 +51,81 @@ It's simple: Instead of using a method per value change, we use a property inste
 
 The following code is provided merely to illustrate the syntax (there's not much point in using a TDB on a class with so few parameters). Here's an overly simple example of a Person class to test.
 
-<pre> /// &lt;summary&gt;The class under test&lt;/summary&gt;
- public class Person
- {
- private readonly string m_name;
- private readonly DateTime m_dateOfBirth;
- private readonly string m_address;
+```c#
+/// <summary>The class under test</summary>
+public class Person
+{
+  private readonly string m_name;
+  private readonly DateTime m_dateOfBirth;
+  private readonly string m_address;
 
- public Person(string _name, DateTime _dateOfBirth, string _address)
- {
- ValidateDateOfBirth(_dateOfBirth);
-            ValidatePostCode(_address);        // etc.
- m_name = _name;
- m_dateOfBirth = _dateOfBirth;
- m_address = _address;
- }
- }</pre>
-
+  public Person(string _name, DateTime _dateOfBirth, string _address)
+  {
+    ValidateDateOfBirth(_dateOfBirth);
+    ValidatePostCode(_address); // etc.        
+    
+    m_name = _name;
+    m_dateOfBirth = _dateOfBirth;
+    m_address = _address;
+   }
+}
+```
 Here's the builder. Notice that it has 3 auto properties that match the Person class's constructor parameter names and types. Default values are instantiated in the constructor, and the properties allow test writers to swap out the defaults for their own specific values.
 
-<pre> /// &lt;summary&gt;Test data builder for testing the Person class&lt;/summary&gt;
- public class PersonTestBuilder
- {
- public string Name { get; set; }
- public DateTime DateOfBirth { get; set; }
- public string Address { get; set; }
+```c#
+/// <summary>Test data builder for testing the Person class</summary>
+public class PersonTestBuilder
+{
+  public string Name { get; set; }
+  public DateTime DateOfBirth { get; set; }
+  public string Address { get; set; }
 
- public PersonTestBuilder()
- {
- Name = "DefaultName";
- Address = "DefaultAddress";
- DateOfBirth = new DateTime(1920, 8, 15);
- }
+  public PersonTestBuilder()
+  {
+    Name = "DefaultName";
+    Address = "DefaultAddress";
+    DateOfBirth = new DateTime(1920, 8, 15);
+  }
 
- public Person Build()
- {
- return new Person(Name, Address, DateOfBirth);
- }
- }</pre>
+  public Person Build()
+  {
+    return new Person(Name, Address, DateOfBirth);
+  }
+}
+```
 
 Finally, here's the test code itself. Notice that the only arguments that are varied are the ones that are named in the test. If the builder's property is not set, the defaults held in the builder are used to construct the instance of the class under test.
 
-<pre> /// &lt;summary&gt;The actual tests for the person class&lt;/summary&gt;
-    [TestFixture]
-    public class PersonTests
+```c#
+/// <summary>The actual tests for the person class</summary>
+[TestFixture]
+public class PersonTests
+{
+  [Test]
+  [ExpectedException(typeof(RidiculousAgeException), ExpectedMessage = "... etc")]
+  public void Constructor_DateOfBirthInvalid_ThrowsExceptionTest()
+  {
+    new PersonTestBuilder
     {
-        [Test]
-        [ExpectedException(typeof(RidiculousAgeException), ExpectedMessage = "... etc")]
-        public void Constructor_DateOfBirthInvalid_ThrowsExceptionTest()
-        {
-            new PersonTestBuilder
-                {
-                    // Notice that this is now the sole focus!
-                    DateOfBirth = new DateTime(1200, 10, 15)
-                }.Build();
-        }
+      // Notice that this is now the sole focus!
+      DateOfBirth = new DateTime(1200, 10, 15)
+      }
+    }.Build();
+  }
 
-        [Test]
-        public void Constructor_AddressTest()
-        {
-            Person testPerson = new PersonTestBuilder
-            {
-                Address = "10 Bigglesworth Lane",
-            }.Build();
+  [Test]
+  public void Constructor_AddressTest()
+  {
+    Person testPerson = new PersonTestBuilder
+    {
+      Address = "10 Bigglesworth Lane",
+    }.Build();
 
-            Assert.That(testPerson.Address,
-                Is.EqualTo("10 Bigglesworth Lane"));
-        }
-    }</pre>
+    Assert.That(testPerson.Address,
+      Is.EqualTo("10 Bigglesworth Lane"));  
+  }
+}
+```
 
 If any of this is unclear, just paste the code into your IDE and step through it in your debugger to see what's happening (you'll have to remove the non existent methods & exception test, obviously!)
 

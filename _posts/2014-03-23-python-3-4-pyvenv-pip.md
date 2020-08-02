@@ -22,8 +22,6 @@ tags:
 
 ... is a virtual environment manager. Rather than installing packages in your site-packages directory (modifying your python environment – something that is a bit sucky when you have conflicting needs for different projects), developers have traditionally used virtualenv. In Python 3.X, you can use pyvenv instead and it seems to Just Work&#x2122;.
 
-## 
-
 ## All Together Now
 
 On Windows, getting pip and pyvenv working together is pretty simple, but I had a little trouble finding the bare minimum “getting started” documentation, so here’s a version for frantic googlers.
@@ -32,23 +30,27 @@ First, set up a virtual environment using pyvenv:
 
 Open a command prompt in the directory you’d like to create the virtual environment, then run the following command:
 
-> **> C:\your\_python\_dir\python C:\your\_python\_dir\Tools\Scripts\pyvenv my\_env\_name**
+```
+C:\your_python_dir\python C:\your_python_dir\Tools\Scripts\pyvenv my_env_name
+```
 
 Then, run:
 
-> **> my\_env\_name\Scripts\activate.bat**
+```
+my_env_name\Scripts\activate.bat
+```
 
 This will give you a command prompt with the environment name prepended to signify that it’s active.
 
 At this point, you can start installing stuff with pip!
 
-> **> pip install beautifulsoup4**
+```
+pip install beautifulsoup4
+```
 
 [<img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" alt="image" src="https://defragdev.com/blog/images/2014/03/image_thumb.png" width="681" height="346" border="0" />](https://defragdev.com/blog/images/2014/03/image.png)
 
 Not bad. Much simpler than in olden times.
-
-## 
 
 ## A bonus – PyCharm & pyvenv
 

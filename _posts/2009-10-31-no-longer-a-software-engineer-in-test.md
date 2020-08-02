@@ -7,7 +7,8 @@ layout: single
 guid: https://defragdev.com/blog/?p=433
 #permalink: /?p=433
 tags:
-  - Uncategorized
+  - life
+  - career
 ---
 .. I've swapped jobs at Realtime Worlds; I'm now a plain ol' software engineer. As a result, there'll be no more test engineering for me.
 

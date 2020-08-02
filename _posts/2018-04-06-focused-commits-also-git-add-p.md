@@ -26,30 +26,34 @@ The first point (the what) has been written about a lot. The gist of the workflo
 
 I.e. when you're working on a feature branch and have local commits that haven't been pushed, use the following to avoid noisy merge commits:
 
-<pre class="">git pull origin mybranch --rebase</pre>
+`git pull origin mybranch --rebase`
 
 To keep your own (non-shared) branch up to date with master, but without creating merge commits, periodically do something like:
 
-<pre class="">git pull origin master
+```bash
+git pull origin master
 git checkout mybranch
-git rebase master</pre>
+git rebase master
+```
 
 (Small tip: if you are pushing your own personal branch after rebasing, you can be sure not to nuke anything important by employing [git push -force-with-lease](https://developer.atlassian.com/blog/2015/04/force-with-lease/) rather than git push -force).
 
 Then when you're ready to merge back to master:``
 
-<pre class="">git checkout master
+```bash
+git checkout master
 git merge mybranch --squash
-git commit</pre>
+git commit
+```
 
 There are many advantages:
 
-  * It keeps the history linear
-  * There's no merge noise
-  * It groups related commits
-  * Reverting a feature merge is easy (i.e. you can just revert the squashed merge)
-  * The default commit message will contain the hashes for all squashed commits, so fine-grained operations & the intent for all of these changes are still there.
-  * ... and arguably best of all, you can trivially figure out which commits introduced bugs when QA says, "hey, CI build 1923's frob widget is misbehaving" (when commits are interleaved from a long-running branch, the offending commit may actually show up in the history as being months old).
+* It keeps the history linear
+* There's no merge noise
+* It groups related commits
+* Reverting a feature merge is easy (i.e. you can just revert the squashed merge)
+* The default commit message will contain the hashes for all squashed commits, so fine-grained operations & the intent for all of these changes are still there.
+* ... and arguably best of all, you can trivially figure out which commits introduced bugs when QA says, "hey, CI build 1923's frob widget is misbehaving" (when commits are interleaved from a long-running branch, the offending commit may actually show up in the history as being months old).
 
 The only time I deviate from this pattern is when I'm suffering a lot of merge pain - standard rebasing means merging up your _individual_ commits, so it can mean a lot of repeated work needs to be done in areas where merge conflicts frequently occur. You can interactively rebase & squash your branch's commits to reduce the number of commits that require merging or use [git rerere](https://git-scm.com/docs/git-rerere), but it's fairly complicated vs. the usual workflow.
 
@@ -109,5 +113,3 @@ Certain IDEs also have VCS integration where you can select the hunks to stage, 
 Nothing's ever free, so when using patch mode, take care that your changes don't mix & match too much, or you may accidentally take part of change A and roll it in with change B (e.g. you renamed a variable, and failed to notice it crept into a prior commit).
 
 If you're making large changes, it's better to just do the work later.
-
-&nbsp;

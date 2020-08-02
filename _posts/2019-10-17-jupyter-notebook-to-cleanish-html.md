@@ -77,7 +77,10 @@ While this is great for a drag 'n' drop experience and for sharing intermediate 
 
 The generated HTML was ~750KB, whereas a markdown variant came in under 270KB!
 
-<pre class="crayon-selected">$ jupyter nbconvert --to markdown overwatch_survey/analysis.ipynb --output-dir <span class="pl-s"><span class="pl-pds">"</span>static_site<span class="pl-pds">"</span></span></pre>
+```bash
+jupyter nbconvert --to markdown \
+  overwatch_survey/analysis.ipynb --output-dir static_site
+```
 
 OK, so we have fairly clean Markdown, but now what?
 
@@ -85,6 +88,8 @@ OK, so we have fairly clean Markdown, but now what?
 
 Doing any kind of webdev install on Windows is a pain, but ... oh well. Jekyll is a solid choice and it works well. It also generates much better HTML for my purposes than nbconvert.<span class="pl-s"><span class="pl-pds"><br /> </span></span>
 
-<pre class="">$ (cd static_site <span class="pl-k">&&</span> bundle <span class="pl-c1">exec</span> jekyll serve)</pre>
+```bash
+(cd static_site && bundle exec jekyll serve)
+```
 
 That's all I have to say about that.

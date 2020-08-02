@@ -35,25 +35,29 @@ Say we had a simple class called "MyDocument", and MyDocument could be loaded fr
 
 #### Approach One
 
-<pre>// #1: this is tightly coupled to file system. 
- void SimpleLoading()
- {
-    var simpleDocument = new MyDocument("filenameToLoad.doc");
- }</pre>
+```c#
+// #1: this is tightly coupled to file system. 
+void SimpleLoading()
+{
+  var simpleDocument = new MyDocument("filenameToLoad.doc");
+}
+```
 
 Depending on your needs and the demands of the user, this may be OK. However, to test MyDocument's methods/properties properly, we need access to the file system to instantiate it. If our tests are to be robust & fast, we need something better. Here's something that's testable:
 
 #### Approach Two
 
-<pre>// #2: doc calls DocumentLoader's methods to get data needed
- void SlightlyImprovedAndTestable()
- {
-    // this type implements IDocumentLoader
-    var docLoaderStrategy = new FileDocumentLoader("filenameToLoad.doc");
+```c#
+// #2: doc calls DocumentLoader's methods to get data needed
+void SlightlyImprovedAndTestable()
+{
+  // this type implements IDocumentLoader
+  var docLoaderStrategy = new FileDocumentLoader("filenameToLoad.doc");
 
-    // Uses DI; ctor calls doc loader's methods to construct itself
-    var doc = new MyDocumentType(docLoaderStrategy);
- }</pre>
+  // Uses DI; ctor calls doc loader's methods to construct itself
+  var doc = new MyDocumentType(docLoaderStrategy);
+}
+```
 
 From a testability standpoint, this is slightly better, as we can now feed in an IDocumentLoader instance which the MyDocument constructor uses to get the data.
 
@@ -62,21 +66,22 @@ On the flipside, the MyDocument type now needs to know about IDocumentLoader. To
 When we think about it though, why should MyDocument need to know about loading strategies? In many cases, we can parse a file and produce some output using a factory or builder instead. E.g.:
 
 #### Approach Three
+```c#
+// #3: Break loading + doc creation into two distinct parts
+void DecoupledAndTestable()
+{
+  // loading is now a separate step :)
+  MyDocument doc;
+  using(var docLoader = new DocumentLoader("filenameToLoad.doc"))
+  {
+    doc = docLoader.LoadDocument();
+  }
 
-<pre>// #3: Break loading + doc creation into two distinct parts
- void DecoupledAndTestable()
- {
-    // loading is now a separate step :)
-    MyDocument doc;
-    using(var docLoader = new DocumentLoader("filenameToLoad.doc"))
-    {
-       doc = docLoader.LoadDocument();
-    }
-
-    // Similarly, we can do something like this
-    var testDoc = new TestLoader()
-                      .LoadDocumentFromText(SomeResourceFile.ValidDocument);
- }</pre>
+  // Similarly, we can do something like this
+  var testDoc = new TestLoader()
+    .LoadDocumentFromText(SomeResourceFile.ValidDocument);
+}
+```
 
 To clarify how this works: The DocumentLoader would parse the .doc file and construct the object instances required to build up a real document, then pass them into the document's constructor (or build up the document via some other means, such as iteratively calling methods on a blank document to fill it up as new items are found - whatever makes sense). This totally decouples the loading and instantiation, meaning we can test each step in isolation.
 

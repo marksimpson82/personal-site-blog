@@ -13,7 +13,8 @@ I've tried to install a couple of different syntax highlighters in the past and 
 
 Anyway, after manually formatting source code snippets for years, I'm giving Crayon a go. The install was easy and the output looks good. Let's see how we go :-)
 
-<pre class="lang:c++ decode:true" title="Snippet" data-url="test_snippet">class Test
+```c++
+class Test
 {
   int x;
   std::string hi;
@@ -24,6 +25,7 @@ public:
   {
 
   }
-}</pre>
+}
+```
 
-You can find it here: https://wordpress.org/plugins/crayon-syntax-highlighter/
+You can find it here: [https://wordpress.org/plugins/crayon-syntax-highlighter/](https://wordpress.org/plugins/crayon-syntax-highlighter/)

@@ -11,6 +11,9 @@ tags:
   - gotchas
   - patterns
   - software
+  - castle-dynamic-proxy
+  - aop
+  - advice
 ---
 I've been faffing around with [Castle.DynamicProxy2](http://www.castleproject.org/dynamicproxy/index.html) a bit lately and it's a pretty interesting bit of kit. Castle Dynamic Proxy (CDP) allows you to dynamically generate proxies at runtime to weave aspects of behaviour into existing types. Aspect oriented programming is typically employed for implementing crosscutting concerns such as logging, performance measuring, raising INotifyPropertyChanged and various other types of repetitive and/or orthogonal concerns. I'm a newbie to this stuff so I won't say much more on AOP.
 
@@ -28,8 +31,8 @@ With class based interceptors, you cannot intercept non virtual methods because 
 
 The second method is [ProxyGenerator.CreateInterfaceProxyWithTarget](http://api.castleproject.org/html/Overload_Castle_DynamicProxy_ProxyGenerator_CreateInterfaceProxyWithTarget.htm), and it is the primary reason for writing this blog post! CreateInterfaceProxyWithTarget does not dynamically subclass target types, it simply creates a dynamically generated class, implements the same target interface and then passes through to it. I.e. it's an implementation of the [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern). This has two effects, one of which is very important!
 
-  1. You don't need to mark your methods/properties as virtual
-  2. Since it is a proxy working via decoration rather than subclassing, for the effects of the interceptor to be applied, all calls must be made **on the proxy instance**. Think about it.
+1. You don't need to mark your methods/properties as virtual
+2. Since it is a proxy working via decoration rather than subclassing, for the effects of the interceptor to be applied, all calls must be made **on the proxy instance**. Think about it.
 
 The most salient point is #2. I'll elaborate.
 

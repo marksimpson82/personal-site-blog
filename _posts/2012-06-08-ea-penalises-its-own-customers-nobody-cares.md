@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=662
 #permalink: /?p=662
 tags:
   - games
-  - rants
+  - whinges
 ---
 To follow up from my last babblings on the [scourge of expansion packs](https://defragdev.com/blog/?p=649) and unfair advantages, EA/DICE has really put the cat amongst the pigeons with the release of [BF3 Premium](http://battlelog.battlefield.com/bf3/premium/).
 

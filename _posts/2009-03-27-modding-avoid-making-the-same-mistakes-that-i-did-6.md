@@ -23,9 +23,9 @@ Negative design is something of a quagmire. By negative, I mean that someone sug
 
 To further illustrate this point, consider the game Left4Dead. So much of what makes L4D riotous fun could be picked apart at the design stage by over-thinking and watering down those choices.
 
-  * "Right, so let me guess this straight, the special infected just _teleport in right next to the survivors with no fixed spawns?_ That's ridiculous. Let's make some pre-defined spawns."
-  * "The boomer is fat, slow, weak and can only vomit on people? You're seriously expecting me to waddle around for a while and occasionally throw up? Boring. Give him some other function and beef up his toughness."
-  * "Once a hunter pounces someone or a smoker grabs a survivor, they simply _stay on them until they die?_ Sounds stupid to only get to choose one target and then be stuck with it. Let them release at will."
+* "Right, so let me guess this straight, the special infected just _teleport in right next to the survivors with no fixed spawns?_ That's ridiculous. Let's make some pre-defined spawns."
+* "The boomer is fat, slow, weak and can only vomit on people? You're seriously expecting me to waddle around for a while and occasionally throw up? Boring. Give him some other function and beef up his toughness."
+* "Once a hunter pounces someone or a smoker grabs a survivor, they simply _stay on them until they die?_ Sounds stupid to only get to choose one target and then be stuck with it. Let them release at will."
 
 Deconstructed and totally removed from the context of L4D's constant waves of tension, these design ideas sound really bad. In practice they all combine to make the game fantastic. I'm betting that Turtle Rock iterated on their design constantly and tried a lot of new things, then sat some people down and watched their reaction. They probably didn't sit around in a room doom-mongering about why it won't work!
 

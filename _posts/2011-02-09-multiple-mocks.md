@@ -40,30 +40,32 @@ By “Fixture as Context”, I mean that if I have a complicated action that has
 
 E.g.
 
-public class when\_updating\_social\_network\_status  
+```c#
+public class when_updating_social_network_status  
 {  
-private IFacebook m_facebook;  
-private ITwitter m_twitter;
+  private IFacebook m_facebook;  
+  private ITwitter m_twitter;
 
-[SetUp]  
-public void before\_each\_test()  
-{  
-// wire up object graph and do the update stuff once  
-}
+  [SetUp]  
+  public void before_each_test()  
+  {  
+    // wire up object graph and do the update stuff once  
+  }
 
-[Test]  
-public void facebook\_is\_updated()  
-{  
-// no expect or verify calls needed, so you can keep this separate from the setup  
-m_facebook.AssertWasCalled(f => f.Update());  
+  [Test]  
+  public void facebook_is_updated()  
+  {  
+    // no expect or verify calls needed, so you can keep this separate from the setup  
+    m_facebook.AssertWasCalled(f => f.Update());  
+  }
+  
+  [Test]  
+  public void twitter_is_updated()  
+  {  
+    m_twitter.AssertWasCalled(t => t.Update());  
+  }  
 }
-
-[Test]  
-public void twitter\_is\_updated()  
-{  
-m_twitter.AssertWasCalled(t => t.Update());  
-}  
-}
+```
 
 For simple mocking, you can use RhinoMocks' stub.AssertWasCalled() (confusing terminology) rather than .Expect(); this keeps things nicely separated and each test is tiny and only verifies the things it is interested in. If one of them fails, you still have the separation & readability.
 

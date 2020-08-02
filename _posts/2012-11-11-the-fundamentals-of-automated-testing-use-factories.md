@@ -17,13 +17,15 @@ Tests are just like normal code in the sense that repeating yourself can cause p
 
 Say we have 30 tests, each directly invoking constructors like the following example:
 
-> [Test]  
-> public void when\_adding\_a\_valid\_order\_it\_is\_appended\_to\_audit\_trail()  
-> {  
->  var orderService = new OrderService(); // hello Mr. Constructor
-> 
->  ... // rest of test  
-> }
+```c#
+[Test]  
+public void when_adding_a_valid_order_it_is_appended_to_audit_trail()  
+{  
+ var orderService = new OrderService(); // hello Mr. Constructor
+
+ ... // rest of test  
+}
+```
 
 It doesn’t look so bad but, if in 3 months, OrderService is changed to use constructor injection and its interface is changed to include a new “Start” method that must be called prior to certain methods being usable, we have a problem. Now we have 30 broken tests that must be fixed individually. I once had to clean up hundreds of tests broken by a single constructor call. It wasn’t fun. Or productive.
 
@@ -33,22 +35,24 @@ I say “a solution” as there are other ways to tackle this problem, such as u
 
 We can insulate our tests from breaking changes by moving object creation to simple private factory methods. It is then often a case of updating the factory method once.
 
-> [Test]  
-> public void when\_adding\_a\_valid\_order\_it\_is\_appended\_to\_audit\_trail()  
-> {  
->  // Arrange  
->  var orderService = CreateOrderService();
-> 
->  ... // rest of test  
-> }
-> 
-> private OrderService CreateOrderService()  
-> {  
->  var orderService = new OrderService(new StubLogger(), new MessageGateway());  
->  orderService.Start();
-> 
->  return orderService;  
-> }
+```c#
+[Test]  
+public void when_adding_a_valid_order_it_is_appended_to_audit_trail()  
+{  
+ // Arrange  
+ var orderService = CreateOrderService();
+
+ ... // rest of test  
+}
+
+private OrderService CreateOrderService()  
+{  
+ var orderService = new OrderService(new StubLogger(), new MessageGateway());  
+ orderService.Start();
+
+ return orderService;  
+}
+```
 
 ## Benefits
 

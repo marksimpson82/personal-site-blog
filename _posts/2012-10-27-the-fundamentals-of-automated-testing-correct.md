@@ -17,19 +17,21 @@ Once you’ve decided what you’re going to test, chosen a good name and starte
 
 It is simple to accidentally write a test that purports to test one thing, but actually tests another. E.g. 
 
-> [Test]  
-> public void model\_is\_loaded\_correctly\_from_stream()  
-> {  
->  // Arrange  
->  var resourceLoader = CreateResourceLoader();  
->  var modelDataStream = CreateModelDataStream();
-> 
->  // Act  
->  var loadedResource = resourceLoader.LoadFromStream(modelDataStream); // fine so far
-> 
->  // Assert  
->  Assert.That(resourceLoader.LoadedResources, Is.EqualTo(1)); // buh?!  
-> }
+```c#
+[Test]  
+public void model_is_loaded_correctly_from_stream()  
+{  
+ // Arrange  
+ var resourceLoader = CreateResourceLoader();  
+ var modelDataStream = CreateModelDataStream();
+
+ // Act  
+ var loadedResource = resourceLoader.LoadFromStream(modelDataStream); // fine so far
+
+ // Assert  
+ Assert.That(resourceLoader.LoadedResources, Is.EqualTo(1)); // buh?!  
+}
+```
 
 In this test, we can see that it claims to test that loading a model from a stream returns a valid resource. However, the test is then asserting that the loaded resources count has increased. It is not checking the returned resource for correctness. Either the test name is out of date, or it is not testing the correct thing. 
 
@@ -43,24 +45,26 @@ All tests should assert against some meaningful result. Put simply, if a test do
 
 Here is an example of a test that looks useful but, on closer inspection, is doesn't really prove much at all. 
 
-> [Test]  
-> public void game\_properties\_are\_correctly\_serialized()  
-> {  
->  // Arrange  
->  var currentLevel = 4;  
->  var playerName = "Steve";  
->  var game = CreateGame(playerName, currentLevel);  
->  var serializer = CreateGamePersistence();  
->   
->  using(Stream stream = new MemoryStream())  
->  {  
->  // Act  
->  serializer.Save(game, stream);  
->  }  
->   
->  Assert.That(true, Is.True) // WHAT?!?!?  
-> }
+```c#
+[Test]  
+public void game_properties_are_correctly_serialized()  
+{  
+ // Arrange  
+ var currentLevel = 4;  
+ var playerName = "Steve";  
+ var game = CreateGame(playerName, currentLevel);  
+ var serializer = CreateGamePersistence();  
+  
+ using(Stream stream = new MemoryStream())  
+ {  
+ // Act  
+ serializer.Save(game, stream);  
+ }  
+  
+ Assert.That(true, Is.True) // WHAT?!?!?  
+}
+```
 
-I’ve seen the “Assert true == true” thing numerous times. If the assert is missing or tells us nothing useful, the chances are the test isn’t going to prove much, so why are some developers compelled to do it? My guess is that people think, “hmm, I’ve written a test with no asserts, there we go”. If you ever get tempted to do this, don’t! It’s a sign that something is wrong.
+I’ve seen the `Assert true == true` anti-pattern numerous times. If the assert is missing or tells us nothing useful, the chances are the test isn’t going to prove much, so why are some developers compelled to do it? My guess is that people think, “hmm, I’ve written a test with no asserts, there we go”. If you ever get tempted to do this, don’t! It’s a sign that something is wrong.
 
 **Note**: it’s sometimes useful to have methods like this to act as surrogate Main() methods so we can invoke them via a test runner for easy debugging but, in general, it’s not a terribly good idea and you wouldn’t want to run these tests as a part of your normal development workflow.

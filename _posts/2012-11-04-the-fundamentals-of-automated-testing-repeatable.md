@@ -45,20 +45,22 @@ While there’s nothing inherently wrong about using threads in integration/func
 
 Here's an example of a test that spins up a thread (again, please do not use this as an example of how to do things, as it’s flawed in several ways). I’ve highlighted the lines in the test body that involve threading concerns:
 
-> [Test]  
-> public void TestLocking()  
-> {  
->  var ptr = Memory.Alloc(128, "test", "Memory");  
-> ** Thread t2 = new Thread(() => Memory.MemSet(ptr, 6, 128));  
->  t2.Start();**
-> 
-> ** while (t2.IsAlive)  
->  {  
->  Thread.Sleep(10);  
->  }**
-> 
->  Memory.Free(ptr);  
-> }
+```c#
+[Test]  
+public void TestLocking()  
+{  
+ var ptr = Memory.Alloc(128, "test", "Memory");  
+ Thread t2 = new Thread(() => Memory.MemSet(ptr, 6, 128));  
+ t2.Start();
+
+ while (t2.IsAlive)  
+ {  
+ Thread.Sleep(10);  
+ }
+
+ Memory.Free(ptr);  
+}
+```
 
 Ignoring the non-descriptive name and the lack of a meaningful assert, this is a fairly simple test that seems to be checking that a memory system can allocate and de-allocate across different threads, yet the majority of the code is dealing with threading concerns. Threaded tests run the risk of race conditions, re-entrancy problems, deadlock, livelock and all of the rest. Also, the more lines of imperative code added to tests, the more risky it is that a bug will be introduced _in the test itself_. 
 
@@ -72,22 +74,25 @@ Timing is related to threading, but typically manifests itself as the test code 
 
 Here's an example (again, please don’t etc. and so forth – it’s not great code): 
 
-> [Test]  
-> public void LoadRequestTest()  
-> {  
->  Command command = new Command(PipeCodes.Loader_PathFile, OpCodes.Load, null, string.Empty, null);  
->  ResourceSystem.commandQueue.ExternalEnqueue(command);
-> 
->  int count = 0;  
->  while ((command.OpCode != OpCodes.Error) &&  
->  (count < 100))  
->  {  
->  Thread.Sleep(10); // Why 10?  
->  count++;  
->  }
-> 
->  Assert.AreEqual(OpCodes.Error, command.OpCode);  
-> }
+```c#
+[Test]  
+public void LoadRequestTest()  
+{  
+ Command command = new Command(
+   PipeCodes.Loader_PathFile, etc ..., null);
+ ResourceSystem.commandQueue.ExternalEnqueue(command);
+
+ int count = 0;  
+ while ((command.OpCode != OpCodes.Error) &&  
+ (count < 100))  
+ {  
+ Thread.Sleep(10); // Why 10?  
+ count++;  
+ }
+
+ Assert.AreEqual(OpCodes.Error, command.OpCode);  
+}
+```
 
 The name isn’t very helpful, but let’s just focus on the timing concerns. Notice that there is no sign of threading. The production code is spinning up threads under the hood, though. Aside from the difficulty understanding the intent of the test, the test relies on the magic number of 10 milliseconds. Presumably something (I'm not quite sure what) takes time to process, so the loop has 100 iterations in which to succeed, and a value to wait after each pass of the loop. 
 

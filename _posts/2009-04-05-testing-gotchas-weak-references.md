@@ -23,27 +23,29 @@ OK you say, what's the point in this article? The point is that GC is extremely 
 
 ### Obligatory Contrived Example
 
-<pre>public class GuyWhoUsesWeakRef
+```c#
+public class GuyWhoUsesWeakRef
 {
-    private WeakReference m_weakBuilder;
+  private WeakReference m_weakBuilder;
 
-    public GuyWhoUsesWeakRef(StringBuilder _builder)
-    {
-        m_weakBuilder = new WeakReference(_builder);
-    }
+  public GuyWhoUsesWeakRef(StringBuilder _builder)
+  {
+    m_weakBuilder = new WeakReference(_builder);
+  }
 
-    public bool IsWeakRefValid { get { return m_weakBuilder.Target != null; } }
+  public bool IsWeakRefValid { get { return m_weakBuilder.Target != null; } }
 }
 
 [Test]
 public void IsWeakRefValid_WhenValidRef_ReturnsTrue_Test()
 {
-    var builder     = new StringBuilder();
-    var usesWeakRef = new GuyWhoUsesWeakRef(builder);
+  var builder     = new StringBuilder();
+  var usesWeakRef = new GuyWhoUsesWeakRef(builder);
 
-    Assert.That(usesWeakRef.IsWeakRefValid, Is.True,
-        "Operation relying on the weak reference should've succeeded");
-}</pre>
+  Assert.That(usesWeakRef.IsWeakRefValid, Is.True,
+    "Operation relying on the weak reference should've succeeded");
+}
+```
 
 ### Why does this occasionally fail?
 
@@ -59,7 +61,8 @@ The main problem is that it won't happen every time. The GC is _non-deterministi
 
 The good folks at Microsoft they provided a very simple static method call to solve this particular problem; enter [GC.KeepAlive](http://msdn.microsoft.com/en-us/library/system.gc.keepalive.aspx). Placing a call to GC.KeepAlive(builder) at the end of this test method will ensure that the object we're referring to will not be collected until after the GC.KeepAlive call has been made. Problem solved.
 
-<pre>[Test]
+```c#
+[Test]
 public void IsWeakRefValid_WhenValidRef_ReturnsTrue_Test()
 {
  var builder = new StringBuilder();
@@ -68,5 +71,6 @@ public void IsWeakRefValid_WhenValidRef_ReturnsTrue_Test()
  Assert.That(usesWeakRef.IsWeakRefValid, Is.True,
  "Operation relying on the weak reference should've succeeded");
 
-    GC.KeepAlive(builder); // weak ref is now valid up to this point
-}</pre>
+  GC.KeepAlive(builder); // weak ref is now valid up to this point
+}
+```

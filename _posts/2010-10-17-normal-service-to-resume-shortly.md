@@ -9,7 +9,9 @@ guid: https://defragdev.com/blog/?p=597
 tags:
   - misc
   - MyWorld
-  - rants
+  - whinges
+  - life
+  - career
 ---
 I've had an ... interesting few months.
 

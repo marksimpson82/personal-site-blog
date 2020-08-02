@@ -35,12 +35,12 @@ This has resulted in two terms entering the vernacular of any L4D player who has
 
 **Rage Quitter -** Someone who leaves a game due to frustration and a build-up of hot salty tears. A rage quit commonly occurs due to:
 
-  1. Their team getting destroyed
-  2. Someone else on their team leaving (see #1) resulting in a _domino_ rage
-  3. Incompetence on their team (see #1)
-  4. Deciding that they don't like French/Italian/English/Scottish/<insert nationality here> people all of a sudden (usually coincides with #1)
-  5. Some kind of alleged _cheating_ _bulllshit_ that is going on with the other team (usually imagined; see #1)
-  6. Other people on their team being dicks
+1. Their team getting destroyed
+2. Someone else on their team leaving (see #1) resulting in a _domino_ rage
+3. Incompetence on their team (see #1)
+4. Deciding that they don't like French/Italian/English/Scottish/<insert nationality here> people all of a sudden (usually coincides with #1)
+5. Some kind of alleged _cheating_ _bulllshit_ that is going on with the other team (usually imagined; see #1)
+6. Other people on their team being dicks
 
 I suppose calling all quitters "ragers" is harsh. Let's face it: Most of us play games to have fun. If our team is riduclously bad or there is a huge skill chasm, it's not fun to be dismantled for the best part of an hour.
 

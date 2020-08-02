@@ -10,6 +10,7 @@ tags:
   - 'c#'
   - testing
   - tips
+  - data-driven
 ---
 When the logic of a test method remains constant but the data varies, data-driven testing is a great tool. It allows you, the test author, to write compact code and to add new test cases rapidly. Unfortunately, data-driven tests have a disadvantage: The inputs are often less readable.
 

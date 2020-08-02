@@ -22,35 +22,37 @@ It's a fairly simple concept. By flipping a logical test or statement, you chang
 
 **Approach One**
 
-<pre class="prettyprint"><code>&lt;span class="kwd">if&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">someVal &lt;/span>&lt;span class="pun">!=&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="kwd">null&lt;/span>&lt;span class="pun">)&lt;/span>&lt;span class="pln">
-&lt;/span>&lt;span class="pun">{&lt;/span>&lt;span class="pln">
- &lt;/span>&lt;span class="kwd">if&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">someOtherVal &lt;/span>&lt;span class="pun">!=&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="kwd">null&lt;/span>&lt;span class="pun">)&lt;/span>&lt;span class="pln">
- &lt;/span>&lt;span class="pun">{&lt;/span>&lt;span class="pln">
-   &lt;/span>&lt;span class="typ">DoSomeStuff&lt;/span>&lt;span class="pun">();&lt;/span>&lt;span class="pln">
-
-   &lt;/span>&lt;span class="pun">//...&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="lit">10&lt;/span>&lt;span class="pln"> years later
+```c#
+if(someval != null) 
+{
+  if(someOtherVal != null)
+  {
+    if(anotherVal == 10)
+    {
        if(someOtherCondition)
        {
            DoExtraStuff();
        }
- &lt;/span>&lt;span class="pun">}&lt;/span>&lt;span class="pln">
-&lt;/span>&lt;span class="pun">}&lt;/span>&lt;span class="pln">
-&lt;/span></code></pre>
+    }
+ }
+```
 
 **Approach Two**
+```c#
+if(someval == null)
+  return;
 
-<pre class="prettyprint"><code>&lt;span class="kwd">if&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">someVal &lt;/span>&lt;span class="pun">==&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="kwd">null&lt;/span>&lt;span class="pun">)&lt;/span>&lt;span class="pln">
-  &lt;/span>&lt;span class="kwd">return&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln">
+if(someOtherVal == null)
+  return;
 
-&lt;/span>&lt;span class="kwd">if&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">someOtherVal &lt;/span>&lt;span class="pun">==&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="kwd">null&lt;/span>&lt;span class="pun">)&lt;/span>&lt;span class="pln">
-  &lt;/span>&lt;span class="kwd">return&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln">
+if(anotherVal != 10)
+  return;
 
-&lt;/span>&lt;span class="typ">DoSomeStuff&lt;/span>&lt;span class="pun">();
-&lt;/span></code><code>&lt;span class="pun">//...&lt;/span>&lt;span class="pln"> &lt;/span>&lt;span class="lit">10&lt;/span>&lt;span class="pln"> years later
-if(someOtherCondition)
-{
-    DoExtraStuff();
-}&lt;/span></code></pre>
+if(!someOtherCondition)
+  return;
+       
+DoExtraStuff();       
+```
 
 Even with these trivial examples, I think the first one is much more convoluted and harder to follow. If invariants must hold at the start of a method, it makes much more sense to check them and return / return an error / throw an exception (as appropriate). If multiple nested if statements are used from the start, the nesting depth in the method is increased by default. Any further indentations compound the problem and reduce clarity.
 

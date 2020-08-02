@@ -7,17 +7,19 @@ layout: single
 guid: https://defragdev.com/blog/?p=654
 #permalink: /?p=654
 tags:
-  - rants
+  - whinges
   - software
   - tips
+  - git
+  - git-stash
 ---
 No, I’m not advocating beavering your way to several badges while wearing ill-fitting shorts, a neckerchief fastened with a woggle and risking a criminal record. I’m talking about [The Boy Scout Rule](http://programmer.97things.oreilly.com/wiki/index.php/The_Boy_Scout_Rule). 
 
 The gist of it:
 
 > The Boy Scouts have a rule: "Always leave the campground cleaner than you found it." If you find a mess on the ground, you clean it up regardless of who might have made the mess. You intentionally improve the environment for the next group of campers. Actually the original form of that rule, written by Robert Stephenson Smyth Baden-Powell, the father of scouting, was "Try and leave this world a little better than you found it." 
-> 
-> What if we followed a similar rule in our code: **"Always check a module in cleaner than when you checked it out."** No matter who the original author was, what if we always made some effort, no matter how small, to improve the module. What would be the result? 
+ 
+What if we followed a similar rule in our code: **"Always check a module in cleaner than when you checked it out."** No matter who the original author was, what if we always made some effort, no matter how small, to improve the module. What would be the result? 
 
 ## Why it matters
 

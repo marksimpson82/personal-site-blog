@@ -1,6 +1,6 @@
 ---
 id: 675
-title: Functional-style programming - Easy debugging!
+title: "Functional-style programming - Easy debugging!"
 date: 2012-07-07T21:34:15+00:00
 author: Mark Simpson
 layout: single
@@ -16,7 +16,7 @@ tags:
 ---
 Ever since LINQ arrived in C# land, a lot of people have been using a functional style of programming without even perhaps being conscious of it. 
 
-I always chuckle when I read the words “functional style”, because I picture grim marches across a barren landscape, brutalist architecture and people with beards. 
+I always chuckle when I read the words "functional style", because I picture grim marches across a barren landscape, brutalist architecture and people with beards. 
 
 One particular facet of programming in a functional style is where, rather than mutating an existing piece of data, input data is transformed / projected into something new via a [pure function](http://en.wikipedia.org/wiki/Pure_function). Since this style of programming limits the number of side-effects, it makes debugging a comparatively wonderful experience. 
 
@@ -30,11 +30,11 @@ To reproduce the bug, you need to get the program back into its original state a
 
 ## Step forward, functional style
 
-If you’re simply transforming some data D by some function F, you get something like F(D) = D\`. D’ is a new object or structure. The original input data D remains untouched. If your program is incorrect after the transformation, all of the original state still exists. 
+If you’re simply transforming some data D by some function F, you get something like `F(D) = D’`. 
+
+`D’` is a new object or structure. The original input data `D` remains untouched. If your program is incorrect after the transformation, all of the original state still exists. 
 
 You can simply break in the VS debugger then use the “Set Next Statement” to rewind the execution to an arbitrary point. As long as the operations have no side effects, you can do this as many times as you want or to any depth. It’s almost like you recorded the drama on tape and rewound it.
-
-## 
 
 ## Stuff wot I’m doing
 

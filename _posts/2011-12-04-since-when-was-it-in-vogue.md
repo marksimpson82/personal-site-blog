@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=646
 #permalink: /?p=646
 tags:
   - games
-  - rants
+  - whinges
 ---
 ... to make aspects of your game totally totally and utterly unbalanced when new players are in the mix? I realise that people are OCD and like collecting shit, but has it _really_ come to this? 
 

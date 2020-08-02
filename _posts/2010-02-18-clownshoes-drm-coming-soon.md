@@ -7,7 +7,8 @@ layout: single
 guid: https://defragdev.com/blog/?p=523
 #permalink: /?p=523
 tags:
-  - rants
+  - whinges
+  - drm  
 ---
 Can you believe this [horse shit](http://www.rockpapershotgun.com/2010/02/17/you-maniacs/)? Yes, you read correctly. DRM that requires you to be online. At all times. Not at all irritating. Check the calendar, folks - it's not the first of April.
 
@@ -21,7 +22,7 @@ I feel like William Shatner in ["I can't get behind that"](http://www.youtube.co
 
 Here's the old way of playing a game you've recently purchased:
 
-  1. Install
-  2. Click on shortcut to launch game
+1. Install
+2. Click on shortcut to launch game
 
 Sounds pretty good to me.

@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=649
 #permalink: /?p=649
 tags:
   - games
-  - rants
+  - whinges
 ---
 From the blurb on the [Battlefield Blog](http://blogs.battlefield.ea.com/battlefield_bad_company/archive/2011/12/01/back-to-karkand-launches-for-the-playstation-3-on-tuesday.aspx) (emphasis mine): 
 
@@ -36,7 +36,7 @@ Anyway, the crux of the matter is that the G36-E was patently unbalanced and onl
 
 # My question
 
-In short, does nobody else see anything wrong with ****watching the game you’ve paid for potentially becoming more and more unbalanced as time goes on **unless you’re willing to pay money to keep up**? 
+In short, does nobody else see anything wrong with watching the game you’ve paid for potentially becoming more and more unbalanced as time goes on **unless you’re willing to pay money to keep up**? 
 
 Unless folk actually recognise the problem and start calling bullshit, this sort of design decision will continue to find its way into games. DICE is not alone in making this choice (Valve has TF2 gameplay items that never drop – you have to pay for them), and it’s going to become far more prevalent as more and more games transition towards the game as a service / free to play models (or somewhere in between).
 

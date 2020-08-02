@@ -35,59 +35,65 @@ Temporarily break the _production_ code to make sure the test detects the failur
 
 Here’s a quick, contrived example:
 
-> public class ScratchPad // class under test  
-> {  
->  private List<string> m_messages = new List<string>();
-> 
->  public IEnumerable<string> Messages { get { return m_messages; } }  
->   
->  public void StoreMessage(string message)  
->  {  
->  m_messages.Add(message);  
->  }  
-> } 
+```c#
+public class ScratchPad // class under test  
+{  
+ private List<string> m_messages = new List<string>();
+
+ public IEnumerable<string> Messages { get { return m_messages; } }  
+  
+ public void StoreMessage(string message)  
+ {  
+ m_messages.Add(message);  
+ }  
+} 
+```
 
 Here’s the test code:
 
-> [TestFixture]  
-> public class ScratchPadTests  
-> {  
->  private ScratchPad CreateScratchPad()  
->  {  
->  return new ScratchPad();  
->  }  
->   
->  [Test]  
->  public void storing\_message\_adds\_message\_to\_messages\_list()  
->  {  
->  // Arrange  
->  var scratchPad = CreateScratchPad();  
->  var message = "Who moved my brie?"  
->   
->  // Act  
->  scratchPad.StoreMessage(message);  
->   
->  // Assert  
->  Assert.That(scratchPad.Messages.First(), Is.EqualTo(message))  
->  }  
-> }
+```c#
+[TestFixture]  
+public class ScratchPadTests  
+{  
+ private ScratchPad CreateScratchPad()  
+ {  
+ return new ScratchPad();  
+ }  
+  
+ [Test]  
+ public void storing_message_adds_message_to_messages_list()  
+ {  
+ // Arrange  
+ var scratchPad = CreateScratchPad();  
+ var message = "Who moved my brie?"  
+  
+ // Act  
+ scratchPad.StoreMessage(message);  
+  
+ // Assert  
+ Assert.That(scratchPad.Messages.First(), Is.EqualTo(message))  
+ }  
+}
+```
 
 There’s nothing terribly interesting about this. The test passes, but how do we know the test is working correctly and not simply succeeding by coincidence?
 
 Let’s spring the trap. To do this, we modify the class under test such that it no longer behaves in the way it should. The test we’re scrutinising is checking that the message is added to the messages IEnumerable. To make it fail, we need to comment out some code such that the message is not stored, like this:
 
-> public class ScratchPad  
-> {  
->  private List<string> m_messages = new List<string>();
-> 
->  public IEnumerable<string> Messages { get { return m_messages; } }  
->   
->  public void StoreMessage(string _message)  
->  {  
->  // this should now make the test fail.  
->  // – intentionally broken! // m_messages.Add(message);  
->  }  
-> }
+```c#
+public class ScratchPad  
+{  
+ private List<string> m_messages = new List<string>();
+
+ public IEnumerable<string> Messages { get { return m_messages; } }  
+  
+ public void StoreMessage(string _message)  
+ {  
+ // this should now make the test fail.  
+ // – intentionally broken! // m_messages.Add(message);  
+ }  
+}
+```
 
 The test now should fail, as the class under test no longer does the correct thing. If the test passes, the test is obviously not correct. 
 

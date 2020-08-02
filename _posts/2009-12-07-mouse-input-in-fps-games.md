@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=461
 #permalink: /?p=461
 tags:
   - games
-  - rants
+  - whinges
 ---
 Am I the only PC gamer that is really, really fussy about mouse input? I say this because it feels like every other PC game I play comes with default input settings that are beyond jarring, yet most reviews fail to mention it.
 

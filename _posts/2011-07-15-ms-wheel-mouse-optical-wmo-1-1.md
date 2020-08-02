@@ -16,7 +16,7 @@ tags:
   - mouse pad
   - sensitivity
   - tips
-  - WMO
+  - wmo
 ---
 ## I’m an addict
 

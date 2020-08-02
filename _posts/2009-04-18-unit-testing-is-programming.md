@@ -66,19 +66,21 @@ Programmers should hold themselves to the same standards when writing tests. Bad
 
 Here's an example of a pointless test:
 
-<pre>[Test]
-    public void SaveGameTest()
-    {
-        var game = new Game();
-        var serializer = new GamePersistence();
+```c#
+[Test]
+public void SaveGameTest()
+{
+  var game = new Game();
+  var serializer = new GamePersistence();
 
-        using(Stream stream = new MemoryStream())
-        {
-            serializer.Save(game, stream);
-        }
+  using(Stream stream = new MemoryStream())
+  {
+    serializer.Save(game, stream);
+  }
 
-        Assert.IsTrue(true);
-    }</pre>
+  Assert.IsTrue(true);
+}
+```
 
 What does this prove? Nothing. At the very most, it proves that you won't encounter an exception when saving a game in the most trivial of cases.
 

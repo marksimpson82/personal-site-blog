@@ -29,10 +29,42 @@ It was then possible to see which resources were doing the damage on the laptop.
 
 The temporarily instrumented code ended up looking something like this, and immediately let us know the culprits. Note this code is just a simplified mockup, but it should give you the gist of the idea:
 
-> <font size="2" face="Consolas">// centralised resource cleanup makes profiling simple <br />private void CleanupResources<TResource>() <br />{ <br /> Profiler.BeginSample("Destroy: " + typeof(TResource).Name); <br /> IEnumerable<TResource> resources = FindResourceOfType(typeof(TResource)); <br /> foreach(var resource in resources) <br /> { <br /> resource.Dispose(); <br /> } <br /> Profiler.EndSample(); <br />}</font>
-> 
-> <font size="2" face="Consolas">//... and each Resource type inherits from a common base class, implementing IDisposable. <br />public abstract class Resource : IDisposable <br />{ <br /> protected abstract void CleanupUnityResources(); <br /> <br /> public void Dispose() <br /> { <br /> CleanupUnityResources(); <br /> } <br />}</font>
-> 
-> <font size="2" face="Consolas">public class SomeResource : Resource <br />{ <br /> private Mesh m_unityMesh; // gets set when resource is locked in <br /> <br /> protected override void CleanupUnityResources() <br /> { <br /> // GameObject.Destroy(m_unityMesh); <br /> GameObject.DestroyImmediately(m_unityMesh); <br /> } <br />}</font>
-> 
-> <span style="font-family: consolas"></span>
+```c#
+// centralised resource cleanup makes profiling simple 
+
+private void CleanupResources<TResource>() { 
+  Profiler.BeginSample("Destroy: " + typeof(TResource).Name); 
+  IEnumerable<TResource> resources = 
+    FindResourceOfType(typeof(TResource)); 
+
+  foreach(var resource in resources) 
+  { 
+    resource.Dispose(); 
+  } 
+
+  Profiler.EndSample(); 
+}
+ 
+//... and each Resource type inherits from a common base class 
+// implementing IDisposable. 
+public abstract class Resource : IDisposable 
+{ 
+  protected abstract void CleanupUnityResources(); 
+ 
+  public void Dispose() 
+  { 
+    CleanupUnityResources(); 
+  } 
+}
+
+public class SomeResource : Resource 
+{ 
+  private Mesh m_unityMesh; // gets set when resource is locked in 
+ 
+  protected override void CleanupUnityResources() 
+  { 
+    // GameObject.Destroy(m_unityMesh); 
+    GameObject.DestroyImmediately(m_unityMesh); 
+  } 
+}
+```

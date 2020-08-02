@@ -21,24 +21,28 @@ The moment you start changing the flow of a test based on some condition, you ar
 
 Here's a real example of a bad test that contains error-prone logic (please ignore the potential floating point comparison issues... I’ll touch on that later):
 
-> [Test]  
-> public void IdentityTest()  
-> {  
->  var m = Mtx4f.Identity;
-> 
-> ** for(int r = 0; r < 4; ++r) // potential error; looping**  
->  {  
-> ** for(int c = 0; c < 4; ++c) // potential error; looping**  
->  {  
->  ** if(r != c) // potential error; logical test / branching**  
->  Assert.AreEqual(m[r, c], 0.0f);  
->  **else // potential error; logical test / branching**  
->  {  
->  Assert.AreEqual(m[r, c], 1.0f);  
->  }  
->  }  
->  }  
-> }
+```c#
+[Test]  
+public void IdentityTest()  
+{  
+  var m = Mtx4f.Identity;
+
+  for(int r = 0; r < 4; ++r) // potential error; looping  
+  {  
+    for(int c = 0; c < 4; ++c) // potential error; looping 
+    {
+      if(r != c) // potential error; logical test / branching
+      {  
+        Assert.AreEqual(m[r, c], 0.0f);
+      }  
+      else // potential error; logical test / branching  
+      {  
+        Assert.AreEqual(m[r, c], 1.0f);  
+      }  
+    }  
+  }  
+}
+```
 
 Off the top of my head, here’s a list of gripes I have: The test loops _and_ branches in a totally unnecessary fashion. It’s easy to get an r or a c mixed up, just as it’s simple to make an if/else mistake. The assert branching is particularly concerning. There’s a few extra variables in the mix too, so there’s more balls in the air, so to speak. 
 
@@ -48,59 +52,67 @@ Would it really have hurt so much to validate the 16 elements manually? We're ta
 
 Here's two alternative tests that do the same thing in a simpler way:
 
-> [Test]  
-> public void IdentityTest()  
-> {  
->  var i = Mtx4f.Identity;
-> 
->  // Row 0  
->  Assert.That(i[0,0], Is.EqualTo(1f));  
->  Assert.That(i[0,1], Is.EqualTo(0f));  
->  Assert.That(i[0,2], Is.EqualTo(0f));  
->  Assert.That(i[0,3], Is.EqualTo(0f));
-> 
->  // Row 1  
->  Assert.That(i[1,0], Is.EqualTo(0f));  
->  Assert.That(i[1,1], Is.EqualTo(1f));  
->  Assert.That(i[1,2], Is.EqualTo(0f));  
->  Assert.That(i[1,3], Is.EqualTo(0f));
-> 
->  // Row 2  
->  Assert.That(i[2,0], Is.EqualTo(0f));  
->  Assert.That(i[2,1], Is.EqualTo(0f));  
->  Assert.That(i[2,2], Is.EqualTo(1f));  
->  Assert.That(i[2,3], Is.EqualTo(0f));
-> 
->  // Row 3  
->  Assert.That(i[3,0], Is.EqualTo(0f));  
->  Assert.That(i[3,1], Is.EqualTo(0f));  
->  Assert.That(i[3,2], Is.EqualTo(0f));  
->  Assert.That(i[3,3], Is.EqualTo(1f));  
-> }
+```c#
+[Test]  
+public void IdentityTest()  
+{  
+ var i = Mtx4f.Identity;
+
+ // Row 0  
+ Assert.That(i[0,0], Is.EqualTo(1f));  
+ Assert.That(i[0,1], Is.EqualTo(0f));  
+ Assert.That(i[0,2], Is.EqualTo(0f));  
+ Assert.That(i[0,3], Is.EqualTo(0f));
+
+ // Row 1  
+ Assert.That(i[1,0], Is.EqualTo(0f));  
+ Assert.That(i[1,1], Is.EqualTo(1f));  
+ Assert.That(i[1,2], Is.EqualTo(0f));  
+ Assert.That(i[1,3], Is.EqualTo(0f));
+
+ // Row 2  
+ Assert.That(i[2,0], Is.EqualTo(0f));  
+ Assert.That(i[2,1], Is.EqualTo(0f));  
+ Assert.That(i[2,2], Is.EqualTo(1f));  
+ Assert.That(i[2,3], Is.EqualTo(0f));
+
+ // Row 3  
+ Assert.That(i[3,0], Is.EqualTo(0f));  
+ Assert.That(i[3,1], Is.EqualTo(0f));  
+ Assert.That(i[3,2], Is.EqualTo(0f));  
+ Assert.That(i[3,3], Is.EqualTo(1f));  
+}
+```
 
 This one is fairly verbose, has some scope for errors (row & column accessors are very easy to typo and/or transpose) and will soon get cumbersome if you have to write multiple tests. To work around the verbosity, I would probably go with something more like this:
 
-> [Test]  
-> public void IdentityTest()  
-> {  
->  // Arrange  
->  var identity = Mtx4f.Identity;  
->  var expected = Matrix(1, 0, 0, 0,  
->  0, 1, 0, 0,  
->  0, 0, 1, 0,  
->  0, 0, 0, 1);
-> 
->  // Act & Assert  
->  Assert. That(identity, Is.EqualTo(expected));  
-> }
+```c#
+[Test]  
+public void IdentityTest()  
+{  
+ // Arrange  
+ var identity = Mtx4f.Identity;  
+ var expected = Matrix(1, 0, 0, 0,  
+ 0, 1, 0, 0,  
+ 0, 0, 1, 0,  
+ 0, 0, 0, 1);
+
+ // Act & Assert  
+ Assert. That(identity, Is.EqualTo(expected));  
+}
+```
 
 **Note**: the second test assumes that there is an equals implementation for Mtx4f and it is well-tested. In an ideal world we’d only ever use the unit of code we’re testing, but I’ll often compromise. 
 
 Depending on whether you think it’s a good idea to ever do a direct floating point comparison without a specified tolerance value (hint: it’s generally a bad idea) _and_ whether you think having an equals implementation for matrices is good design, either of these choices may be deemed unacceptable. 
 
-I’d personally go for a third way™: write a testing extension that checks two matrices with a specified tolerance value. Something like this would do it:
+I’d personally go for a third way™: write a testing extension that checks two matrices with a specified tolerance value.
+Something like this would do it:
 
-> static void AssertEqualsWithinTolerance(Mtx4f a, Mtx4f b, float tolerance)
+```c#
+static void AssertEqualsWithinTolerance(
+  Mtx4f a, Mtx4f b, float tolerance)
+```
 
 Add it to a testing helpers namespace and write a few tests for it. You can also extend some test runners to make it read more idiomatically. It’s important to write tests for utility / helper test code, as anything that uses it is making the assumption that it is correct and trustworthy.
 
@@ -122,4 +134,7 @@ Sometimes it seems like a good idea to do something 'clever' to reduce the amoun
 
 It backfired horribly, though. As new types were added, the test broke repeatedly. Due to all of the hoop jumping I was doing to discover and map the types, the test code was barely understandable and, due to its brittle nature, represented a maintenance risk. Debugging a failure was as clear as mud.
 
-Ultimately, I deleted it and replaced it with simple, individual tests. They worked fine and were written inside a couple of hours - far less time than I spent dicking around trying to make a 'clever' solution work. Oh and the simple solution never once broke.
+Ultimately, I deleted it and replaced it with simple, individual tests. They worked fine and were written inside a 
+couple of hours -- far less time than I spent dicking around trying to make a 'clever' solution work. 
+
+Oh and the simple solution never once broke.

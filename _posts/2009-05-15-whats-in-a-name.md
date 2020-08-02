@@ -16,27 +16,33 @@ On numerous occasions I've had to review some code and tests. I open the classes
 
 It's not uncommon to see something like the hugely descriptive and easy to read:
 
-<pre>[Test]
+```c#
+[Test]
 public void TestMethodName()
 {
-....
-}</pre>
+...
+}
+```
 
 .. the excellent
 
-<pre>[Test]
+```c#
+[Test]
 public void TestMethodName4()
 {
-....
-}</pre>
+...
+}
+```
 
 .. and the ubiquitous
 
-<pre>[Test]
+```c#
+[Test]
 public void TestConstructor()
 {
-....
-}</pre>
+...
+}
+```
 
 This is not a good state of affairs!
 
@@ -71,9 +77,9 @@ First and foremost, what are you trying to prove with the test? Tests are meant 
 
 You need at least three pieces of information to name a test.
 
-  1. The thing that is being tested, such as a function, method or property (or a sequence of them)
-  2. The arguments/data/circumstance involved
-  3. The expected outcome. What is meant to happen? Be as explicit as you can.
+1. The thing that is being tested, such as a function, method or property (or a sequence of them)
+2. The arguments/data/circumstance involved
+3. The expected outcome. What is meant to happen? Be as explicit as you can.
 
 That's it. That's all you need. I prefer to write mine in the format 1\_2\_3, but I'm sure everyone has their own personal style. As long as it's readable and consistent, I don't care.
 
@@ -81,19 +87,19 @@ That's it. That's all you need. I prefer to write mine in the format 1\_2\_3, bu
 
 Here's a few examples of some good test names for a bounding box class.
 
-  * AddPoint\_ValidPointOutsideExistingBounds\_IncreasesBoundsToContainPoint()
-  * AddPoint\_ValidPointInsideExistingBounds\_DoesNothing()
-  * AddPoint\_ValidPointOnEdgeOfBounds\_DoesNothing()
-  * AddPoint\_InvalidPointContainingNaN\_DoesNothing()
-  * AddPoint\_InvalidPointNull\_ThrowsException()
+* AddPoint\_ValidPointOutsideExistingBounds\_IncreasesBoundsToContainPoint()
+* AddPoint\_ValidPointInsideExistingBounds\_DoesNothing()
+* AddPoint\_ValidPointOnEdgeOfBounds\_DoesNothing()
+* AddPoint\_InvalidPointContainingNaN\_DoesNothing()
+* AddPoint\_InvalidPointNull\_ThrowsException()
 
 Now compare those to equivalent, but badly named tests:
 
-  * TestAddPoint()
-  * TestAddPoint2()
-  * TestAddPoint3()
-  * TestAddPointBad()
-  * TestAddPointBad2()
+* TestAddPoint()
+* TestAddPoint2()
+* TestAddPoint3()
+* TestAddPointBad()
+* TestAddPointBad2()
 
 One set is descriptive, easily graspable and allows you to skim the members list to get a good feel for the thoroughness of the tests. The other set of names tells us very little.
 

@@ -9,8 +9,9 @@ guid: https://defragdev.com/blog/?p=482
 tags:
   - 'c#'
   - software
+  - ndepend
 ---
-__I was given an NDepend license to play around with (thanks to Patrick) and said I'd blog about it. Apologies for my tardiness!
+I was given an NDepend license to play around with (thanks to Patrick) and said I'd blog about it. Apologies for my tardiness!
 
 ### What is NDepend?
 

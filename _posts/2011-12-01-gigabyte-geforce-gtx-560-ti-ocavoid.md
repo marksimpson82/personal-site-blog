@@ -8,7 +8,7 @@ guid: https://defragdev.com/blog/?p=642
 #permalink: /?p=642
 tags:
   - misc
-  - rants
+  - whinges
   - tips
 ---
 [This card](http://www.google.co.uk/products/catalog?hl=en&safe=off&q=gigabyte+geforce+gtx+560ti+oc&gs_upl=336l603l1l704l3l1l0l1l1l0l95l95l1l2l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&biw=1920&bih=1096&um=1&ie=UTF-8&tbm=shop&cid=1323606381779257544&sa=X&ei=iOHWTrGKA9Gg8gP8vL3rDQ&ved=0CDIQ8wIwAA), amongst various other factory overclocked GTX 560 Tis are [causing problems](http://forums.whirlpool.net.au/archive/1639211) for lots of people. There are various 560 Ti cards that have the OC postfix which stands for “Overclocked”, but the Gigabyte one seems to be the biggest offender.
@@ -25,8 +25,7 @@ I bought the Gigabyte card purely for the quiet fans, but I’ve found that it c
 
 * (Silently) Crash to the desktop
 * Crash with a BF3 stopped working error
-* Crash with a Windows 7 driver failure (like this) 
-[<img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="bf3_crash" border="0" alt="bf3_crash" src="https://defragdev.com/blog/images/2011/12/bf3_crash_thumb.png" width="244" height="108" />](https://defragdev.com/blog/images/2011/12/bf3_crash.png)</li> </ul> 
+* Crash with a Windows 7 driver failure (like this) <img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="bf3_crash" border="0" alt="bf3_crash" src="https://defragdev.com/blog/images/2011/12/bf3_crash_thumb.png" width="244" height="108" /> 
     
 I initially raged against BF3 and called DICE all of the names under the sun as BF games have a history of being horrendously buggy on release (I still crash on loading up for the first time quite a lot so...), but this time around the amount of ranting on forums with BF3 _and_ other DX11 games points to faulty hardware.
 
