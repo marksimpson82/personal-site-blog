@@ -21,11 +21,11 @@ On the rare occasion I have to monkey around with bitwise operators, I always ke
 
 > public static class BinaryPrinter  
 > {  
-> &#160;&#160;&#160; public static string ToBinaryString(long _long)  
-> &#160;&#160;&#160; {  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; // have to do this or it won&#8217;t print the leading 0 values&#160;&#160;&#160;&#160;&#160;&#160;&#160;  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; return Convert.ToString(_long, 2).PadLeft(sizeof(long) * 8, &#8216;0&#8217;);&#160;  
-> &#160;&#160;&#160; }  
+>  public static string ToBinaryString(long _long)  
+>  {  
+>  // have to do this or it won't print the leading 0 values  
+>  return Convert.ToString(_long, 2).PadLeft(sizeof(long) * 8, '0');  
+>  }  
 > }
 
 Similarly, you could write a few of these (for all of the various inbuilt types) and chuck them in extension methods.

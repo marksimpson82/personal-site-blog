@@ -10,11 +10,10 @@ tags:
   - misc
   - rants
 ---
-**#243 &#8220;Concretion&#8221;**
+**Concretion**
 
-Concretion sounds stupid.  Please, just say concrete type.
+Concretion sounds stupid. Please, just say concrete type.
 
-**#244 &#8220;Action&#8221;, as in &#8220;he&#8217;s Actioning it as we speak&#8221;  
-** 
+**Action**
 
-Action is a noun.  I will not stand for this!
+As in "he's _actioning_ it as we speak". Action is a noun. I will not stand for this!

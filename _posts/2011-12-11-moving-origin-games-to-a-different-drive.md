@@ -11,7 +11,7 @@ tags:
   - software
   - tips
 ---
-I wanted to move my BF3 install to my SSD but couldn’t figure out how to do it.&#160; Numerous posts suggested things, but none worked until I found this:
+I wanted to move my BF3 install to my SSD but couldn’t figure out how to do it. Numerous posts suggested things, but none worked until I found this:
 
 From the EA forums:
 

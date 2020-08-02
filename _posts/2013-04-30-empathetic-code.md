@@ -29,7 +29,7 @@ If you encounter a gotcha, why not write a bit of code to clearly document the c
 
 <!--more-->
 
-## Debugging may diagnose problems, but…
+## Debugging may diagnose problems, but...
 
 When I was writing some road graph parsing code, due to the way that shapefiles are delivered by certain vendors, it was possible that the same road edge could be added twice. The road edges had the same ids / properties, but appeared in multiple files (files A and B contain contiguous geographical areas; roads crossing from A to B or vice-versa are sometimes contained in both files). This then caused some of the angle calculation code to detonate as, unsurprisingly, intersections between parallel lines don’t tend to give sensible results. Hi, NaN.
 
@@ -49,9 +49,11 @@ E.g. I had quite a few cases in Python where a function was meant to be passed t
 
 I managed to catch myself out a few times, so what’s someone else going to make of this? How can we improve it?
 
-> def \_\_init\_\_(self, create_func):  
-> &nbsp;&nbsp;&nbsp; if not callable(create_func):  
-> &nbsp;&nbsp;&nbsp; raise ValueError(“create_func was not callable. Did you accidentally invoke the function instead of passing it as an argument?”)
+```python
+def __init__(self, create_func):  
+  if not callable(create_func):  
+    raise ValueError("create_func was not callable. Did you accidentally invoke the function instead of passing it as an argument?")
+```
 
 Sometimes it’s very small things like this that can make a big difference. If someone makes this mistake, they know exactly what to do to fix it. Compare this to running some unfamiliar code and being confronted by a stack trace 20 fathoms deep, where a value that was set eons ago was invalid.
 
@@ -63,24 +65,35 @@ Imagine we’re creating a tool whose configuration is conventional. Tasks are d
 
 The user wants to run the colour task.
 
-> **> run.exe colours**
-> 
-> > Error. Couldn’t find file. Exiting.
+```bash
+run.exe colours
+```
+```
+Output:
+
+Error. Couldn’t find file. Exiting.
+```
 
 -versus-
 
-> **> run.exe colours**
-> 
-> > Error running task ‘**colours**’. Cannot find the required configuration file ‘**colours.conf**’.&nbsp;
-> 
-> Registered configuration files:  
-> &#8211; colors.conf  
-> &#8211; terrain.conf  
-> &#8211; disco.conf
-> 
-> Suggestions:  
-> &#8211; Did you create a configuration file yet?  
-> &#8211; Is the configuration named correctly? It should be in the form ‘**taskname.conf**’. Perhaps you made a typo?
+```bash
+run.exe colours
+```
+
+```
+Output:
+
+Error running task 'colours'. Cannot find the required configuration file 'colours.conf'.
+ 
+Registered configuration files:  
+- colors.conf  
+- terrain.conf  
+- disco.conf
+ 
+Suggestions:  
+- Did you create a configuration file yet?  
+- Is the configuration named correctly? It should be in the form 'taskname.conf'. Perhaps you made a typo?
+```
 
 The user has a much better chance of realising their error when things are shown to them in this manner.
 
@@ -94,17 +107,19 @@ If it is possible to collect _all_ of the errors before failing (or at least all
 
 Here’s what you need to collect errors (pseudo C# – close enough)
 
-> public class ErrorMessageBuilder  
-> {  
-> &nbsp;&nbsp;&nbsp; private StringBuilder m_errors = new StringBuilder()
-> 
-> &nbsp;&nbsp;&nbsp; public void AddError(string message)  
-> &nbsp;&nbsp;&nbsp; {  
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; m_errors.AppendLine(message)  
-> &nbsp;&nbsp;&nbsp; }
-> 
-> &nbsp;&nbsp;&nbsp; public bool HasErrors { get { return m_errors.Count > 0; } }  
-> }
+```csharp
+public class ErrorMessageBuilder  
+{  
+  private StringBuilder m_errors = new StringBuilder()
+
+  public void AddError(string message)  
+  {  
+    m_errors.AppendLine(message);
+  }
+
+  public bool HasErrors { get { return m_errors.Count > 0; } }  
+}
+```
 
 Pretty complicated, ja? Instead of immediately killing the program when an error occurs, simple whack it into the error message builder. Once a particular phase is complete, check to see if it has anything in it. If it does, then call its ToString() method and die.
 

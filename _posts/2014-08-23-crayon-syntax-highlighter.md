@@ -9,9 +9,9 @@ guid: https://defragdev.com/blog/?p=794
 tags:
   - Uncategorized
 ---
-I&#8217;ve tried to install a couple of different syntax highlighters in the past and was thoroughly unimpressed. They either failed to install cleanly, didn&#8217;t work or had numerous issues that rendered them useless.
+I've tried to install a couple of different syntax highlighters in the past and was thoroughly unimpressed. They either failed to install cleanly, didn't work or had numerous issues that rendered them useless.
 
-Anyway, after manually formatting source code snippets for years, I&#8217;m giving Crayon a go. The install was easy and the output looks good. Let&#8217;s see how we go :-)
+Anyway, after manually formatting source code snippets for years, I'm giving Crayon a go. The install was easy and the output looks good. Let's see how we go :-)
 
 <pre class="lang:c++ decode:true" title="Snippet" data-url="test_snippet">class Test
 {

@@ -9,4 +9,4 @@ guid: https://defragdev.com/blog/?p=3
 tags:
   - misc
 ---
-Hello World.  Oh shi
+Hello World. Oh shi

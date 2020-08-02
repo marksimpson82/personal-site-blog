@@ -18,14 +18,14 @@ For this post, I’ll use the following example test scenario: When a stack is e
 > [Test]  
 > public void pushing\_an\_item\_onto\_an\_empty\_stack\_increments\_count()  
 > {  
-> &#160;&#160;&#160; // Arrange  
-> &#160;&#160;&#160; var stack = new Stack<bool>(); 
+>  // Arrange  
+>  var stack = new Stack<bool>(); 
 > 
-> &#160;&#160;&#160; // Act  
-> &#160;&#160;&#160; stack.Push(false); 
+>  // Act  
+>  stack.Push(false); 
 > 
-> &#160;&#160;&#160; // Assert  
-> &#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(1));&#160;&#160;&#160;  
+>  // Assert  
+>  Assert.That(stack.Count, Is.EqualTo(1));  
 > }
 
 Each ‘phase’ of the test happens in order and occurs precisely once. Arrange precedes Act, Act precedes Assert. I’ll go into a little more detail later as to why this is a useful property.
@@ -34,19 +34,19 @@ A brief description of each “A” follows.
 
 <!--more-->
 
-&#160;
+
 
 ## Arrange
 
-To be able to put yourself in a position where you can invoke a method and check that the result was correct, you first need to able to put things into a ‘primed’ configuration.&#160; If you want to test that your pistol can shoot a tin can, then you’d probably need to set up the tin can at an appropriate range, load the weapon and take the safety off before you even think about firing.
+To be able to put yourself in a position where you can invoke a method and check that the result was correct, you first need to able to put things into a ‘primed’ configuration. If you want to test that your pistol can shoot a tin can, then you’d probably need to set up the tin can at an appropriate range, load the weapon and take the safety off before you even think about firing.
 
 This step is often referred to as the “Arrange” phase, as you’re arranging things prior to calling the method/function of interest.
 
-In the stack example, the arrange phase would simply mean creating an empty stack.&#160; In more complicated scenarios, you will need to do more work to knock things into shape.
+In the stack example, the arrange phase would simply mean creating an empty stack. In more complicated scenarios, you will need to do more work to knock things into shape.
 
 ## Act
 
-The action is the main bit of the show.&#160; It’s the bit the test is interested in, whether because calling a method or function returns a result that can be directly scrutinised, or because calling it causes a side-effect that can be observed (mutation of state, call to another class, an event being raised etc).&#160; 
+The action is the main bit of the show. It’s the bit the test is interested in, whether because calling a method or function returns a result that can be directly scrutinised, or because calling it causes a side-effect that can be observed (mutation of state, call to another class, an event being raised etc). 
 
 This is often called the “Act” phase.
 
@@ -54,7 +54,7 @@ In the empty stack example, the “Act” phase occurs when Push() is called, as
 
 ## Assert
 
-The assertion is the part that ensures that your expectations are met.&#160; You can cobble objects together and call any number of methods, but unless you actually check a _meaningful_ result, there’s little point in it.&#160; Without a good assertion, the best you can do is prove that the unit of code under test hasn’t crashed – there’s very little value in this.
+The assertion is the part that ensures that your expectations are met. You can cobble objects together and call any number of methods, but unless you actually check a _meaningful_ result, there’s little point in it. Without a good assertion, the best you can do is prove that the unit of code under test hasn’t crashed – there’s very little value in this.
 
 This step is often called the “Assert” phase.
 
@@ -73,35 +73,35 @@ Take this example of a bad test that I’ve lifted from that post (I’ve shorte
 > [Test]  
 > public void BadPushPopTest()  
 > {  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; var stack = new Stack<int>();  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(0)); 
+>  var stack = new Stack<int>();  
+>  Assert.That(stack.Count, Is.EqualTo(0)); 
 > 
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; stack.Push(1);  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(1));&#160; 
+>  stack.Push(1);  
+>  Assert.That(stack.Count, Is.EqualTo(1)); 
 > 
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; int popped = stack.Pop();  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(popped, Is.EqualTo(1));&#160;  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(0));  
+>  int popped = stack.Pop();  
+>  Assert.That(popped, Is.EqualTo(1));  
+>  Assert.That(stack.Count, Is.EqualTo(0));  
 > }
 
 Let’s try and structure it using the Arrange, Act, Assert comments and see how it holds up:
 
 > [Test]  
 > public void BadPushPopTest()  
-> {&#160;  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; **// Arrange**  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; var stack = new Stack<int>();  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(0));&#160; **// Warning: asserting in the Arrange phase**!
+> {  
+>  **// Arrange**  
+>  var stack = new Stack<int>();  
+>  Assert.That(stack.Count, Is.EqualTo(0)); **// Warning: asserting in the Arrange phase**!
 > 
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; **// Act  
->** &#160;&#160;&#160;&#160;&#160;&#160;&#160; stack.Push(1); 
+>  **// Act  
+>**  stack.Push(1); 
 > 
-> **&#160;&#160;&#160;&#160;&#160;&#160;&#160; // Assert**  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(1));&#160;  
+> ** // Assert**  
+>  Assert.That(stack.Count, Is.EqualTo(1));  
 >        **  
->** &#160;&#160;&#160;&#160;&#160;&#160;&#160; int popped = stack.Pop();&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; **// Warning: action in the Assert phase**!  
-> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(popped, Is.EqualTo(1));&#160;&#160;&#160;&#160;&#160;&#160; **// Warning: why are we asserting again?  
->** &#160;&#160;&#160;&#160;&#160;&#160;&#160; Assert.That(stack.Count, Is.EqualTo(0)); **// Warning: and again&#8230;  
+>**  int popped = stack.Pop(); **// Warning: action in the Assert phase**!  
+>  Assert.That(popped, Is.EqualTo(1)); **// Warning: why are we asserting again?  
+>**  Assert.That(stack.Count, Is.EqualTo(0)); **// Warning: and again...  
 >** }
 
 It doesn’t work, because the test is not focused enough. It would be very difficult (probably impossible) to whip this into a reasonable AAA structure. If a test does not fit into the AAA structure, it’s almost always a warning sign that the test needs split into multiple tests. 

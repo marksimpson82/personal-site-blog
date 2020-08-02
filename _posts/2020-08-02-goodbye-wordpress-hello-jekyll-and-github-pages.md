@@ -73,7 +73,7 @@ E.g. an old URL might look something like: `https://defragdev.com/blog/?p=50`
 ```
 ---
 id: 847
-title: "Nvidia + G-SYNC &#8211; Black screen when alt-tabbing"
+title: "Nvidia + G-SYNC - Black screen when alt-tabbing"
 date: 2020-03-29T21:14:28+00:00
 author: Mark Simpson
 layout: single

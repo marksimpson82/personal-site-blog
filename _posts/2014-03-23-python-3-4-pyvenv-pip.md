@@ -16,11 +16,11 @@ tags:
 ---
 ## Pip
 
-… is a nice little package manager for Python, but it was somewhat hamstrung by the clunky install procedure in Python 2.X and early versions of Python 3. With Python 2.x, you’d have to do something like use curl to get setuptools, then use easy install to get pip, then use pip to install packages. Happily, 3.4 now includes pip by default.
+... is a nice little package manager for Python, but it was somewhat hamstrung by the clunky install procedure in Python 2.X and early versions of Python 3. With Python 2.x, you’d have to do something like use curl to get setuptools, then use easy install to get pip, then use pip to install packages. Happily, 3.4 now includes pip by default.
 
 ## Pyvenv
 
-… is a virtual environment manager. Rather than installing packages in your site-packages directory (modifying your python environment – something that is a bit sucky when you have conflicting needs for different projects), developers have traditionally used virtualenv. In Python 3.X, you can use pyvenv instead and it seems to Just Work&#x2122;.
+... is a virtual environment manager. Rather than installing packages in your site-packages directory (modifying your python environment – something that is a bit sucky when you have conflicting needs for different projects), developers have traditionally used virtualenv. In Python 3.X, you can use pyvenv instead and it seems to Just Work&#x2122;.
 
 ## 
 

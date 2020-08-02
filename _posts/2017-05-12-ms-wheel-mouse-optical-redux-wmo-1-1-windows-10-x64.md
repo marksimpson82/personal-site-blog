@@ -40,7 +40,7 @@ Furthermore, I don’t want a mouse with stupid cloud software (S3 is down? Well
 
 If you can walk into a decently-sized PC store and try out a load of mice, I’d recommend just forgetting about the WMO and finding something new.
 
-## However, if you’re stubborn…
+## However, if you’re stubborn...
 
 In the end, I decided to buy another WMO. They’ve long since been discontinued, so the main options nowadays are ebay and second-hand sites.
 
@@ -120,29 +120,29 @@ You don’t need to strip the entire cable, just a section of it close to the mo
 
 I played with the WMO for a week or so; the negative acceleration coupled with my low sensitivity renders it unsuitable. I decided to try something new.
 
-So what to do?. [Rocketjumpninja&#8217;s website](http://www.rocketjumpninja.com/top-40/) has some great mouse review articles & youtube links, including detailed size comparisons / side-by-side videos of various popular mice.
+So what to do?. [Rocketjumpninja's website](http://www.rocketjumpninja.com/top-40/) has some great mouse review articles & youtube links, including detailed size comparisons / side-by-side videos of various popular mice.
 
-Given that my hands are fairly long (22cm or so) and I palm grip when gaming, I thought the Zowie EC1-A or the Razer DeathAdder would be good. However,&nbsp;I tried the Zowie EC1-A and it didn&#8217;t suit me. It was a good match for me length-wise and was comfortable to rest my hand on, but it&#8217;s too wide for me to pick up without changing the way I grip it.
+Given that my hands are fairly long (22cm or so) and I palm grip when gaming, I thought the Zowie EC1-A or the Razer DeathAdder would be good. However,&nbsp;I tried the Zowie EC1-A and it didn't suit me. It was a good match for me length-wise and was comfortable to rest my hand on, but it's too wide for me to pick up without changing the way I grip it.
 
-If you have massive hams for hands, definitely check out the EC1-A. The sensor is great, and it has a few other wonderful features, namely a DPI switch being on the base of the mouse (&#8220;let&#8217;s change DPI to go into sniper mode!&#8221; said nobody ever, apart from marketing guys) and zero setup / drivers. True plug &#8216;n&#8217; play.
+If you have massive hams for hands, definitely check out the EC1-A. The sensor is great, and it has a few other wonderful features, namely a DPI switch being on the base of the mouse ("let's change DPI to go into sniper mode!" said nobody ever, apart from marketing guys) and zero setup / drivers. True plug 'n' play.
 
-After sending it back, I noticed RJN&#8217;s videos featured a Logitech G403. The G403 is much larger than the Steelseries Rival 100, and somewhere between the sizes of the EC1-A and the EC2-A. Given that I wanted a larger mouse, but not as big as the EC1-A, the Logitech G403 fitted the bill. It is perfect for my hand size.
+After sending it back, I noticed RJN's videos featured a Logitech G403. The G403 is much larger than the Steelseries Rival 100, and somewhere between the sizes of the EC1-A and the EC2-A. Given that I wanted a larger mouse, but not as big as the EC1-A, the Logitech G403 fitted the bill. It is perfect for my hand size.
 
 Positives:
 
   * I like the shape even better than the WMO / EC1-A.
-  * It&#8217;s light. Not quite as light as the WMO, but within 10g. The extra 10g is not noticeable as&#8230;
-  * &#8230; it glides much better and faster than any other mouse I&#8217;ve tried
-  * The cable slides over a cloth pad easily and doesn&#8217;t twist or snag.
+  * It's light. Not quite as light as the WMO, but within 10g. The extra 10g is not noticeable as...
+  * ... it glides much better and faster than any other mouse I've tried
+  * The cable slides over a cloth pad easily and doesn't twist or snag.
   * The sensor is amazing.
   * The DPI switch cycles between 400 / 800 / 1600 / 3200 DPI without requiring drivers.
-  * You don&#8217;t need to install any software whatsoever unless you want to customise it (I don&#8217;t).
+  * You don't need to install any software whatsoever unless you want to customise it (I don't).
 
 Negatives:
 
-  * It&#8217;s £60, for crying out loud! I managed to get it on sale for £40, but the normal retail price is very steep.
-  * The cable is very thick. While its weight is not an issue, it doesn&#8217;t fit in most mouse bungees (razer bungee says: nope).
-  * The DPI switch is on top of the mouse. It&#8217;s hard to press accidentally, but it&#8217;s still there. Zowie wins this round.
-  * Logitech&#8217;s customisation software is a 100+ MB installer. Balls to that! (This is also a major reason I won&#8217;t buy razer mice.)
+  * It's £60, for crying out loud! I managed to get it on sale for £40, but the normal retail price is very steep.
+  * The cable is very thick. While its weight is not an issue, it doesn't fit in most mouse bungees (razer bungee says: nope).
+  * The DPI switch is on top of the mouse. It's hard to press accidentally, but it's still there. Zowie wins this round.
+  * Logitech's customisation software is a 100+ MB installer. Balls to that! (This is also a major reason I won't buy razer mice.)
 
-I&#8217;m pretty sure that my mouse-buying days are over for another 5 years. What I take from this spate of experimentation is that there is no &#8216;amazing&#8217; mouse that beats all others. It all depends on your hand size, shape and grip style. Try out some mice and see what suits you rather than buying the &#8220;best&#8221; mouse with the most positive reviews.
+I'm pretty sure that my mouse-buying days are over for another 5 years. What I take from this spate of experimentation is that there is no 'amazing' mouse that beats all others. It all depends on your hand size, shape and grip style. Try out some mice and see what suits you rather than buying the "best" mouse with the most positive reviews.
