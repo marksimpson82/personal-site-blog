@@ -14,7 +14,7 @@ Non Battlefield 3 players, look away now. Battlefield 3 players who like shotgun
 
 Firstly, just so you can see that I can actually use shotguns to a vaguely competent level, here's a quick clip showing what the SPAS & Slug can do:
 
-`[youtube_sc url=oe7vgDS0yzY]`
+{% include video id="oe7vgDS0yzY" provider="youtube" %}
 
 Firstly, if you’re a shotgun user in BF3, ditch the auto shotguns. They’ve only got enough punch to kill a couple of people with one clip. Grab yourself an [870MCS](http://battlefield.wikia.com/wiki/870MCS) or the [SPAS 12](http://battlefield.wikia.com/wiki/SPAS-12). Both of these shotguns are one shot, one kill and have plenty of potential for decimating entire squads with a single clip.
 
