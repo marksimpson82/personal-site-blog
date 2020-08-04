@@ -202,12 +202,42 @@ I don't want to serve via HTTP, so I forced HTTPS. Check the box under:
 `Settings` > `GitHub Pages` > `Enforce HTTPS`
 
 ### Fix up various content problems
-There's a lot of nasty holdovers from running scores of worpdress versions; off the top of my head:
+Since I've been running every major version of wordpress since ~2008, the defaults have changed a lot over that time. As
+a consequence, the exported content is quite changeable. 
 
-- formatting is all over the place (mixture of markdown, html etc.)
+If you've written a lot of posts, you're not going to have fun fixing up the content; in my own case it took about 4
+hours to fix up my paltry 87 posts. The low number of posts and changeable formatting meant that it wasn't worth 
+automating, so I went with occasional scripts, grep & targeted manually editing.
 
-- code snippets are generally broken
+Some of the problems/fixes include:
 
-- there's a never-ending variety of unicode decimal codes that hinder readability in a text editor
+#### Broken internal blog links
+While my hacky redirect solution worked, it's obviously better if you can use the built-in Jekyll functionality to 
+create internal links.
 
-- irrelevant tags like `<--more-->`
+**Fix**: see [Jekyll: linking to posts](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts). The `{% post_url %}` 
+syntax is handy, as `jekyll serve` will fail with an error message if you have a broken internal link. 
+
+#### Text content and formatting issues
+My blog's content was all over the place and included a mixture of markdown, html etc.
+
+**Fix**: manual editing
+
+#### Code snippets
+Code snippets were similarly in a mixture of formats, all of which won't play nicely with markdown.
+ 
+**Fix**: see [Jekyll: code snippets](https://jekyllrb.com/docs/configuration/markdown/#redcarpet) -- this involved a lot of 
+manual editing, but was a doddle compared to the bad old days of wordpress formatting.
+
+#### Special characters & entity names/numbers 
+These either hinder readability while editing posts (e.g. `&lt;` aka `&#60;` for `<`, `&gt;` aka `&#62;` for `>`) and/or 
+don't render correctly in a browser (`<pre>` combined with `&nbsp`).
+
+If you have a lot of content, it'd probably be wise to ignore entity names/numbers that render correctly in the 
+browser and focus on the legitimate content problems.
+  
+**Fix**: I fixed these problems via search/replace mostly -- be careful as sometimes the context means that the entity 
+names/numbers are required (or may require escaping or different quotes if removed).
+
+#### Irrelevant tags like `<--more-->`
+**Fix**: Search & delete.
