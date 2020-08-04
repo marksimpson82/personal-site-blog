@@ -215,7 +215,7 @@ Some of the problems/fixes include:
 While my hacky redirect solution worked, it's obviously better if you can use the built-in Jekyll functionality to 
 create internal links.
 
-**Fix**: see [Jekyll: linking to posts](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts). The `{% post_url %}` 
+**Fix**: see [Jekyll: linking to posts](https://jekyllrb.com/docs/liquid/tags/#linking-to-posts). The `post_url` 
 syntax is handy, as `jekyll serve` will fail with an error message if you have a broken internal link. 
 
 #### Text content and formatting issues
