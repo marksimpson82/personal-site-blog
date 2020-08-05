@@ -225,4 +225,4 @@ Firstly, you should note that these tests touch the file system and are really i
 
 For unit tests, abstract the production code’s file IO by at least one level. By this, I mean separate the loading & processing of files and their contents. You can still present file loading APIs to the user, but the guts of the implementation uses streams, allowing fast, in-memory unit testing for the more complicated ‘inner’ code. 
 
-I wrote a post about this a while back, so [take a look]({% link _posts/2009-11-26-avoiding-the-file-system.md %}).
+I wrote a post about this a while back, so [take a look]({% post_url 2009-11-26-avoiding-the-file-system %}).

@@ -18,7 +18,7 @@ tags:
 ---
 Back on the WMO train again. I was using Sweetlow's signed driver, but it stopped working again, probably due to 
 Windows updates. You can find the old guide
-[here]({% link _posts/2017-05-12-ms-wheel-mouse-optical-redux-wmo-1-1-windows-10-x64.md %}).
+[here]({% post_url 2017-05-12-ms-wheel-mouse-optical-redux-wmo-1-1-windows-10-x64 %}).
 
 I'm on Windows 10 Home 64-bit, version 1803. Here's how to get it working at the time of writing.
 
