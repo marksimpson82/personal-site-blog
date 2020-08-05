@@ -53,9 +53,9 @@ If we have a class under test like the following (please note: do not write code
 public class ModelLoader  
 {  
  public Model Load(string xml)  
- {  
+ {
  ... // some processing occurs then...  
- var handle = **MemoryManager.Allocate**(numVertices * vertexSize); // a **static call**  
+ var handle = MemoryManager.Allocate(numVertices * vertexSize); // a static call  
  }  
 }
 ```
@@ -63,23 +63,23 @@ public class ModelLoader
 ... and the static dependency:
 
 ```c#
-> public **static** class MemoryManager  
+public static class MemoryManager  
 {  
  private static MemoryPool m_memoryPool;
 
- public **static** void Init()  
+ public static void Init()  
  {  
  // does initialisation stuff.  
  m_memoryPool = new MemoryPool();  
  }
 
- public **static** MemoryHandle Allocate(long numBytes)  
+ public static MemoryHandle Allocate(long numBytes)  
  {  
  // this will crash if Init wasn't called  
  return m_memoryPool.DoSomething();  
  }
 
- public **static** void Quit()  
+ public static void Quit()  
  {  
  // poor man’s Dispose()  
  }
@@ -95,32 +95,32 @@ Here’s the (horribly non-atomic) test code:
 [TestFixture]  
 public class StaticStateHurtsMyBrainTests  
 {  
- [Test]  
- public void loading_simple_model_xml_returns_valid_model()  
- {  
- // Arrange  
- MemoryManager.Init(); // static state initialised here!  
- var modelLoader = new ModelLoader();
+  [Test]  
+  public void loading_simple_model_xml_returns_valid_model()  
+  {  
+    // Arrange  
+    MemoryManager.Init(); // static state initialised here!  
+    var modelLoader = new ModelLoader();
 
- // Act. Our class under test depends on implicit static state contained in MemoryManager  
- var loadedModel = modelLoader.Load("<Model Name = ... etc ");
+    // Act. Our class under test depends on implicit static state contained in MemoryManager  
+    var loadedModel = modelLoader.Load("<Model Name = ... etc ");
 
- // Assert  
- Assert.That( // **Note: we forgot to call MemoryManager.Quit()**  
- }
+    // Assert  
+    Assert.That(...) // Note: we forgot to call MemoryManager.Quit()  
+  }
 
- [Test]  
- public void loading_model_with_positions_and_uvs_returns_valid_model()  
- {  
- // Arrange. Uh oh, we forgot to call MemoryManager.Init()  
- var modelLoader = new ModelLoader();
-
- // Act. MemoryManager isn't initialised; test will fail here. Or will it?!  
- var loadedModel = modelLoader.Load("<Model Name = ... etc");
-
- // Assert  
- Assert.That( // etc.  
- }  
+  [Test]  
+  public void loading_model_with_positions_and_uvs_returns_valid_model()  
+  {  
+    // Arrange. Uh oh, we forgot to call MemoryManager.Init()  
+    var modelLoader = new ModelLoader();
+ 
+    // Act. MemoryManager isn't initialised; test will fail here. Or will it?!  
+    var loadedModel = modelLoader.Load("<Model Name = ... etc");
+ 
+    // Assert  
+    Assert.That( // etc.  
+  }  
 }
 ``` 
 
@@ -133,33 +133,33 @@ To solve this problem, the static state should be replaced with instance-based c
 ```c#
 public class ModelLoader  
 {  
- private MemoryManager m_memoryManager;  
-  
- public ModelLoader(MemoryManager memoryManager)  
- {  
- m_memoryManager = memoryManager;  
- }  
-  
- public Model Load(string xmlString)  
- {  
- ... // some processing occurs .. then  
- m_memoryManager.Allocate(numVertices * vertexSize);  
- }  
+  private MemoryManager m_memoryManager;  
+   
+  public ModelLoader(MemoryManager memoryManager)  
+  {  
+    m_memoryManager = memoryManager;  
+  }  
+   
+  public Model Load(string xmlString)  
+  {  
+    ... // some processing occurs .. then  
+    m_memoryManager.Allocate(numVertices * vertexSize);  
+  }  
 }
 
 public class MemoryManager // probably implement IDisposable too, but it’s just an example so...  
 {  
- private MemoryPool m_memoryPool;
-
- public MemoryManager()  
- {  
- m_memoryPool = new MemoryPool();  
- }
-
- public MemoryHandle Allocate(long numBytes)  
- {  
- return m_memoryPool.DoSomething(numBytes);  
- }
+  private MemoryPool m_memoryPool;
+ 
+  public MemoryManager()  
+  {  
+    m_memoryPool = new MemoryPool();  
+  }
+ 
+  public MemoryHandle Allocate(long numBytes)  
+  {  
+    return m_memoryPool.DoSomething(numBytes);  
+  }
 }
 ```
 
@@ -177,47 +177,53 @@ Any test that is dependent on its environment is an integration test. The most c
 [TestFixture]  
 public class OrderDependentTests  
 {  
- private const string Filename = "myfile.txt";
-
- [Test]  
- public void when_the_file_exists_constructor_loads_the_file_contents()  
- {  
- // Arrange  
- File.Create(Filename);  
- AddThreeElementsToFile(Filename); // imagine this opened the file and wrote something in
-
- // Act  
- var systemUnderTest = new TypeLoader(Filename);
-
- // Assert  
- Assert.That(systemUnderTest.LoadedTypes, Has.Count.EqualTo(3));  
- }
-
- [Test]  
- public void when_file_exists_that_contains_only_comments_constructor_doesnt_load_anything()  
- {  
- // Arrange  
- AddCommentToFile(Filename); // this requires the file to exist! Does it? Maybe.
-
- // Act  
- var systemUnderTest = new TypeLoader(Filename);
-
- // Assert  
- Assert.That(systemUnderTest.LoadedTypes, Has.Count.EqualTo(0));  
- }
-
- [Test]  
- public void when_file_does_not_exist_constructor_doesnt_load_anything()  
- {  
- // Arrange  
- File.Delete(Filename); // what happens here if the previous test(s) didn’t run yet?
-
- // Act  
- var systemUnderTest = new TypeLoader(Filename);
-
- // Assert  
- Assert.That(systemUnderTest.LoadedTypes, Has.Count.EqualTo(0));  
- }  
+  private const string Filename = "myfile.txt";
+ 
+  [Test]  
+  public void when_the_file_exists_constructor_loads_the_file_contents()  
+  {  
+    // Arrange  
+    File.Create(Filename);  
+    // imagine this opened the file and wrote something in
+    AddThreeElementsToFile(Filename); 
+   
+    // Act  
+    var systemUnderTest = new TypeLoader(Filename);
+   
+    // Assert  
+    Assert.That(systemUnderTest.LoadedTypes, 
+      Has.Count.EqualTo(3));  
+  }
+ 
+  [Test]  
+  public void when_file_exists_that_contains_only_comments_constructor_doesnt_load_anything()  
+  {  
+    // Arrange  
+    // this requires the file to exist! Does it? Maybe.
+    AddCommentToFile(Filename); 
+   
+    // Act  
+    var systemUnderTest = new TypeLoader(Filename);
+   
+    // Assert  
+    Assert.That(systemUnderTest.LoadedTypes, 
+      Has.Count.EqualTo(0));  
+  }
+ 
+  [Test]  
+  public void when_file_does_not_exist_constructor_doesnt_load_anything()  
+  {  
+    // Arrange  
+    // what happens here if the previous test(s) didn’t run yet?
+    File.Delete(Filename); 
+   
+    // Act  
+    var systemUnderTest = new TypeLoader(Filename);
+   
+    // Assert  
+    Assert.That(systemUnderTest.LoadedTypes, 
+      Has.Count.EqualTo(0));  
+  }  
 }
 ```
 
