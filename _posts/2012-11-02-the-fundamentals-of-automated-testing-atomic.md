@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 Every single unit test you write should be atomic. 
 
 ## A definition

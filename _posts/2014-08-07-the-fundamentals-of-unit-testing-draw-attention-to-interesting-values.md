@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 3 is the magic number? No. No, it's not. 
 
 Magic numbers/strings/other values in all walks of programming are a readability and maintenance liability. It’s quite common to see all kinds of literals being littered through test code. It’s quite easy to simply switch off and treat test code as a second class citizen.

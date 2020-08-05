@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 When it comes to writing unit tests, it pays to be _specific_. 
 
 If you have a narrow & focused test, it will...

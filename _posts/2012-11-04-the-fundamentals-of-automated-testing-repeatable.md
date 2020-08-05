@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 The main purpose of automated testing is to highlight problems with correctness in production code. When a test fails, it means, “something is wrong here; we have a bug in our production code!” I’m sorry about your canary. It died a valiant death.
 
 ## Tests Should be Repeatable

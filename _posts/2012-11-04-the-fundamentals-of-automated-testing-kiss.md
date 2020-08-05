@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 KISS, ([Keep it Simple, Stupid](http://en.wikipedia.org/wiki/KISS_principle)) is a guiding principle in software engineering and it's of vital importance when writing tests. Tests should be straightforward and contain as little logic as possible. 
 
 I know from painful experience that trying to do something overly 'clever' in a test is a recipe for disaster.

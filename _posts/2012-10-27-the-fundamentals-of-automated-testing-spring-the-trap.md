@@ -11,6 +11,8 @@ tags:
   - testing
   - tips
 ---
+This post is [part of a series]({% post_url 2012-10-24-the-fundamentals-of-automated-testing-series %}) on unit testing.
+
 This is a lesson I learned from the [Pragmatic Unit Testing](http://pragprog.com/book/utc2/pragmatic-unit-testing-in-c-with-nunit) book. Five years later and it’s still a tool that I frequently reach for – it’s simple and incredibly useful.
 
 ## Who tests the tests?
