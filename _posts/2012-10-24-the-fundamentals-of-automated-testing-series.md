@@ -40,4 +40,4 @@ General testing tips:
   * Setup structure 
   * [Tests shouldn’t ape the production code]({% post_url 2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code %}) 
   * [KISS]({% post_url 2012-11-04-the-fundamentals-of-automated-testing-kiss %}) 
-  * Data-Driven testing (same logic, different inputs)
+  * [Data-Driven testing (same logic, different inputs)]({% post_url 2020-08-05-the-fundamentals-of-automated-testing-data-driven-tests %})
