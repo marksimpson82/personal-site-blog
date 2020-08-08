@@ -54,13 +54,11 @@ For more complicated test cases (especially those that have more intricate
 duplication soon gets out of control. 
 
 ### A solution: data-driven testing
-Data-driven testing is much what it sounds like -- the test logic is written once, and we data-driven the test by 
+Data-driven testing is much what it sounds like -- the test logic is written once, and we data-drive the test by 
 passing in multiple values.
 
 Most languages have testing frameworks that support data-driven testing. For example, Python has the 
-[ddt](https://ddt.readthedocs.io/en/latest/example.html) package. 
-
-Installing it is as simple as `pip install ddt`. 
+[ddt](https://ddt.readthedocs.io/en/latest/example.html) package. Installing it is as simple as `pip install ddt`. 
 
 We can now re-write our addition operator tests to use a single method and multiple test data inputs:
 
