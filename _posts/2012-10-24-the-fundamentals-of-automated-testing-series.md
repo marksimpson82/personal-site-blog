@@ -37,7 +37,7 @@ General testing tips:
   * Descriptive naming schemes 
   * [Draw attention to ‘interesting’ values]({% post_url 2014-08-07-the-fundamentals-of-unit-testing-draw-attention-to-interesting-values %})
   * [Factory methods]({% post_url 2012-11-11-the-fundamentals-of-automated-testing-use-factories %}) 
-  * Setup structure 
+  * [Setup structure]({% post_url 2020-08-10-the-fundamentals-of-automated-testing-setup-structure %}) 
   * [Tests shouldn’t ape the production code]({% post_url 2012-11-12-the-fundamentals-of-automated-testing-tests-shouldnt-ape-the-production-code %}) 
   * [KISS]({% post_url 2012-11-04-the-fundamentals-of-automated-testing-kiss %}) 
   * [Data-Driven testing (same logic, different inputs)]({% post_url 2020-08-05-the-fundamentals-of-automated-testing-data-driven-tests %})
